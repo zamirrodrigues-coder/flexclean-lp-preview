@@ -33,6 +33,13 @@
   li p { color: var(--tinta-70); font-size: 16px; }
   li a { display: inline-block; margin-top: 16px; font-weight: 700; color: var(--azul-escuro); text-decoration: none; border-bottom: 2px solid var(--azul); padding-bottom: 2px; }
   li a:hover { color: var(--azul); }
+  .revisoes { margin-top: 18px; border-top: 1px solid var(--fio); }
+  .revisoes > div { padding: 16px 0; border-bottom: 1px solid var(--fio); }
+  .revisoes > div:last-child { border-bottom: 0; padding-bottom: 0; }
+  .revisoes h3 { font-size: 17px; margin-bottom: 4px; }
+  .revisoes p { font-size: 15px; }
+  .revisoes a { margin-top: 10px; }
+
   .nota { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--fio); font-size: 15px; color: var(--tinta-70); }
 </style>
 </head>
@@ -47,14 +54,20 @@
       <a href="solar/">Abrir a página</a>
     </li>
     <li>
-      <h2>Manutenção de Aquecedor a Gás · Revisão 01</h2>
-      <p>Conserto, revisão preventiva e limpeza técnica. Versão com o texto condensado, como no redesign aprovado, já com as correções da conferência contra a copy.</p>
-      <a href="aquecedor-gas/">Abrir a revisão 01</a>
-    </li>
-    <li>
-      <h2>Manutenção de Aquecedor a Gás · Revisão 02</h2>
-      <p>A mesma página com o documento de copy replicado ao pé da letra, nos 15 blocos e na ordem original. Mais longa e com menos botões, porque é o que o documento prevê.</p>
-      <a href="aquecedor-gas-rev02/">Abrir a revisão 02</a>
+      <h2>Manutenção de Aquecedor a Gás</h2>
+      <p>Conserto, revisão preventiva e limpeza técnica. Duas revisões da mesma página, para comparar.</p>
+      <div class="revisoes">
+        <div>
+          <h3>Revisão 01</h3>
+          <p>Texto condensado, como no redesign aprovado, já com as correções da conferência contra a copy.</p>
+          <a href="aquecedor-gas/">Abrir a revisão 01</a>
+        </div>
+        <div>
+          <h3>Revisão 02</h3>
+          <p>Documento de copy replicado ao pé da letra, nos 15 blocos e na ordem original. Mais longa e com menos botões, porque é o que o documento prevê.</p>
+          <a href="aquecedor-gas-rev02/">Abrir a revisão 02</a>
+        </div>
+      </div>
     </li>
     <li>
       <h2>Bombas e Pressurizadores</h2>
