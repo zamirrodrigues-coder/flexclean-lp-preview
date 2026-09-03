@@ -1,0 +1,2111 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>[MOCKUP AQUECEDOR] Flex Clean · Manutenção de Aquecedor a Gás em Florianópolis</title>
+<meta name="description" content="Manutenção, revisão preventiva e conserto de aquecedores a gás com técnicos especializados, suporte rápido e garantia real.">
+<meta property="og:title" content="Flex Clean · Manutenção de Aquecedor a Gás em Florianópolis">
+<meta property="og:description" content="Manutenção, revisão preventiva e conserto de aquecedores a gás com técnicos especializados, suporte rápido e garantia real.">
+<meta property="og:image" content="https://servicos.flexclean.com.br/assets/aquecedor-gas/hero-tecnico-aquecedor.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="../assets/aquecedor-gas/logo_flex_clean.png">
+<link rel="stylesheet" href="../assets/lp-rev03.css">
+<style>
+/* ================================================================
+   REPLICA DO MOCKUP  -  primeira dobra
+   Cores estimadas a olho a partir da imagem enviada no chat.
+   Este bloco NAO segue o v2.1: tem olho em caixa alta, icone na lista,
+   canto arredondado, sombra, fundo cinza e ornamento decorativo.
+   ================================================================ */
+.hero-mock {
+  --mk-fundo:   #F4F7FA;
+  --mk-navy:    #0E2338;
+  --mk-azul:    #1470E0;
+  --mk-azul-cl: #2E7FE3;
+  --mk-cinza:   #6B7B8C;
+  --mk-verde:   #1FA855;
+  --mk-blob:    #E7F0FB;
+  --mk-ponto:   #D3E2F2;
+
+  position: relative;
+  overflow: hidden;
+  background: var(--mk-fundo);
+  padding: clamp(18px, 2.6vh, 50px) var(--esp-1) clamp(70px, 13vh, 150px);
+}
+
+/* mesmo conteiner das outras dobras: 1200px centralizado */
+.hm-miolo {
+  position: relative;
+  max-width: var(--larg-faixa);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 48fr 52fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* ornamentos: circulo pálido atras da imagem e duas malhas de pontos */
+.hm-miolo::before {
+  content: "";
+  position: absolute;
+  top: -150px; right: -60px;
+  width: 460px; height: 460px;
+  border-radius: 50%;
+  background: var(--mk-blob);
+  z-index: 0;
+}
+.hm-miolo::after {
+  content: "";
+  position: absolute;
+  top: -30px; right: -110px;
+  width: 150px; height: 120px;
+  background-image: radial-gradient(circle, var(--mk-ponto) 1.6px, transparent 1.7px);
+  background-size: 17px 17px;
+  z-index: 0;
+}
+.hm-pontos {
+  position: absolute;
+  left: 46%; bottom: -50px;
+  width: 150px; height: 120px;
+  background-image: radial-gradient(circle, var(--mk-ponto) 1.6px, transparent 1.7px);
+  background-size: 17px 17px;
+  z-index: 0;
+}
+
+.hm-texto, .hm-figura { position: relative; z-index: 1; }
+
+/* olho */
+.hm-olho {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--mk-navy);
+  max-width: none;
+  margin-bottom: 32px;
+}
+
+/* titulo: duas cores, entrelinha curta, escala bem contrastada */
+.hero-mock h1 {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 900;
+  font-size: clamp(30px, 3.4vw, 47px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--mk-navy);
+  margin: 0 0 34px;
+  max-width: none;
+}
+.hero-mock h1 .marca-azul { color: var(--mk-azul); display: block; }
+
+.hm-chamada {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 700;
+  font-size: clamp(18px, 1.5vw, 23px);
+  line-height: 1.3;
+  color: var(--mk-navy);
+  max-width: 42ch;
+  margin: 0 0 24px;
+}
+
+.hm-apoio {
+  font-size: clamp(16px, 1.1vw, 18px);
+  line-height: 1.6;
+  color: var(--mk-cinza);
+  max-width: 64ch;
+  margin: 0 0 34px;
+}
+
+/* lista com check circular vazado, duas colunas, texto em peso normal */
+.hm-provas {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(3, auto);
+  grid-auto-flow: column;
+  gap: 18px 28px;
+  margin: 0 0 36px;
+  padding: 0;
+}
+.hm-provas li {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--mk-navy);
+  max-width: none;
+}
+.hm-check { width: 20px; height: 20px; flex: none; fill: none; stroke: var(--mk-azul-cl); stroke-width: 1.6; }
+
+/* botao: retangulo arredondado, verde claro, glifo em circulo branco */
+.hm-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--mk-verde);
+  color: #FFFFFF;
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 18px 30px;
+  border-radius: 10px;
+}
+.hm-btn:hover { background: #18904A; }
+.hm-btn-txt { display: block; }
+.hm-btn .glifo { width: 30px; height: 30px; flex: none; background: #FFFFFF; border-radius: 50%; padding: 6px; fill: var(--mk-verde); }
+
+/* imagem: canto arredondado, moldura branca fina, sombra suave */
+.hm-figura { margin: 0; }
+.hm-figura img {
+  width: 100%;
+  aspect-ratio: 10 / 9;
+  object-fit: cover;
+  border-radius: 24px;
+  border: 8px solid #FFFFFF;
+  box-shadow: 0 24px 60px rgba(14, 35, 56, 0.14);
+}
+
+@media (max-width: 900px) {
+  .hero-mock { padding: 56px var(--esp-1); }
+  .hm-miolo { grid-template-columns: 1fr; gap: 32px; }
+  .hm-miolo::before { width: 300px; height: 300px; top: -80px; right: -70px; }
+  .hm-miolo::after, .hm-pontos { display: none; }
+  .hero-mock h1 { max-width: none; }
+  .hero-mock h1 .marca-azul { display: inline; }
+  .hm-provas { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; gap: 14px; }
+}
+
+@media (max-width: 560px) {
+  .hero-mock { padding: 40px var(--esp-1); }
+  .hm-olho { font-size: 12px; margin-bottom: 20px; }
+  .hero-mock h1 { margin-bottom: 22px; }
+  .hm-chamada { margin-bottom: 18px; }
+  .hm-apoio { margin-bottom: 26px; }
+  .hm-provas { margin-bottom: 28px; }
+  /* botao: glifo fixo a esquerda e rotulo ocupando o resto, sem centralizar */
+  .hm-btn {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.25;
+    padding: 16px 20px;
+    gap: 12px;
+  }
+  .hm-btn-txt { flex: 1; }
+  .hm-btn .glifo { width: 28px; height: 28px; padding: 5px; }
+  .hm-figura img { border-width: 6px; border-radius: 18px; }
+}
+
+/* ================================================================
+   REPLICA DO MOCKUP  -  segunda dobra
+   Cores estimadas a olho a partir da imagem enviada no chat.
+   Os 12 icones sao desenhados a mao em SVG, nenhum de biblioteca.
+   ================================================================ */
+.db2 {
+  --d2-alt: clamp(18px, 2.7vh, 52px);
+  --d2-ico: clamp(44px, 6.2vh, 60px);
+  --d2-fundo:  #F4F7FA;
+  --d2-navy:   #0E2338;
+  --d2-azul:   #1470E0;
+  --d2-icobg:  #EAF1FC;
+  --d2-alerta: #E8F0FB;
+  --d2-fio:    #E6EDF5;
+  --d2-cinza:  #46586B;
+
+  position: relative;
+  overflow: hidden;
+  background: var(--d2-fundo);
+  padding: var(--d2-alt) var(--esp-1) clamp(70px, 13vh, 150px);
+}
+.db2-miolo { position: relative; max-width: var(--larg-faixa); margin: 0 auto; }
+
+/* ornamentos: circulo palido e malha de pontos, so no canto superior direito */
+.db2-miolo::before {
+  content: ""; position: absolute; z-index: 0;
+  top: -170px; right: -90px; width: 440px; height: 440px;
+  border-radius: 50%; background: #EDF3FC;
+}
+.db2-miolo::after {
+  content: ""; position: absolute; z-index: 0;
+  top: -18px; right: -6px; width: 132px; height: 108px;
+  background-image: radial-gradient(circle, #D3E2F2 1.7px, transparent 1.8px);
+  background-size: 22px 22px;
+}
+.db2-miolo > * { position: relative; z-index: 1; }
+
+/* olho com traco */
+.db2-olho {
+  display: flex; align-items: center; gap: 14px;
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 700; font-size: 13px; letter-spacing: 0.13em;
+  text-transform: uppercase; color: var(--d2-navy);
+  max-width: none; margin: 0 0 clamp(8px, 1.4vh, 18px);
+}
+.db2-traco { display: block; width: 44px; height: 4px; border-radius: 2px; background: var(--d2-azul); flex: none; }
+
+.db2 h2 {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 900; font-size: clamp(26px, min(3vw, 4.4vh), 40px);
+  line-height: 1.12; letter-spacing: -0.02em;
+  color: var(--d2-navy); max-width: 20ch; margin: 0 0 clamp(10px, 1.6vh, 20px);
+}
+.db2 h2 .marca-azul { color: var(--d2-azul); }
+
+.db2-apoio {
+  font-size: clamp(16px, 1.1vw, 18px); line-height: 1.5; color: var(--d2-cinza);
+  max-width: none; margin: 0 0 clamp(14px, 2.2vh, 32px);
+}
+
+/* cartao branco com os 8 problemas */
+.db2-cartao {
+  background: #FFFFFF;
+  border-radius: 24px;
+  box-shadow: 0 18px 44px rgba(14, 35, 56, 0.07);
+  padding: 8px 0;
+}
+.db2-itens { list-style: none; display: grid; grid-template-columns: 1fr 1fr; margin: 0; padding: 0; }
+.db2-itens li {
+  display: grid; grid-template-columns: var(--d2-ico) 1fr; align-items: center; gap: 20px;
+  padding: clamp(9px, 1.3vh, 20px) 34px;
+  font-size: 17px; color: var(--d2-navy);
+  max-width: none;
+  border-bottom: 1px solid var(--d2-fio);
+}
+.db2-itens li:nth-child(2n) { border-left: 1px solid var(--d2-fio); }
+.db2-itens li:nth-last-child(-n+2) { border-bottom: none; }
+
+.d2-ico {
+  width: var(--d2-ico); height: var(--d2-ico);
+  border-radius: 50%; background: var(--d2-icobg);
+  display: grid; place-items: center;
+}
+.d2-ico svg { width: calc(var(--d2-ico) * 0.57); height: calc(var(--d2-ico) * 0.57); fill: none; stroke: var(--d2-azul); stroke-width: 1.8; stroke-linecap: round; }
+.d2-ico svg circle[r="1.4"], .d2-ico svg circle[r="1.1"] { fill: var(--d2-azul); stroke: none; }
+.d2-ico-branco { background: #FFFFFF; }
+
+/* bloco E o pior */
+.db2-alerta {
+  display: block;
+  background: var(--d2-alerta);
+  border-left: 8px solid var(--d2-azul);
+  border-radius: 6px 16px 16px 6px;
+  padding: clamp(16px, 2.2vh, 26px) 32px;
+  margin-top: clamp(14px, 2vh, 26px);
+  padding-left: clamp(24px, 2.6vw, 36px);
+}
+.db2-pior { font-family: 'Archivo', Arial, sans-serif; font-weight: 700; font-size: 20px; color: var(--d2-azul); margin: 0 0 4px; max-width: none; }
+.db2-pior-txt { font-weight: 700; font-size: 17px; color: var(--d2-navy); margin: 0; max-width: none; }
+
+/* linha de fechamento com os tres selos */
+.db2-fecho {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: 10px; font-size: 17px; color: var(--d2-navy);
+  max-width: none; margin: clamp(14px, 2.2vh, 32px) 0 0;
+}
+.d2-selo { display: inline-flex; align-items: center; gap: 8px; }
+.d2-selo svg { width: 24px; height: 24px; fill: none; stroke: var(--d2-azul); stroke-width: 1.8; stroke-linecap: round; }
+.d2-selo b { font-family: 'Archivo', Arial, sans-serif; color: var(--d2-azul); }
+.d2-sep { color: var(--d2-azul); }
+
+@media (max-width: 900px) {
+  .db2-itens { grid-template-columns: 1fr; }
+  .db2-itens li:nth-child(2n) { border-left: none; }
+  .db2-itens li:nth-last-child(-n+2) { border-bottom: 1px solid var(--d2-fio); }
+  .db2-itens li:last-child { border-bottom: none; }
+  .db2-miolo::before { width: 260px; height: 260px; top: -120px; right: -80px; }
+  .db2-miolo::after { display: none; }
+  .db2 h2 { max-width: none; }
+  .db2-apoio br { display: none; }
+}
+
+@media (max-width: 560px) {
+  .db2 { padding: 40px var(--esp-1); --d2-ico: 48px; --d2-alt: 40px; }
+  .db2-itens li { gap: 14px; padding: 16px 20px; font-size: 16px; }
+
+  .db2-alerta { grid-template-columns: 1fr; gap: 14px; padding: 22px 20px; }
+  .db2-fecho { justify-content: flex-start; }
+}
+
+/* ================================================================
+   TERCEIRA DOBRA  -  replica do mockup dos servicos
+   Tres cartoes com foto, cartao de outros cuidados e selo de 10 anos.
+   Icones desenhados a mao, sem circulo de fundo neste bloco.
+   ================================================================ */
+.db3 {
+  --d3-alt: clamp(16px, 2.4vh, 52px);
+  --d3-ico2: clamp(26px, 3.8vh, 34px);
+  --d3-selo: clamp(38px, 5.6vh, 52px);
+  --d3-navy: #0E2338;
+  --d3-azul: #1470E0;
+  --d3-cinza: #46586B;
+  --d3-fio: #E6EDF5;
+  position: relative;
+  overflow: hidden;
+  background: #F4F7FA;
+  padding: var(--d3-alt) var(--esp-1) clamp(70px, 13vh, 150px);
+}
+.db3-miolo { position: relative; max-width: var(--larg-faixa); margin: 0 auto; }
+
+.db3-miolo::before {
+  content: ""; position: absolute; z-index: 0;
+  top: -180px; right: -110px; width: 430px; height: 430px;
+  border-radius: 50%; background: #EDF3FC;
+}
+.db3-miolo::after {
+  content: ""; position: absolute; z-index: 0;
+  top: 60px; right: -4px; width: 122px; height: 100px;
+  background-image: radial-gradient(circle, #DCE8F6 1.7px, transparent 1.8px);
+  background-size: 22px 22px;
+}
+.db3-miolo > * { position: relative; z-index: 1; }
+
+.db3 h2 {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 900; font-size: clamp(28px, min(3.2vw, 4.6vh), 44px);
+  line-height: 1.1; letter-spacing: -0.02em;
+  color: var(--d3-navy); max-width: none; margin: 0 0 clamp(10px, 1.7vh, 22px);
+}
+.db3 h2 .marca-azul { color: var(--d3-azul); }
+.db3-traco { display: block; width: 44px; height: 4px; border-radius: 2px; background: var(--d3-azul); margin: clamp(6px, 1vh, 16px) 0 clamp(6px, 1vh, 16px); }
+
+.db3-apoio {
+  font-size: clamp(16px, 1.1vw, 18px); line-height: 1.6; color: var(--d3-cinza);
+  max-width: 84ch; margin: 0 0 clamp(12px, 1.8vh, 28px);
+}
+
+/* tres cartoes com foto */
+.db3-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.db3-card {
+  background: #FFFFFF; border-radius: 16px; overflow: hidden;
+  box-shadow: 0 14px 36px rgba(14, 35, 56, 0.07);
+  display: flex; flex-direction: column;
+}
+.db3-card img { width: 100%; height: clamp(110px, 15vh, 230px); object-fit: cover; }
+.db3-card-txt { padding: clamp(12px, 1.6vh, 24px) 24px clamp(13px, 1.8vh, 26px); }
+.db3-card h3 {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(18px, 1.5vw, 22px); color: var(--d3-navy);
+  margin: 0 0 clamp(5px, 0.9vh, 14px);
+}
+.db3-card p { font-size: 17px; line-height: 1.6; color: var(--d3-cinza); margin: 0; max-width: none; }
+
+/* cartao dos outros cuidados */
+.db3-outros {
+  background: #FFFFFF; border-radius: 16px;
+  box-shadow: 0 14px 36px rgba(14, 35, 56, 0.07);
+  padding: clamp(13px, 2vh, 26px) clamp(24px, 3vw, 36px);
+  margin-top: clamp(10px, 1.6vh, 24px);
+}
+.db3-outros h3 {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(17px, 1.4vw, 20px); color: var(--d3-navy);
+  margin: 0 0 clamp(6px, 1.1vh, 18px);
+}
+.db3-outros-grade { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); margin: 0; padding: 0; }
+.db3-outros-grade li {
+  display: grid; grid-template-columns: var(--d3-ico2) 1fr; align-items: center; gap: 14px;
+  padding: clamp(5px, 0.9vh, 12px) 24px;
+  font-size: 17px; color: var(--d3-navy); max-width: none;
+}
+.db3-outros-grade li:nth-child(3n+1) { padding-left: 0; }
+.db3-outros-grade li:not(:nth-child(3n+1)) { border-left: 1px solid var(--d3-fio); }
+.db3-outros-grade svg { width: var(--d3-ico2); height: var(--d3-ico2); fill: none; stroke: var(--d3-azul); stroke-width: 1.8; stroke-linecap: round; }
+
+/* selo dos 10 anos */
+.db3-selo10 {
+  display: block;
+  background: #EDF3FC; border-radius: 16px;
+  padding: clamp(12px, 1.8vh, 24px) clamp(24px, 3vw, 34px);
+  margin-top: clamp(10px, 1.6vh, 24px);
+}
+.db3-selo10 svg { width: var(--d3-selo); height: var(--d3-selo); fill: none; stroke: var(--d3-azul); stroke-width: 1.7; stroke-linejoin: round; }
+.db3-selo10 p { font-size: clamp(16px, 1.2vw, 18px); line-height: 1.55; color: var(--d3-navy); margin: 0; max-width: none; }
+.db3-selo10 b { color: var(--d3-azul); font-family: 'Archivo', Arial, sans-serif; }
+
+@media (max-width: 900px) {
+  .db3-cards { grid-template-columns: 1fr; gap: 20px; }
+  .db3-outros-grade { grid-template-columns: 1fr 1fr; }
+  .db3-outros-grade li { padding-left: 20px; }
+  .db3-outros-grade li:nth-child(3n+1) { padding-left: 20px; }
+  .db3-outros-grade li:not(:nth-child(3n+1)) { border-left: none; }
+  .db3-outros-grade li:nth-child(2n) { border-left: 1px solid var(--d3-fio); }
+  .db3-outros-grade li:nth-child(2n+1) { padding-left: 0; }
+}
+
+@media (max-width: 560px) {
+  .db3 { --d3-ico2: 30px; --d3-selo: 44px; --d3-alt: 40px; }
+  .db3-card img { height: 190px; }
+  .db3-outros-grade { grid-template-columns: 1fr; }
+  .db3-outros-grade li, .db3-outros-grade li:nth-child(2n) { border-left: none; padding-left: 0; }
+  .db3-selo10 { grid-template-columns: 1fr; gap: 14px; }
+}
+
+/* ================================================================
+   QUARTA DOBRA  -  replica do mockup do check de sinais
+   Os 10 sinais sao os mesmos da rev02, agrupados em duas colunas.
+   ================================================================ */
+.db4 {
+  --d4-alt: clamp(16px, 2.4vh, 52px);
+  --d4-ico: clamp(40px, 5.8vh, 56px);
+  --d4-check: clamp(22px, 3.2vh, 30px);
+  --d4-navy: #0E2338;
+  --d4-azul: #1470E0;
+  --d4-cinza: #46586B;
+  --d4-fio: #E6EDF5;
+  position: relative;
+  overflow: hidden;
+  background: #F4F7FA;
+  padding: var(--d4-alt) var(--esp-1) clamp(70px, 13vh, 150px);
+}
+.db4-miolo { position: relative; max-width: var(--larg-faixa); margin: 0 auto; }
+.db4-miolo::before {
+  content: ""; position: absolute; z-index: 0;
+  top: -190px; right: -120px; width: 440px; height: 440px;
+  border-radius: 50%; background: #EDF3FC;
+}
+.db4-miolo::after {
+  content: ""; position: absolute; z-index: 0;
+  top: -10px; right: -4px; width: 122px; height: 100px;
+  background-image: radial-gradient(circle, #DCE8F6 1.7px, transparent 1.8px);
+  background-size: 22px 22px;
+}
+.db4-miolo > * { position: relative; z-index: 1; }
+
+.db4-olho {
+  display: flex; align-items: center; gap: 14px;
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 700; font-size: 13px; letter-spacing: 0.13em;
+  text-transform: uppercase; color: var(--d4-navy);
+  max-width: none; margin: 0 0 clamp(8px, 1.4vh, 18px);
+}
+.db4-traco { display: block; width: 44px; height: 4px; border-radius: 2px; background: var(--d4-azul); flex: none; }
+
+.db4 h2 {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 900; font-size: clamp(26px, min(3vw, 4.4vh), 42px);
+  line-height: 1.1; letter-spacing: -0.02em;
+  color: var(--d4-navy); max-width: 20ch; margin: 0 0 clamp(6px, 1vh, 14px);
+}
+.db4 h2 .marca-azul { color: var(--d4-azul); }
+.db4-apoio { font-size: clamp(16px, 1.1vw, 18px); line-height: 1.55; color: var(--d4-cinza); max-width: none; margin: 0 0 clamp(10px, 1.6vh, 26px); }
+
+/* cartao com os dois grupos */
+.db4-cartao {
+  background: #FFFFFF; border-radius: 24px;
+  box-shadow: 0 18px 44px rgba(14, 35, 56, 0.07);
+  display: grid; grid-template-columns: 1fr 1fr;
+  padding: clamp(10px, 1.6vh, 26px) 0;
+}
+.d4-grupo { padding: 0 clamp(22px, 2.6vw, 40px); }
+.d4-grupo + .d4-grupo { border-left: 1px solid var(--d4-fio); }
+.d4-grupo-topo { display: grid; grid-template-columns: var(--d4-ico) 1fr; align-items: center; gap: 16px; margin-bottom: clamp(6px, 1.2vh, 16px); }
+.d4-grupo-topo h3 {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(14px, 1.15vw, 17px); letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--d4-azul); margin: 0;
+}
+.d4-ico { width: var(--d4-ico); height: var(--d4-ico); border-radius: 50%; background: #EAF1FC; display: grid; place-items: center; }
+.d4-ico svg { width: calc(var(--d4-ico) * 0.58); height: calc(var(--d4-ico) * 0.58); fill: none; stroke: var(--d4-azul); stroke-width: 1.8; stroke-linecap: round; }
+
+.d4-lista { list-style: none; margin: 0; padding: 0; }
+.d4-lista li {
+  display: grid; grid-template-columns: var(--d4-check) 1fr; align-items: center; gap: 14px;
+  padding: clamp(5px, 0.85vh, 13px) 0;
+  font-size: clamp(15px, 1.15vw, 17px); color: var(--d4-navy); max-width: none;
+  border-bottom: 1px solid var(--d4-fio);
+}
+.d4-lista li:last-child { border-bottom: none; }
+.d4-check { width: var(--d4-check); height: var(--d4-check); fill: none; stroke: var(--d4-azul); stroke-width: 1.8; stroke-linecap: round; }
+
+/* fechamento */
+.db4-fecho { display: grid; justify-items: center; margin-top: clamp(10px, 1.6vh, 26px); }
+.db4-fecho-txt { display: grid; grid-template-columns: var(--d4-ico) 1fr; align-items: center; gap: 20px; }
+.db4-fecho h3 {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(17px, 1.5vw, 22px); color: var(--d4-navy); margin: 0 0 4px;
+}
+.db4-fecho p { font-size: clamp(15px, 1.15vw, 17px); line-height: 1.5; color: var(--d4-cinza); margin: 0; max-width: none; }
+
+.db4-btn {
+  display: inline-flex; align-items: center; gap: 14px;
+  background: #1FA855; color: #FFFFFF;
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(15px, 1.2vw, 18px); letter-spacing: 0.02em;
+  text-transform: uppercase; text-decoration: none;
+  padding: clamp(13px, 1.9vh, 19px) clamp(22px, 2.4vw, 34px);
+  border-radius: 10px;
+  margin-top: clamp(10px, 1.8vh, 22px);
+}
+.db4-btn:hover { background: #18904A; }
+.db4-btn .glifo { width: 28px; height: 28px; flex: none; background: #FFFFFF; border-radius: 50%; padding: 5px; fill: #1FA855; stroke: none; }
+
+.db4-seguro {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 14px; color: var(--d4-cinza);
+  margin: clamp(7px, 1.2vh, 14px) 0 0; max-width: none;
+}
+.db4-seguro svg { width: 17px; height: 17px; fill: none; stroke: var(--d4-cinza); stroke-width: 2; }
+
+@media (max-width: 900px) {
+  .db4 { --d4-ico: 48px; --d4-check: 26px; --d4-alt: 40px; }
+  .db4-cartao { grid-template-columns: 1fr; padding: 8px 0; }
+  .d4-grupo { padding: 18px clamp(20px, 5vw, 30px); }
+  .d4-grupo + .d4-grupo { border-left: none; border-top: 1px solid var(--d4-fio); }
+  .db4 h2 { max-width: none; }
+  .db4-apoio br, .db4-fecho p br { display: none; }
+}
+
+@media (max-width: 560px) {
+  .db4-fecho-txt { grid-template-columns: 1fr; gap: 12px; justify-items: start; }
+  .db4-btn { width: 100%; justify-content: flex-start; text-align: left; }
+  .db4-fecho { justify-items: start; }
+}
+
+/* ================================================================
+   QUINTA DOBRA  -  replica do mockup dos servicos principais
+   Tres colunas sobre o fundo, sem cartao. Itens em texto corrido
+   separados por bullet, como no mockup.
+   ================================================================ */
+.db5 {
+  --d5-alt: clamp(16px, 2.4vh, 52px);
+  --d5-navy: #0E2338;
+  --d5-azul: #1470E0;
+  --d5-cinza: #46586B;
+  --d5-fio: #DDE6F0;
+  position: relative;
+  overflow: hidden;
+  background: #F4F7FA;
+  padding: var(--d5-alt) var(--esp-1) clamp(70px, 13vh, 150px);
+}
+.db5-miolo { position: relative; max-width: var(--larg-faixa); margin: 0 auto; }
+.db5-miolo::before {
+  content: ""; position: absolute; z-index: 0;
+  top: -200px; right: -130px; width: 430px; height: 430px;
+  border-radius: 50%; background: #EDF3FC;
+}
+.db5::before {
+  content: ""; position: absolute; z-index: 0;
+  bottom: -260px; left: -200px; width: 520px; height: 520px;
+  border-radius: 52% 48% 46% 54% / 44% 52% 48% 56%;
+  background: #EEF4FD;
+}
+.db5-miolo::after {
+  content: ""; position: absolute; z-index: 0;
+  top: 92px; right: -6px; width: 122px; height: 100px;
+  background-image: radial-gradient(circle, #DCE8F6 1.7px, transparent 1.8px);
+  background-size: 22px 22px;
+}
+.db5-miolo > * { position: relative; z-index: 1; }
+
+.db5-olho {
+  display: flex; align-items: center; gap: 14px;
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 700; font-size: 13px; letter-spacing: 0.13em;
+  text-transform: uppercase; color: var(--d5-azul);
+  max-width: none; margin: 0 0 clamp(8px, 1.4vh, 18px);
+}
+.db5-traco, .d5-traco { display: block; width: 44px; height: 4px; border-radius: 2px; background: var(--d5-azul); flex: none; }
+
+.db5 h2 {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 900; font-size: clamp(26px, min(3vw, 4.4vh), 42px);
+  line-height: 1.1; letter-spacing: -0.02em;
+  color: var(--d5-navy); max-width: 20ch; margin: 0 0 clamp(6px, 1.2vh, 14px);
+}
+.db5 h2 .marca-azul { color: var(--d5-azul); }
+.db5-apoio { font-size: clamp(16px, 1.1vw, 18px); line-height: 1.55; color: var(--d5-cinza); max-width: none; margin: 0 0 clamp(16px, 2.6vh, 40px); }
+
+/* tres colunas direto sobre o fundo, sem cartao */
+.db5-grade { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+.d5-col { padding: 0 clamp(18px, 2.4vw, 40px); }
+.d5-col:first-child { padding-left: 0; }
+.d5-col:last-child { padding-right: 0; }
+.d5-col + .d5-col { border-left: 1px solid var(--d5-fio); }
+.d5-col > * { max-width: none; }
+.d5-col .d5-traco { margin-bottom: clamp(10px, 1.6vh, 18px); }
+.d5-col h3 {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(15px, 1.3vw, 19px); line-height: 1.25; letter-spacing: 0.02em;
+  text-transform: uppercase; color: var(--d5-navy);
+  margin: 0 0 clamp(10px, 1.6vh, 20px);
+}
+.d5-desc { font-size: clamp(14px, 1.05vw, 16px); line-height: 1.6; color: var(--d5-cinza); margin: 0 0 clamp(10px, 1.8vh, 22px); }
+.d5-rot {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(14px, 1.05vw, 16px); color: var(--d5-azul);
+  margin: 0 0 clamp(6px, 1vh, 12px);
+}
+.d5-itens { font-size: clamp(14px, 1.05vw, 16px); line-height: 1.75; color: var(--d5-navy); margin: 0 0 clamp(10px, 1.6vh, 20px); }
+.d5-sep { color: var(--d5-azul); font-weight: 700; }
+.d5-fecho {
+  font-size: clamp(14px, 1.05vw, 16px); line-height: 1.6; color: var(--d5-cinza);
+  border-top: 1px solid var(--d5-fio);
+  padding-top: clamp(8px, 1.4vh, 16px); margin: 0;
+}
+.d5-fecho b { font-family: 'Archivo', Arial, sans-serif; color: var(--d5-azul); }
+
+.db5-rodape {
+  font-size: clamp(15px, 1.1vw, 17px); color: var(--d5-navy);
+  max-width: none;
+  border-top: 1px solid var(--d5-fio);
+  margin: clamp(16px, 2.6vh, 40px) 0 0;
+  padding-top: clamp(12px, 2vh, 26px);
+}
+.db5-rodape svg { width: 30px; height: 30px; flex: none; fill: none; stroke: var(--d5-azul); stroke-width: 1.8; stroke-linejoin: round; }
+
+@media (max-width: 900px) {
+  .db5 { --d5-alt: 40px; }
+  .db5-grade { grid-template-columns: 1fr; }
+  .d5-col { padding: 22px 0; }
+  .d5-col + .d5-col { border-left: none; border-top: 1px solid var(--d5-fio); }
+  .db5 h2 { max-width: none; }
+  .db5-apoio br, .d5-col h3 br { display: none; }
+
+}
+
+/* ================================================================
+   SEXTA DOBRA  -  replica do mockup dos diferenciais
+   As 8 razoes sao as da rev02, numeradas e em duas colunas.
+   ================================================================ */
+.db6 {
+  --d6-alt: clamp(16px, 2.4vh, 52px);
+  --d6-navy: #0E2338;
+  --d6-azul: #1470E0;
+  --d6-cinza: #46586B;
+  --d6-fio: #E1E9F3;
+  --d6-regua: #C9DDF6;
+  position: relative;
+  overflow: hidden;
+  background: #F4F7FA;
+  padding: var(--d6-alt) var(--esp-1) clamp(70px, 13vh, 150px);
+}
+.db6-miolo { position: relative; max-width: var(--larg-faixa); margin: 0 auto; }
+.db6-miolo::before {
+  content: ""; position: absolute; z-index: 0;
+  top: -210px; right: -150px; width: 440px; height: 440px;
+  border-radius: 50%; background: #EDF3FC;
+}
+.db6-miolo::after {
+  content: ""; position: absolute; z-index: 0;
+  top: -6px; right: 60px; width: 150px; height: 128px;
+  background-image: radial-gradient(circle, #D3E2F2 1.7px, transparent 1.8px);
+  background-size: 24px 24px;
+}
+.db6-miolo > * { position: relative; z-index: 1; }
+
+.db6-olho {
+  display: flex; align-items: center; gap: 14px;
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 700; font-size: 13px; letter-spacing: 0.13em;
+  text-transform: uppercase; color: var(--d6-azul);
+  max-width: none; margin: 0 0 clamp(8px, 1.4vh, 18px);
+}
+.db6-traco { display: block; width: 44px; height: 4px; border-radius: 2px; background: var(--d6-azul); flex: none; }
+
+.db6 h2 {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 900; font-size: clamp(26px, min(3vw, 4.4vh), 42px);
+  line-height: 1.1; letter-spacing: -0.02em;
+  color: var(--d6-navy); max-width: none; margin: 0 0 clamp(6px, 1.2vh, 14px);
+}
+.db6 h2 .marca-azul { color: var(--d6-azul); }
+.db6-apoio { font-size: clamp(16px, 1.1vw, 18px); line-height: 1.55; color: var(--d6-cinza); max-width: none; margin: 0 0 clamp(9px, 1.5vh, 26px); }
+
+/* as 8 razoes numeradas, em duas colunas */
+.db6-itens {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: 1fr 1fr;
+  column-gap: clamp(28px, 4vw, 64px);
+}
+.db6-itens li {
+  display: grid; grid-template-columns: auto 1fr;
+  gap: clamp(14px, 1.6vw, 24px);
+  padding: clamp(8px, 1.3vh, 18px) 0;
+  border-bottom: 1px solid var(--d6-fio);
+  max-width: none;
+}
+.db6-itens li:nth-last-child(-n+2) { border-bottom: none; }
+.d6-num {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 900;
+  font-size: clamp(24px, 2.2vw, 34px); line-height: 1.05;
+  color: var(--d6-azul); font-variant-numeric: tabular-nums;
+}
+.d6-txt { border-left: 2px solid var(--d6-regua); padding-left: clamp(14px, 1.5vw, 22px); }
+.d6-txt h3 {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(15px, 1.3vw, 19px); line-height: 1.25;
+  color: var(--d6-navy); margin: 0 0 clamp(3px, 0.7vh, 8px);
+}
+.d6-txt p { font-size: clamp(14px, 1.05vw, 16px); line-height: 1.5; color: var(--d6-cinza); margin: 0; max-width: none; }
+
+/* fechamento */
+.db6-fecho { display: grid; justify-items: center; margin-top: clamp(10px, 1.6vh, 28px); }
+.db6-btn {
+  display: inline-flex; align-items: center; gap: 14px;
+  background: #1FA855; color: #FFFFFF;
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(15px, 1.2vw, 18px); letter-spacing: 0.02em;
+  text-transform: uppercase; text-decoration: none;
+  padding: clamp(13px, 1.9vh, 19px) clamp(22px, 2.4vw, 34px);
+  border-radius: 10px;
+}
+.db6-btn:hover { background: #18904A; }
+.db6-btn .glifo { width: 28px; height: 28px; flex: none; background: #FFFFFF; border-radius: 50%; padding: 5px; fill: #1FA855; stroke: none; }
+.db6-seguro {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 14px; color: var(--d6-cinza);
+  margin: clamp(7px, 1.2vh, 14px) 0 0; max-width: none;
+}
+.db6-seguro svg { width: 18px; height: 18px; fill: none; stroke: var(--d6-azul); stroke-width: 1.9; stroke-linejoin: round; }
+
+@media (max-width: 900px) {
+  .db6 { --d6-alt: 40px; }
+  .db6-itens { grid-template-columns: 1fr; }
+  .db6-itens li:nth-last-child(-n+2) { border-bottom: 1px solid var(--d6-fio); }
+  .db6-itens li:last-child { border-bottom: none; }
+  .db6 h2 br, .db6-apoio br { display: none; }
+}
+
+@media (max-width: 560px) {
+  .db6-btn { width: 100%; justify-content: flex-start; text-align: left; }
+  .db6-fecho { justify-items: start; }
+}
+
+/* ================================================================
+   DOBRA "PARA QUEM"  -  replica do mockup
+   Seis frases grandes em tres colunas, sem icone e sem marcador.
+   Os seis itens sao os da rev02, na mesma ordem.
+   ================================================================ */
+.db7 {
+  --d7-alt: clamp(30px, 7vh, 80px);
+  --d7-navy: #101C3D;
+  --d7-azul: #1470E0;
+  --d7-fio: #DCE5F0;
+  position: relative;
+  overflow: hidden;
+  background: #F7FAFD;
+  padding: var(--d7-alt) var(--esp-1) clamp(70px, 13vh, 150px);
+}
+/* manchas pálidas: uma no alto à direita, outra embaixo à esquerda */
+.db7::before {
+  content: ""; position: absolute; z-index: 0;
+  top: -190px; right: -170px; width: 560px; height: 560px;
+  border-radius: 46% 54% 52% 48% / 50% 44% 56% 50%;
+  background: #EAF1FB;
+}
+.db7::after {
+  content: ""; position: absolute; z-index: 0;
+  bottom: -230px; left: -190px; width: 520px; height: 520px;
+  border-radius: 52% 48% 46% 54% / 44% 52% 48% 56%;
+  background: #EDF3FC;
+}
+.db7-miolo { position: relative; z-index: 1; max-width: var(--larg-faixa); margin: 0 auto; }
+
+.db7-olho {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 700; font-size: 13px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--d7-azul);
+  max-width: none; margin: 0 0 clamp(14px, 3vh, 30px);
+}
+
+.db7 h2 {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 900; font-size: clamp(28px, min(3.4vw, 6vh), 46px);
+  line-height: 1.1; letter-spacing: -0.02em;
+  color: var(--d7-navy); max-width: none;
+  margin: 0 0 clamp(20px, 5.5vh, 56px);
+  padding-bottom: clamp(20px, 5.5vh, 56px);
+  border-bottom: 1px solid var(--d7-fio);
+}
+
+.db7-itens {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: clamp(28px, 9vh, 90px) clamp(28px, 3.6vw, 60px);
+}
+.db7-itens li {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(19px, min(1.9vw, 4.2vh), 32px);
+  line-height: 1.22; letter-spacing: -0.01em;
+  color: var(--d7-navy); max-width: none;
+}
+
+@media (max-width: 900px) {
+  .db7 { --d7-alt: 40px; }
+  .db7-itens { grid-template-columns: 1fr 1fr; gap: 26px 28px; }
+  .db7-itens li { font-size: 20px; max-width: none; }
+  .db7::before { width: 320px; height: 320px; top: -130px; right: -120px; }
+  .db7::after { width: 300px; height: 300px; bottom: -160px; left: -130px; }
+}
+
+@media (max-width: 560px) {
+  .db7-itens { grid-template-columns: 1fr; gap: 18px; }
+}
+
+/* rolagem por ancora: o cabecalho fixo tem 68px e cobria o topo da secao.
+   scroll-margin-top faz o navegador parar antes, deixando o titulo visivel. */
+section[id] { scroll-margin-top: 84px; }
+
+/* o logo do cabecalho leva ao topo da pagina */
+.cabecalho-logo { display: flex; align-items: center; flex: none; }
+.cabecalho-logo img { display: block; }
+
+/* grade de 4 cartoes de imagem, e a lista de marcas sem icone */
+.db3-cards-4 { grid-template-columns: repeat(4, 1fr); }
+.db3-cards-4 .db3-card img { height: clamp(100px, 13vh, 200px); }
+.db3-marcas li { grid-template-columns: 1fr; }
+.db3-marcas li span { font-family: 'Archivo', Arial, sans-serif; font-weight: 700; }
+@media (max-width: 900px) { .db3-cards-4 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .db3-cards-4 { grid-template-columns: 1fr; } }
+
+/* o hero do aquecedor usa o mesmo check da lista de sinais */
+.hm-provas li { grid-template-columns: 21px 1fr; }
+
+/* ================================================================
+   DOBRA "MAIS DO QUE UM SIMPLES CONSERTO"  -  replica do mockup
+   Os quatro focos em linha com fio vertical, e os seis itens em
+   duas colunas com fio. Texto da rev02 do aquecedor, sem alteracao.
+   ================================================================ */
+.db8 {
+  --d8-alt: clamp(20px, 3vh, 60px);
+  --d8-navy: #101C3D;
+  --d8-azul: #1470E0;
+  --d8-cinza: #46586B;
+  --d8-fio: #DCE5F0;
+  position: relative;
+  overflow: hidden;
+  background: #F7FAFD;
+  padding: var(--d8-alt) var(--esp-1) clamp(70px, 13vh, 150px);
+}
+.db8::before {
+  content: ""; position: absolute; z-index: 0;
+  top: -200px; right: -180px; width: 560px; height: 560px;
+  border-radius: 46% 54% 52% 48% / 50% 44% 56% 50%;
+  background: #EAF1FB;
+}
+.db8::after {
+  content: ""; position: absolute; z-index: 0;
+  bottom: -240px; left: -200px; width: 520px; height: 520px;
+  border-radius: 52% 48% 46% 54% / 44% 52% 48% 56%;
+  background: #EDF3FC;
+}
+.db8-miolo { position: relative; z-index: 1; max-width: var(--larg-faixa); margin: 0 auto; }
+
+.db8-olho {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 700; font-size: 13px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--d8-azul);
+  max-width: none; margin: 0 0 clamp(10px, 1.7vh, 20px);
+}
+.db8 h2 {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 900; font-size: clamp(28px, min(3.4vw, 5vh), 46px);
+  line-height: 1.08; letter-spacing: -0.02em;
+  color: var(--d8-navy); max-width: none; margin: 0 0 clamp(8px, 1.3vh, 16px);
+}
+.db8 h2 .marca-azul { color: var(--d8-azul); }
+.db8-apoio { font-size: clamp(16px, 1.2vw, 19px); line-height: 1.5; color: var(--d8-navy); max-width: none; margin: 0 0 clamp(14px, 2.4vh, 34px); }
+
+.db8-lead { font-size: clamp(15px, 1.1vw, 17px); line-height: 1.5; color: var(--d8-cinza); max-width: none; margin: 0 0 clamp(10px, 1.6vh, 20px); }
+
+/* os quatro focos em linha, separados por fio vertical */
+.db8-valores {
+  list-style: none; margin: 0 0 clamp(14px, 2.4vh, 34px); padding: 0;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+}
+.db8-valores li {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(15px, 1.35vw, 20px); line-height: 1.25;
+  color: var(--d8-navy); max-width: none;
+  padding: 0 clamp(14px, 1.8vw, 30px);
+}
+.db8-valores li::first-letter { text-transform: uppercase; }
+.db8-valores li:first-child { padding-left: 0; }
+.db8-valores li + li { border-left: 1px solid var(--d8-fio); }
+
+.db8-corpo { border-top: 1px solid var(--d8-fio); padding-top: clamp(14px, 2.4vh, 34px); }
+.db8-p { font-size: clamp(15px, 1.1vw, 17px); line-height: 1.55; color: var(--d8-cinza); max-width: 74ch; margin: 0 0 clamp(6px, 1vh, 12px); }
+.db8-rot { font-weight: 700; color: var(--d8-navy); margin-bottom: clamp(8px, 1.4vh, 16px); }
+
+/* os seis itens em duas colunas, com fio, no ritmo do mockup */
+.db8-conta {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: 1fr 1fr;
+  column-gap: clamp(28px, 4vw, 64px);
+}
+.db8-conta li {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(15px, 1.25vw, 18px); line-height: 1.3;
+  color: var(--d8-navy); max-width: none;
+  padding: clamp(8px, 1.3vh, 15px) 0;
+  border-bottom: 1px solid var(--d8-fio);
+}
+.db8-conta li::first-letter { text-transform: uppercase; }
+.db8-conta li:nth-child(2n) { border-left: 1px solid var(--d8-fio); padding-left: clamp(20px, 2.6vw, 40px); }
+.db8-conta li:nth-last-child(-n+2) { border-bottom: none; }
+
+@media (max-width: 900px) {
+  .db8 { --d8-alt: 40px; }
+  .db8-valores { grid-template-columns: 1fr 1fr; gap: 12px 0; }
+  .db8-valores li:nth-child(2n+1) { padding-left: 0; border-left: none; }
+  .db8-conta { grid-template-columns: 1fr; }
+  .db8-conta li:nth-child(2n) { border-left: none; padding-left: 0; }
+  .db8-conta li:nth-last-child(-n+2) { border-bottom: 1px solid var(--d8-fio); }
+  .db8-conta li:last-child { border-bottom: none; }
+  .db8 h2 br { display: none; }
+  .db8::before { width: 320px; height: 320px; top: -130px; right: -130px; }
+  .db8::after { width: 300px; height: 300px; bottom: -170px; left: -140px; }
+}
+
+/* ================================================================
+   DOBRA DO VAZAMENTO DE GAS  -  replica do mockup
+   Texto a esquerda, foto a direita com cartao sobreposto.
+   Os 5 riscos e os 5 itens de verificacao vem da rev02.
+   ================================================================ */
+.db9 {
+  --d9-alt: clamp(16px, 2.4vh, 52px);
+  --d9-ico: clamp(30px, 4.4vh, 40px);
+  --d9-navy: #0E2338;
+  --d9-azul: #1470E0;
+  --d9-cinza: #46586B;
+  --d9-fio: #DDE6F0;
+  position: relative;
+  overflow: hidden;
+  background: #F7FAFD;
+  padding: var(--d9-alt) var(--esp-1) clamp(70px, 13vh, 150px);
+}
+.db9::before {
+  content: ""; position: absolute; z-index: 0;
+  bottom: -240px; left: -200px; width: 500px; height: 500px;
+  border-radius: 52% 48% 46% 54% / 44% 52% 48% 56%;
+  background: #EDF3FC;
+}
+.db9-miolo {
+  position: relative; z-index: 1;
+  max-width: var(--larg-faixa); margin: 0 auto;
+  display: grid; grid-template-columns: 48fr 52fr; gap: clamp(28px, 3.4vw, 56px);
+  align-items: center;
+}
+.db9-texto > * { max-width: none; }
+
+.db9-olho {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 700; font-size: 13px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--d9-azul);
+  margin: 0 0 clamp(8px, 1.3vh, 16px);
+}
+.db9 h2 {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 900; font-size: clamp(26px, min(3vw, 4.4vh), 42px);
+  line-height: 1.06; letter-spacing: -0.02em;
+  color: var(--d9-navy); margin: 0 0 clamp(10px, 1.6vh, 20px);
+}
+.db9 h2 .marca-azul { color: var(--d9-azul); }
+.db9-lead { font-size: clamp(15px, 1.1vw, 17px); line-height: 1.5; color: var(--d9-navy); margin: 0 0 clamp(6px, 1vh, 12px); }
+
+.db9-riscos, .db9-checa {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-auto-flow: column;
+  column-gap: clamp(18px, 2.2vw, 36px);
+}
+.db9-riscos li, .db9-checa li {
+  display: grid; align-items: center; gap: 12px;
+  padding: clamp(6px, 1.05vh, 12px) 0;
+  font-size: clamp(14px, 1.05vw, 16px); color: var(--d9-navy);
+  border-bottom: 1px solid var(--d9-fio);
+}
+.db9-riscos li { grid-template-columns: var(--d9-ico) 1fr; }
+.db9-checa li { grid-template-columns: clamp(20px, 2.8vh, 26px) 1fr; }
+.db9-riscos li:last-child, .db9-checa li:last-child { border-bottom: none; }
+.d9-ico { width: var(--d9-ico); height: var(--d9-ico); border-radius: 50%; background: #EAF1FC; display: grid; place-items: center; }
+.d9-ico svg { width: calc(var(--d9-ico) * 0.56); height: calc(var(--d9-ico) * 0.56); fill: none; stroke: var(--d9-azul); stroke-width: 1.8; stroke-linecap: round; }
+.d9-check { width: 100%; height: auto; aspect-ratio: 1; fill: none; stroke: var(--d9-azul); stroke-width: 1.8; stroke-linecap: round; }
+
+.db9-callout {
+  display: grid; grid-template-columns: 44px 1fr; align-items: center; gap: 18px;
+  background: #EAF1FB; border-left: 5px solid var(--d9-azul); border-radius: 4px 12px 12px 4px;
+  padding: clamp(12px, 1.9vh, 20px) clamp(16px, 1.8vw, 26px);
+  margin: clamp(12px, 2vh, 24px) 0;
+}
+.db9-callout svg { width: 44px; height: 44px; fill: none; stroke: var(--d9-azul); stroke-width: 1.7; stroke-linejoin: round; }
+.db9-callout p { font-size: clamp(14px, 1.05vw, 16px); line-height: 1.5; color: var(--d9-navy); margin: 0; }
+
+.db9-sub {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 700; font-size: 13px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--d9-azul);
+  margin: 0 0 clamp(6px, 1vh, 12px);
+}
+
+/* foto com o cartao sobreposto */
+.db9-figura { position: relative; margin: 0; }
+.db9-figura img {
+  width: 100%; height: clamp(280px, 52vh, 520px); object-fit: cover;
+  border-radius: 20px; box-shadow: 0 24px 60px rgba(14, 35, 56, 0.16);
+}
+.db9-cartao {
+  position: absolute; left: clamp(14px, 3%, 30px); right: clamp(14px, 3%, 30px);
+  bottom: clamp(14px, 4%, 32px);
+  display: grid; grid-template-columns: 46px 1fr; align-items: center; gap: 16px;
+  background: #FFFFFF; border-radius: 14px;
+  padding: 14px 20px;
+  box-shadow: 0 12px 30px rgba(14, 35, 56, 0.14);
+}
+.db9-cartao svg { width: 46px; height: 46px; fill: none; stroke: var(--d9-azul); stroke-width: 1.7; stroke-linejoin: round; }
+.db9-cartao h3 { font-family: 'Archivo', Arial, sans-serif; font-weight: 700; font-size: clamp(15px, 1.2vw, 18px); color: var(--d9-navy); margin: 0 0 2px; }
+.db9-cartao p { font-size: clamp(13px, 1vw, 15px); color: var(--d9-cinza); margin: 0; max-width: none; }
+
+@media (max-width: 900px) {
+  .db9 { --d9-alt: 40px; --d9-ico: 38px; }
+  .db9-miolo { grid-template-columns: 1fr; gap: 28px; }
+  .db9-riscos, .db9-checa { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; }
+  .db9-riscos li, .db9-checa li { border-bottom: 1px solid var(--d9-fio); }
+  .db9-riscos li:last-child, .db9-checa li:last-child { border-bottom: none; }
+  .db9 h2 br { display: none; }
+  .db9-figura img { height: 300px; }
+}
+
+@media (max-width: 560px) {
+  .db9-callout { grid-template-columns: 1fr; gap: 10px; }
+  .db9-cartao { position: static; margin-top: 12px; }
+}
+
+/* ================================================================
+   DOBRA DAS MARCAS  -  modelo novo
+   As 8 marcas em linha, os 4 equipamentos em cartao com legenda.
+   ================================================================ */
+.db10 {
+  --d10-alt: clamp(16px, 2.4vh, 52px);
+  --d10-navy: #0E2338;
+  --d10-azul: #1470E0;
+  --d10-cinza: #46586B;
+  --d10-fio: #DDE6F0;
+  position: relative;
+  overflow: hidden;
+  background: #F4F7FA;
+  padding: var(--d10-alt) var(--esp-1) clamp(70px, 13vh, 150px);
+}
+.db10-miolo { position: relative; z-index: 1; max-width: var(--larg-faixa); margin: 0 auto; }
+.db10-miolo::before {
+  content: ""; position: absolute; z-index: 0;
+  top: -190px; right: -140px; width: 430px; height: 430px;
+  border-radius: 50%; background: #EDF3FC;
+}
+.db10-miolo > * { position: relative; z-index: 1; }
+
+.db10-olho {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 700; font-size: 13px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--d10-azul);
+  max-width: none; margin: 0 0 clamp(8px, 1.3vh, 16px);
+}
+.db10 h2 {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 900; font-size: clamp(26px, min(3vw, 4.4vh), 42px);
+  line-height: 1.1; letter-spacing: -0.02em;
+  color: var(--d10-navy); max-width: 22ch; margin: 0 0 clamp(12px, 2vh, 26px);
+}
+
+/* as oito marcas em linha, separadas por fio */
+.db10-marcas { list-style: none; display: flex; flex-wrap: wrap; margin: 0 0 clamp(8px, 1.3vh, 16px); padding: 0; }
+.db10-marcas li {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(16px, 1.5vw, 22px); line-height: 1.3;
+  color: var(--d10-navy); max-width: none;
+  padding: 4px clamp(14px, 1.6vw, 26px);
+  border-left: 1px solid var(--d10-fio);
+}
+.db10-marcas li:first-child { padding-left: 0; border-left: none; }
+
+.db10-apoio { font-size: clamp(15px, 1.1vw, 17px); color: var(--d10-cinza); max-width: none; margin: 0 0 clamp(14px, 2.4vh, 32px); }
+
+/* quatro equipamentos em cartao branco com legenda */
+.db10-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(16px, 1.8vw, 26px); }
+.d10-card {
+  background: #FFFFFF; border-radius: 16px; margin: 0;
+  box-shadow: 0 14px 36px rgba(14, 35, 56, 0.07);
+  padding: clamp(12px, 1.8vh, 22px);
+  display: flex; flex-direction: column;
+}
+.d10-card img {
+  width: 100%; height: clamp(110px, 20vh, 220px);
+  object-fit: contain; aspect-ratio: auto;
+}
+.d10-card figcaption {
+  border-top: 1px solid var(--d10-fio); border-bottom: none;
+  padding-top: clamp(8px, 1.2vh, 14px); margin-top: clamp(8px, 1.2vh, 14px);
+  font-size: clamp(13px, 1vw, 15px); color: var(--d10-cinza); max-width: none;
+}
+
+.db10-acao { margin-top: clamp(14px, 2.4vh, 32px); }
+.db10-btn {
+  display: inline-flex; align-items: center; gap: 14px;
+  background: #1FA855; color: #FFFFFF;
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(15px, 1.2vw, 18px); letter-spacing: 0.02em;
+  text-transform: uppercase; text-decoration: none;
+  padding: clamp(13px, 1.9vh, 19px) clamp(22px, 2.4vw, 34px);
+  border-radius: 10px;
+}
+.db10-btn:hover { background: #18904A; }
+.db10-btn .glifo { width: 28px; height: 28px; flex: none; background: #FFFFFF; border-radius: 50%; padding: 5px; fill: #1FA855; stroke: none; }
+
+@media (max-width: 900px) {
+  .db10 { --d10-alt: 40px; }
+  .db10-cards { grid-template-columns: 1fr 1fr; }
+  .db10 h2 { max-width: none; }
+  .db10-marcas li { font-size: 16px; padding: 4px 12px; }
+}
+
+@media (max-width: 560px) {
+  .db10-cards { grid-template-columns: 1fr; }
+  .db10-btn { width: 100%; justify-content: flex-start; }
+}
+
+/* ================================================================
+   DOBRA "UMA EMPRESA CONSTRUIDA NA CONFIANCA"  -  replica do mockup
+   Quatro valores em linha com fio, e a frase da indicacao em destaque.
+   Texto da rev02 do aquecedor, sem troca de palavra.
+   ================================================================ */
+.db11 {
+  --d11-alt: clamp(20px, 3vh, 60px);
+  --d11-navy: #101C3D;
+  --d11-azul: #1470E0;
+  --d11-cinza: #46586B;
+  --d11-fio: #DCE5F0;
+  position: relative;
+  overflow: hidden;
+  background: #F9FBFE;
+  padding: var(--d11-alt) var(--esp-1) clamp(70px, 13vh, 150px);
+}
+.db11::before {
+  content: ""; position: absolute; z-index: 0;
+  top: -200px; right: -190px; width: 560px; height: 560px;
+  border-radius: 46% 54% 52% 48% / 50% 44% 56% 50%;
+  background: #EAF1FB;
+}
+.db11::after {
+  content: ""; position: absolute; z-index: 0;
+  bottom: -250px; left: -210px; width: 520px; height: 520px;
+  border-radius: 52% 48% 46% 54% / 44% 52% 48% 56%;
+  background: #EEF4FD;
+}
+.db11-miolo { position: relative; z-index: 1; max-width: var(--larg-faixa); margin: 0 auto; }
+.db11-miolo > * { max-width: none; }
+
+.db11-olho {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 700; font-size: 13px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--d11-azul);
+  margin: 0 0 clamp(10px, 1.7vh, 22px);
+}
+.db11 h2 {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 900; font-size: clamp(28px, min(3.4vw, 5vh), 46px);
+  line-height: 1.08; letter-spacing: -0.02em;
+  color: var(--d11-navy); margin: 0 0 clamp(10px, 1.7vh, 22px);
+}
+.db11 h2 .marca-azul { color: var(--d11-azul); }
+.db11-lead { font-size: clamp(15px, 1.15vw, 18px); line-height: 1.5; color: var(--d11-cinza); margin: 0 0 clamp(16px, 3vh, 44px); }
+
+/* os quatro valores em linha, separados por fio vertical */
+.db11-valores {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid var(--d11-fio);
+  padding-bottom: clamp(16px, 3vh, 44px);
+}
+.db11-valores li {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(16px, 1.5vw, 22px); line-height: 1.25;
+  color: var(--d11-navy); max-width: none;
+  padding: 0 clamp(14px, 1.8vw, 30px);
+}
+.db11-valores li::first-letter { text-transform: uppercase; }
+.db11-valores li:first-child { padding-left: 0; }
+.db11-valores li + li { border-left: 1px solid var(--d11-fio); }
+
+/* a frase da indicacao, recuada como no mockup */
+.db11-indicacao { padding: clamp(20px, 4vh, 64px) 0 0 clamp(0px, 8vw, 120px); }
+.db11-frase {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 900;
+  font-size: clamp(22px, min(2.6vw, 4vh), 36px); line-height: 1.12;
+  letter-spacing: -0.02em; color: var(--d11-navy);
+  margin: 0 0 clamp(8px, 1.4vh, 16px);
+}
+.db11-frase .marca-azul { color: var(--d11-azul); }
+.db11-resto { font-size: clamp(15px, 1.15vw, 18px); line-height: 1.5; color: var(--d11-cinza); margin: 0; }
+.db11-resto::first-letter { text-transform: uppercase; }
+
+@media (max-width: 900px) {
+  .db11 { --d11-alt: 40px; }
+  .db11-valores { grid-template-columns: 1fr 1fr; gap: 14px 0; }
+  .db11-valores li:nth-child(2n+1) { padding-left: 0; border-left: none; }
+  .db11-indicacao { padding-left: 0; }
+  .db11 h2 br, .db11-frase br { display: none; }
+  .db11::before { width: 320px; height: 320px; top: -130px; right: -140px; }
+  .db11::after { width: 300px; height: 300px; bottom: -180px; left: -150px; }
+}
+
+@media (max-width: 560px) {
+  .db11-valores { grid-template-columns: 1fr; }
+  .db11-valores li { padding-left: 0; border-left: none; }
+}
+
+/* ================================================================
+   DOBRA "O PROBLEMA COMECA PEQUENO"  -  replica do mockup
+   Cinco sintomas em duas colunas com fio, faixa de alerta e os
+   cinco ganhos em linha. Texto da rev02, sem troca de palavra.
+   ================================================================ */
+.db12 {
+  --d12-alt: clamp(18px, 2.8vh, 56px);
+  --d12-navy: #101C3D;
+  --d12-azul: #1470E0;
+  --d12-cinza: #46586B;
+  --d12-fio: #DCE5F0;
+  position: relative;
+  overflow: hidden;
+  background: #F7FAFD;
+  padding: var(--d12-alt) var(--esp-1) clamp(70px, 13vh, 150px);
+}
+.db12::before {
+  content: ""; position: absolute; z-index: 0;
+  top: -170px; right: -190px; width: 520px; height: 520px;
+  border-radius: 46% 54% 52% 48% / 50% 44% 56% 50%;
+  background: #EAF1FB;
+}
+.db12::after {
+  content: ""; position: absolute; z-index: 0;
+  bottom: -250px; left: -210px; width: 500px; height: 500px;
+  border-radius: 52% 48% 46% 54% / 44% 52% 48% 56%;
+  background: #EEF4FD;
+}
+.db12-miolo { position: relative; z-index: 1; max-width: var(--larg-faixa); margin: 0 auto; }
+.db12-miolo > * { max-width: none; }
+
+.db12-olho {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 700; font-size: 13px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--d12-azul);
+  margin: 0 0 clamp(8px, 1.4vh, 18px);
+}
+.db12 h2 {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 900; font-size: clamp(26px, min(3.2vw, 4.6vh), 44px);
+  line-height: 1.08; letter-spacing: -0.02em;
+  color: var(--d12-navy); margin: 0 0 clamp(10px, 1.7vh, 22px);
+}
+.db12 h2 .marca-azul { color: var(--d12-azul); }
+.db12-lead { font-size: clamp(14px, 1.05vw, 16px); line-height: 1.5; color: var(--d12-cinza); margin: 0 0 clamp(6px, 1vh, 12px); }
+
+/* os cinco sintomas em duas colunas, com fio embaixo de cada um */
+.db12-sintomas {
+  list-style: none; margin: 0 0 clamp(14px, 2.4vh, 32px); padding: 0;
+  display: grid; grid-template-columns: 1fr 1fr;
+  column-gap: clamp(28px, 5vw, 90px);
+}
+.db12-sintomas li {
+  font-size: clamp(15px, 1.2vw, 18px); color: var(--d12-navy); max-width: none;
+  padding: clamp(8px, 1.3vh, 15px) 0;
+  border-bottom: 1px solid var(--d12-fio);
+}
+
+/* a faixa de alerta */
+.db12-callout {
+  background: #EAF1FB; border: 1px solid #D6E4F6; border-radius: 10px;
+  padding: clamp(12px, 2vh, 22px) clamp(16px, 2vw, 30px);
+  margin: 0 0 clamp(14px, 2.4vh, 32px);
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(14px, 1.15vw, 18px); line-height: 1.45;
+  color: var(--d12-navy); text-align: center;
+}
+
+/* os cinco ganhos em linha, separados por fio vertical */
+.db12-ajuda {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(5, 1fr);
+}
+.db12-ajuda li {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(14px, 1.3vw, 20px); line-height: 1.22;
+  color: var(--d12-navy); max-width: none;
+  padding: 0 clamp(10px, 1.4vw, 24px);
+}
+.db12-ajuda li:first-child { padding-left: 0; }
+.db12-ajuda li + li { border-left: 1px solid var(--d12-fio); }
+
+@media (max-width: 900px) {
+  .db12 { --d12-alt: 40px; }
+  .db12-sintomas { grid-template-columns: 1fr; }
+  .db12-ajuda { grid-template-columns: 1fr 1fr 1fr; gap: 14px 0; }
+  .db12-ajuda li:nth-child(3n+1) { padding-left: 0; border-left: none; }
+  .db12 h2 br { display: none; }
+  .db12-callout { text-align: left; }
+  .db12::before { width: 300px; height: 300px; top: -120px; right: -130px; }
+  .db12::after { width: 280px; height: 280px; bottom: -170px; left: -140px; }
+}
+
+@media (max-width: 560px) {
+  .db12-ajuda { grid-template-columns: 1fr 1fr; }
+  .db12-ajuda li:nth-child(3n+1) { padding-left: clamp(10px, 1.4vw, 24px); border-left: 1px solid var(--d12-fio); }
+  .db12-ajuda li:nth-child(2n+1) { padding-left: 0; border-left: none; }
+}
+
+/* ================================================================
+   DOBRA "ANTES DE CHAMAR QUALQUER TECNICO"  -  replica do mockup
+   Duas colunas separadas por fio, cada uma com seu rotulo e lista.
+   Texto da rev02 do aquecedor, sem troca de palavra nem de ordem.
+   ================================================================ */
+.db13 {
+  --d13-alt: clamp(18px, 2.8vh, 56px);
+  --d13-navy: #101C3D;
+  --d13-azul: #1470E0;
+  --d13-cinza: #46586B;
+  --d13-fio: #DCE5F0;
+  position: relative;
+  overflow: hidden;
+  background: #F7FAFD;
+  padding: var(--d13-alt) var(--esp-1) clamp(70px, 13vh, 150px);
+}
+.db13::before {
+  content: ""; position: absolute; z-index: 0;
+  top: -180px; right: -180px; width: 540px; height: 540px;
+  border-radius: 46% 54% 52% 48% / 50% 44% 56% 50%;
+  background: #EAF1FB;
+}
+.db13::after {
+  content: ""; position: absolute; z-index: 0;
+  bottom: -250px; left: -210px; width: 500px; height: 500px;
+  border-radius: 52% 48% 46% 54% / 44% 52% 48% 56%;
+  background: #EEF4FD;
+}
+.db13-miolo { position: relative; z-index: 1; max-width: var(--larg-faixa); margin: 0 auto; }
+.db13-miolo > * { max-width: none; }
+
+.db13-olho {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 700; font-size: 13px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--d13-azul);
+  margin: 0 0 clamp(8px, 1.4vh, 18px);
+}
+.db13 h2 {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 900; font-size: clamp(26px, min(3.4vw, 4.8vh), 46px);
+  line-height: 1.08; letter-spacing: -0.02em;
+  color: var(--d13-navy); margin: 0 0 clamp(8px, 1.3vh, 16px);
+}
+.db13-sub { font-size: clamp(15px, 1.15vw, 18px); line-height: 1.5; color: var(--d13-cinza); margin: 0 0 clamp(16px, 3vh, 44px); }
+
+/* duas colunas separadas por fio vertical */
+.db13-grade { display: grid; grid-template-columns: 1fr 1fr; }
+.d13-col { padding: 0 clamp(20px, 3vw, 52px); }
+.d13-col:first-child { padding-left: 0; }
+.d13-col:last-child { padding-right: 0; }
+.d13-col + .d13-col { border-left: 1px solid var(--d13-fio); }
+.d13-col h3 {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(15px, 1.25vw, 19px); line-height: 1.3;
+  color: var(--d13-navy); margin: 0 0 clamp(8px, 1.4vh, 18px);
+}
+.d13-lista { list-style: none; margin: 0; padding: 0; }
+.d13-lista li {
+  font-size: clamp(15px, 1.2vw, 18px); color: var(--d13-navy); max-width: none;
+  padding: clamp(8px, 1.4vh, 16px) 0;
+  border-bottom: 1px solid var(--d13-fio);
+}
+.d13-lista li:last-child { border-bottom: none; }
+
+.db13-rodape {
+  font-size: clamp(14px, 1.1vw, 17px); line-height: 1.5; color: var(--d13-cinza);
+  text-align: center; margin: clamp(16px, 3vh, 44px) 0 0;
+}
+
+@media (max-width: 900px) {
+  .db13 { --d13-alt: 40px; }
+  .db13-grade { grid-template-columns: 1fr; }
+  .d13-col { padding: 22px 0; }
+  .d13-col + .d13-col { border-left: none; border-top: 1px solid var(--d13-fio); }
+  .db13-rodape { text-align: left; }
+  .db13::before { width: 300px; height: 300px; top: -130px; right: -130px; }
+  .db13::after { width: 280px; height: 280px; bottom: -170px; left: -140px; }
+}
+
+/* ================================================================
+   DOBRA "SEU BANHO QUENTE"  -  replica do mockup
+   Os seis itens em grade de 3 por 2 com fios, e o fechamento com
+   botao. Texto da rev02 do aquecedor, sem troca de palavra.
+   ================================================================ */
+.db14 {
+  --d14-alt: clamp(18px, 2.8vh, 56px);
+  --d14-navy: #101C3D;
+  --d14-azul: #1470E0;
+  --d14-btn: #1FA855;
+  --d14-cinza: #46586B;
+  --d14-fio: #DCE5F0;
+  position: relative;
+  overflow: hidden;
+  background: #F7FAFD;
+  padding: var(--d14-alt) var(--esp-1) clamp(70px, 13vh, 150px);
+}
+.db14::before {
+  content: ""; position: absolute; z-index: 0;
+  top: -190px; right: -170px; width: 540px; height: 540px;
+  border-radius: 46% 54% 52% 48% / 50% 44% 56% 50%;
+  background: #EAF1FB;
+}
+.db14::after {
+  content: ""; position: absolute; z-index: 0;
+  bottom: -250px; left: -210px; width: 500px; height: 500px;
+  border-radius: 52% 48% 46% 54% / 44% 52% 48% 56%;
+  background: #EEF4FD;
+}
+.db14-miolo { position: relative; z-index: 1; max-width: var(--larg-faixa); margin: 0 auto; }
+.db14-miolo > * { max-width: none; }
+
+.db14-olho {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 700; font-size: 13px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--d14-azul);
+  margin: 0 0 clamp(8px, 1.3vh, 16px);
+}
+.db14 h2 {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 900; font-size: clamp(24px, min(2.9vw, 4.2vh), 40px);
+  line-height: 1.1; letter-spacing: -0.02em;
+  color: var(--d14-navy); margin: 0 0 clamp(10px, 1.6vh, 20px);
+}
+.db14 h2 .marca-azul { color: var(--d14-azul); }
+.db14-lead { font-size: clamp(14px, 1.1vw, 17px); color: var(--d14-cinza); margin: 0 0 clamp(10px, 1.7vh, 22px); }
+
+/* os seis itens em grade de 3 por 2, com fio vertical e horizontal */
+.db14-oferece {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid var(--d14-fio);
+}
+.db14-oferece li {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(16px, 1.4vw, 22px); line-height: 1.25;
+  color: var(--d14-navy); max-width: none;
+  padding: clamp(12px, 2.2vh, 26px) clamp(14px, 1.8vw, 30px);
+}
+.db14-oferece li::first-letter { text-transform: uppercase; }
+.db14-oferece li:nth-child(3n+1) { padding-left: 0; }
+.db14-oferece li:not(:nth-child(3n+1)) { border-left: 1px solid var(--d14-fio); }
+.db14-oferece li:nth-child(n+4) { border-top: 1px solid var(--d14-fio); }
+
+/* fechamento com a frase, a linha de apoio e o botao */
+.db14-fecho { padding-top: clamp(14px, 2.6vh, 36px); }
+.db14-frase {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 400;
+  font-size: clamp(19px, min(2vw, 3vh), 28px); line-height: 1.25;
+  color: var(--d14-navy); max-width: 34ch; margin: 0 0 clamp(8px, 1.3vh, 16px);
+}
+.db14-sub { font-size: clamp(14px, 1.1vw, 17px); color: var(--d14-cinza); margin: 0 0 clamp(12px, 2vh, 24px); }
+
+.db14-btn {
+  display: inline-flex; align-items: center; gap: 14px;
+  background: var(--d14-btn); color: #FFFFFF;
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(14px, 1.15vw, 17px); letter-spacing: 0.02em;
+  text-transform: uppercase; text-decoration: none;
+  padding: clamp(13px, 2vh, 20px) clamp(20px, 2.2vw, 32px);
+  border-radius: 10px;
+}
+.db14-btn:hover { background: #18904A; }
+.db14-btn .glifo { width: 28px; height: 28px; flex: none; background: #FFFFFF; border-radius: 50%; padding: 5px; fill: var(--d14-btn); stroke: none; }
+
+@media (max-width: 900px) {
+  .db14 { --d14-alt: 40px; }
+  .db14-oferece { grid-template-columns: 1fr 1fr; }
+  .db14-oferece li:nth-child(3n+1) { padding-left: clamp(14px, 1.8vw, 30px); }
+  .db14-oferece li:not(:nth-child(3n+1)) { border-left: none; }
+  .db14-oferece li:nth-child(2n) { border-left: 1px solid var(--d14-fio); }
+  .db14-oferece li:nth-child(2n+1) { padding-left: 0; }
+  .db14-oferece li:nth-child(n+3) { border-top: 1px solid var(--d14-fio); }
+  .db14 h2 br { display: none; }
+  .db14-frase { max-width: none; }
+  .db14::before { width: 300px; height: 300px; top: -130px; right: -130px; }
+  .db14::after { width: 280px; height: 280px; bottom: -170px; left: -140px; }
+}
+
+@media (max-width: 560px) {
+  .db14-oferece { grid-template-columns: 1fr; }
+  .db14-oferece li { padding-left: 0 !important; border-left: none !important; border-top: 1px solid var(--d14-fio); }
+  .db14-oferece li:first-child { border-top: none; }
+  .db14-btn { width: 100%; justify-content: flex-start; }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <!-- 1. agua nao aquece: termometro sobre ondas -->
+  <g id="i-agua"><path d="M20 7.5a2.6 2.6 0 0 1 2.6 2.6v9.4a5.2 5.2 0 1 1-5.2 0v-9.4A2.6 2.6 0 0 1 20 7.5Z"/><path d="M22.8 12.6h2.2M22.8 15.6h2.2"/><path d="M7 31c2.2-2.2 4.4-2.2 6.6 0s4.4 2.2 6.6 0 4.4-2.2 6.6 0 4.4 2.2 6.2 0"/><path d="M7 35.4c2.2-2.2 4.4-2.2 6.6 0s4.4 2.2 6.6 0 4.4-2.2 6.6 0 4.4 2.2 6.2 0"/></g>
+  <!-- 2. resistencia queimando: serpentina com calor -->
+  <g id="i-resist"><path d="M6 30h28"/><path d="M9 30v-6a3.2 3.2 0 0 1 6.4 0v6m2.2 0v-6a3.2 3.2 0 0 1 6.4 0v6m2.2 0v-6a3.2 3.2 0 0 1 6.4 0v6"/><path d="M13 15q1.8-2 0-4M20 15q1.8-2 0-4M27 15q1.8-2 0-4"/></g>
+  <!-- 3. vazamentos no boiler: gota com gota menor -->
+  <g id="i-gota2"><path d="M20 6.5c0 0 9.4 10 9.4 15.6A9.4 9.4 0 0 1 10.6 22C10.6 16.5 20 6.5 20 6.5Z"/><path d="M22.6 21.4c0 0 3.1 3.3 3.1 5.2a3.1 3.1 0 0 1-6.2 0c0-1.9 3.1-5.2 3.1-5.2Z"/></g>
+  <!-- 4. perda de eficiencia: barras decrescentes com seta -->
+  <g id="i-perda"><path d="M8 7v25h25"/><rect x="12.5" y="17" width="5.5" height="15" rx="1"/><rect x="21" y="22" width="5.5" height="10" rx="1"/><rect x="29.5" y="26.5" width="5.5" height="5.5" rx="1"/><path d="M13.5 11.5 30 22.5m0 0h-5m5 0v-5"/></g>
+  <!-- 5. superaquecimento: termometro com seta -->
+  <g id="i-super"><path d="M16.5 7.5a2.6 2.6 0 0 1 2.6 2.6v9.4a5.2 5.2 0 1 1-5.2 0v-9.4a2.6 2.6 0 0 1 2.6-2.6Z"/><path d="M19.3 12.6h2.2M19.3 15.6h2.2"/><path d="M29.5 30V13m0 0-3.4 3.6M29.5 13l3.4 3.6"/></g>
+  <!-- 6. sujeira nas placas: placa solar com brilho -->
+  <g id="i-placa"><rect x="6.5" y="12" width="24" height="17" rx="1.6"/><path d="M6.5 17.7h24M6.5 23.4h24M14.5 12v17M22.5 12v17"/><path d="m33 7.5 1.2 2.9 2.9 1.2-2.9 1.2L33 15.7l-1.2-2.9-2.9-1.2 2.9-1.2z"/></g>
+  <!-- 7. acumulo de residuos: particulas caindo na calha -->
+  <g id="i-residuo"><path d="M9 25.5c2.6 5.2 18.4 5.2 21 0"/><path d="M7 30.5c3.4 3.4 22.6 3.4 26 0"/><circle cx="14.5" cy="15.5" r="1.4"/><circle cx="20.5" cy="11.5" r="1.4"/><circle cx="26" cy="16" r="1.4"/><circle cx="17.5" cy="20.5" r="1.1"/><circle cx="23.5" cy="21" r="1.1"/></g>
+  <!-- 8. aumento do uso eletrico: casa com tomada -->
+  <g id="i-casa"><path d="M7 19 20 8l13 11v12.5a1.6 1.6 0 0 1-1.6 1.6H8.6A1.6 1.6 0 0 1 7 31.5Z"/><path d="M17.4 19.5v3M22.6 19.5v3"/><path d="M15.4 22.5h9.2v2.6a4.6 4.6 0 0 1-9.2 0Z"/><path d="M20 29.7v3"/></g>
+  <!-- alerta do bloco "E o pior" -->
+  <g id="i-alerta"><path d="M20 7.5 34.5 32h-29Z" stroke-linejoin="round"/><path d="M20 16.5v7M20 27.4h.02"/></g>
+
+  <!-- limpeza periodica: rodo sobre a placa, com brilho -->
+  <g id="i-limpeza"><path d="M11 8h18v6H11z"/><path d="M14 14v5M20 14v5M26 14v5"/><path d="M7 25c4.5 3.5 21.5 3.5 26 0"/><path d="m32 27.5.9 2.2 2.2.9-2.2.9-.9 2.2-.9-2.2-2.2-.9 2.2-.9z"/></g>
+  <!-- revisao tecnica: prancheta com check -->
+  <g id="i-revisao"><path d="M10 9h20a1.6 1.6 0 0 1 1.6 1.6v21A1.6 1.6 0 0 1 30 33.2H10a1.6 1.6 0 0 1-1.6-1.6v-21A1.6 1.6 0 0 1 10 9Z"/><path d="M15.5 6.5h9v4.4h-9z"/><path d="m14 21.5 3.6 3.6 8.4-8.6"/></g>
+  <!-- analise dos componentes: lupa sobre engrenagem -->
+  <g id="i-analise"><circle cx="18" cy="18" r="9.5"/><path d="m25 25 8 8"/><path d="M18 14.2v-2.6M18 24.4v-2.6M21.7 15.4l1.8-1.8M14.5 22.6l1.8-1.8M21.8 18h2.6M11.6 18h2.6M21.7 20.6l1.8 1.8M14.5 13.4l1.8 1.8"/><circle cx="18" cy="18" r="2.6"/></g>
+  <!-- verificacao do boiler: reservatorio cilindrico com manometro -->
+  <g id="i-boiler"><rect x="8" y="10" width="19" height="21" rx="9.5"/><path d="M8 15.5h19M8 25.5h19"/><path d="M27 20.5h5"/><circle cx="32.5" cy="20.5" r="1.6"/></g>
+  <!-- testes de funcionamento: manometro com ponteiro -->
+  <g id="i-teste"><path d="M7.5 27a13 13 0 1 1 25 0"/><path d="m20 27 6.5-8"/><circle cx="20" cy="27" r="1.8"/><path d="M20 11v2.4M9.6 16.2l2 1.2M30.4 16.2l-2 1.2"/></g>
+  <!-- conforto: chuveiro com gotas -->
+  <g id="i-conforto"><path d="M20 6v5"/><path d="M11.5 15.5a8.5 8.5 0 0 1 17 0Z"/><path d="M14.5 21v2M20 22.5v3M25.5 21v2M17 26v2M23 26v2"/></g>
+  <!-- sustentabilidade: folha -->
+  <g id="i-folha"><path d="M31 9C18 9 10 14.5 10 24a9.5 9.5 0 0 0 3 7c0-9 6-14.5 15-16-7 3.5-11 8.5-12.5 17 9 1.5 15.5-4 15.5-23Z"/><path d="M8.5 32.5c2-5 5-8.5 8.5-11"/></g>
+  <!-- longa vida util: relogio -->
+  <g id="i-relogio"><circle cx="20" cy="21" r="12.5"/><path d="M20 13.5V21l5 3"/><path d="M15 6.5h10"/></g>
+
+  <!-- testes de funcionamento: linha de pulso -->
+  <g id="i-pulso"><circle cx="20" cy="20" r="13.5"/><path d="M10.5 20h4l2.5-5.5 4.5 11 2.5-5.5h5.5"/></g>
+  <!-- checagem de vazamentos: torneira com gota -->
+  <g id="i-torneira"><path d="M8 14h9v7H8z"/><path d="M17 17.5h7a3.5 3.5 0 0 1 3.5 3.5v3"/><path d="M12.5 21v4.5"/><path d="M27.5 27.5c0 0 3 3.2 3 5a3 3 0 0 1-6 0c0-1.8 3-5 3-5Z"/></g>
+  <!-- selo de 10 anos: escudo com estrela -->
+  <g id="i-escudo-estrela"><path d="M20 4.5 7.5 9.2v9.6c0 6.8 4.9 12.1 12.5 14.4 7.6-2.3 12.5-7.6 12.5-14.4V9.2Z"/><path d="m20 12.5 2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.6-4.8 2.6.9-5.4-3.9-3.8 5.4-.8z"/></g>
+
+  <!-- check redondo dos sinais -->
+  <g id="i-check"><circle cx="20" cy="20" r="13"/><path d="m13.8 20.3 4.2 4.2 8.2-8.8"/></g>
+  <!-- grupo temperatura e consumo: termometro com raios -->
+  <g id="i-temp"><path d="M17 8.5a2.7 2.7 0 0 1 5.4 0v10.9a5.6 5.6 0 1 1-5.4 0Z"/><path d="M19.7 14.5v6.8"/><path d="M27 9.5h4M27 14h3M28.5 5.5l2.5-2.2"/></g>
+  <!-- grupo componentes: boiler horizontal com tubo -->
+  <g id="i-tanque"><rect x="6" y="12" width="24" height="13" rx="6.5"/><path d="M14 12v13M22 12v13"/><path d="M30 18.5h4v7"/><path d="M11 25v5M25 25v5"/></g>
+  <!-- equipe: duas pessoas com selo de check -->
+  <g id="i-equipe"><circle cx="15" cy="13" r="4.4"/><path d="M7 29c0-4.4 3.6-7.6 8-7.6s8 3.2 8 7.6"/><circle cx="27" cy="15" r="3.6"/><path d="M23.5 22.4A7.4 7.4 0 0 1 34 29"/><circle cx="28.5" cy="27.5" r="5.5" fill="#FFFFFF"/><path d="m26 27.6 1.9 1.9 3.6-4"/></g>
+  <!-- cadeado da linha de seguranca -->
+  <g id="i-cadeado"><rect x="10" y="18" width="20" height="15" rx="3"/><path d="M14.5 18v-4a5.5 5.5 0 0 1 11 0v4"/><path d="M20 24v3.5"/></g>
+  <symbol id="zap" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></symbol>
+
+  <!-- aquecedor desliga sozinho: botao de energia -->
+  <g id="i-desliga"><circle cx="20" cy="20" r="13"/><path d="M20 10.5v9"/><path d="M26.4 14.6a8.4 8.4 0 1 1-12.8 0"/></g>
+  <!-- erro no painel: visor com exclamacao -->
+  <g id="i-painel"><rect x="7" y="10" width="26" height="19" rx="2.6"/><path d="M20 15v6M20 24.6h.02"/><path d="M12 33h16"/></g>
+  <!-- cheiro de gas: chama com ondas -->
+  <g id="i-gas"><path d="M20 6.5c2.8 3.6 4.4 6.2 4.4 8.4a4.4 4.4 0 0 1-8.8 0c0-1.1.4-2.2 1.1-3.3"/><path d="M20 33.5a7.6 7.6 0 0 0 7.6-7.6c0-2.6-1.4-5.4-4-8.6"/><path d="M20 33.5a7.6 7.6 0 0 1-7.6-7.6c0-1.7.6-3.6 1.8-5.6"/><path d="M31 9.5q2-1.6 0-3.2M35 13q2-1.6 0-3.2"/></g>
+  <!-- agua oscilando: termometro com setas nos dois sentidos -->
+  <g id="i-oscila"><path d="M17 7.5a2.6 2.6 0 0 1 5.2 0v10.4a5.6 5.6 0 1 1-5.2 0Z"/><path d="M19.6 13.5v6.4"/><path d="M30 12v14m0-14-2.8 3m2.8-3 2.8 3M30 26l-2.8-3M30 26l2.8-3"/></g>
+  <!-- banho interrompido: chuveiro com corte -->
+  <g id="i-chuveiro"><path d="M20 5.5v5"/><path d="M11.5 15a8.5 8.5 0 0 1 17 0Z"/><path d="M15 20.5v2M20 22v3M25 20.5v2"/><path d="M8 33 32 9"/></g>
+  <!-- aquecedor a gas de parede: para o grupo de funcionamento -->
+  <g id="i-aquecedor"><rect x="9" y="7" width="22" height="21" rx="2.6"/><path d="M9 21h22"/><path d="M14 12h6"/><circle cx="26" cy="12" r="1.6"/><path d="M14 28v4M26 28v4"/></g>
+
+  <!-- monoxido de carbono: circulo com CO -->
+  <g id="i-co"><circle cx="20" cy="20" r="13"/><path d="M18.2 16.6a3.2 3.2 0 0 0-3.2 3.4 3.2 3.2 0 0 0 3.2 3.4"/><circle cx="24.6" cy="20" r="3.4"/></g>
+  <!-- danos ao equipamento: engrenagem -->
+  <g id="i-engrenagem"><circle cx="20" cy="20" r="4.6"/><path d="M20 6.5v3.8M20 29.7v3.8M33.5 20h-3.8M10.3 20H6.5M29.5 10.5l-2.7 2.7M13.2 26.8l-2.7 2.7M29.5 29.5l-2.7-2.7M13.2 13.2l-2.7-2.7"/></g>
+  <!-- falhas na exaustao: ventilador -->
+  <g id="i-exaustao"><circle cx="20" cy="20" r="13"/><circle cx="20" cy="20" r="2.4"/><path d="M20 17.6c0-3.4-1.4-5.6-4-5.6-2.2 0-3.4 1.8-2.6 3.6.8 1.8 3.2 2.6 6.6 2z"/><path d="M22.1 21.2c2.9-1.7 4-4 2.7-6.2-1.1-1.9-3.3-2-4.6-.3-1.2 1.6-.9 4 1.9 6.5z"/><path d="M17.9 21.2c-2.9 1.7-4 4-2.7 6.2 1.1 1.9 3.3 2 4.6.3 1.2-1.6.9-4-1.9-6.5z"/><path d="M22.1 21.2c.6 3.3 2.4 5.2 4.9 4.7 2.2-.5 2.9-2.5 1.6-4.1-1.2-1.5-3.6-1.8-6.5-.6z"/></g>
+  <!-- selos do fechamento -->
+  <g id="i-escudo"><path d="M20 5 8.5 9.3v8.9c0 6.3 4.5 11.2 11.5 13.3 7-2.1 11.5-7 11.5-13.3V9.3Z"/><path d="m14.8 18.6 3.9 3.9 6.7-7.3"/></g>
+  <g id="i-gota"><path d="M20 6.5c0 0 9.4 10 9.4 15.6A9.4 9.4 0 0 1 10.6 22C10.6 16.5 20 6.5 20 6.5Z"/></g>
+  <g id="i-cifrao"><circle cx="20" cy="20" r="13.5"/><path d="M20 11.5v17"/><path d="M24.2 15.8c0-1.9-1.9-3-4.2-3s-4.2 1.1-4.2 3 1.9 2.7 4.2 3.4 4.2 1.4 4.2 3.4-1.9 3-4.2 3-4.2-1.1-4.2-3"/></g>
+</defs></svg>
+
+<header>
+  <div class="cabecalho">
+    <a class="cabecalho-logo" href="#" aria-label="Flex Clean, ir para o topo da página"><img src="../assets/aquecedor-gas/logo_flex_clean.png" alt="Flex Clean" width="140" height="47"></a>
+    <nav>
+      <a href="#problemas">Problemas</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="btn-zap" href="https://wa.me/5548992171489?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20manuten%C3%A7%C3%A3o%20de%20aquecedor%20a%20g%C3%A1s%20e%20quero%20um%20or%C3%A7amento.">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+      SOLICITAR ATENDIMENTO AGORA
+    </a>
+  </div>
+</header>
+
+<!-- HERO — PRIMEIRA DOBRA -->
+<section class="hero-mock">
+  <div class="hm-miolo">
+  <div class="hm-texto">
+    <p class="hm-olho">MANUTENÇÃO DE AQUECEDOR A GÁS • FLORIANÓPOLIS</p>
+    <h1>Seu Aquecedor Não Está <span class="marca-azul">Esquentando a Água?</span></h1>
+    <p class="hm-chamada">Resolva Hoje com Atendimento Especializado em Florianópolis</p>
+    <p class="hm-apoio">Manutenção, revisão preventiva e conserto de aquecedores a gás com técnicos especializados, suporte rápido e garantia real.</p>
+    <ul class="hm-provas">
+        <li><svg class="hm-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>Atendimento rápido via WhatsApp</span></li>
+        <li><svg class="hm-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>Manutenção de todas as marcas</span></li>
+        <li><svg class="hm-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>Empresa autorizada das principais fabricantes</span></li>
+        <li><svg class="hm-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>Técnicos treinados e especializados</span></li>
+        <li><svg class="hm-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>Garantia no serviço realizado</span></li>
+    </ul>
+    <a class="hm-btn" href="https://wa.me/5548992171489?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20manuten%C3%A7%C3%A3o%20de%20aquecedor%20a%20g%C3%A1s%20e%20quero%20um%20or%C3%A7amento.">
+      <svg class="glifo" viewBox="0 0 24 24" aria-hidden="true"><use href="#zap"/></svg>
+      <span class="hm-btn-txt">SOLICITAR ATENDIMENTO AGORA</span>
+    </a>
+  </div>
+  <div class="hm-figura">
+    <img src="../assets/aquecedor-gas/hero-tecnico-aquecedor.jpg" alt="Técnico da Flex Clean fazendo manutenção em um aquecedor a gás de parede" width="1600" height="1200" fetchpriority="high">
+  </div>
+  <span class="hm-pontos" aria-hidden="true"></span>
+  </div>
+</section>
+
+<!-- BLOCO DE IDENTIFICAÇÃO (DOR) -->
+<section class="db2" id="problemas">
+  <div class="db2-miolo">
+    <p class="db2-olho">PROBLEMAS MAIS COMUNS NO AQUECEDOR A GÁS</p>
+    <h2>Ninguém merece banho frio ou risco com vazamento de gás.</h2>
+    <p class="db2-apoio">Quando o aquecedor apresenta problemas, normalmente tudo vira urgência.<br>O cliente começa a enfrentar situações como:</p>
+
+    <div class="db2-cartao">
+      <ul class="db2-itens">
+        <li><span class="d2-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-agua"/></svg></span><span>água não esquenta</span></li>
+        <li><span class="d2-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-desliga"/></svg></span><span>aquecedor desliga sozinho</span></li>
+        <li><span class="d2-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-painel"/></svg></span><span>erro no painel</span></li>
+        <li><span class="d2-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-gas"/></svg></span><span>cheiro de gás</span></li>
+        <li><span class="d2-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-oscila"/></svg></span><span>água oscilando entre quente e fria</span></li>
+        <li><span class="d2-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-gota2"/></svg></span><span>equipamento pingando</span></li>
+        <li><span class="d2-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-chuveiro"/></svg></span><span>banho interrompido no meio do uso</span></li>
+      </ul>
+    </div>
+
+    <div class="db2-alerta">
+      <div>
+        <p class="db2-pior">E o pior:</p>
+        <p class="db2-pior-txt">Muitas pessoas acabam contratando profissionais sem preparo, sem garantia e sem suporte.</p>
+      </div>
+    </div>
+
+    <p class="db2-fecho"><span>Quando se trata de gás e água quente, isso pode gerar riscos sérios. A Flex Clean resolve isso com atendimento profissional e segurança.</span></p>
+  </div>
+</section>
+
+<!-- O CONCEITO -->
+<section class="db8">
+  <div class="db8-miolo">
+    <p class="db8-olho">MAIS DO QUE MANUTENÇÃO</p>
+    <h2>Mais do que um<br>simples conserto<span class="marca-azul">.</span></h2>
+    <p class="db8-apoio">Segurança e tranquilidade para sua família.</p>
+
+    <p class="db8-lead">Desde 2015, a Flex Clean atende Florianópolis com foco em:</p>
+    <ul class="db8-valores">
+      <li>segurança</li>
+      <li>transparência</li>
+      <li>qualidade técnica</li>
+      <li>suporte pós-venda</li>
+    </ul>
+
+    <div class="db8-corpo">
+      <p class="db8-p">Nossa equipe realiza diagnósticos completos para identificar a verdadeira causa do problema e corrigir da forma correta.</p>
+      <p class="db8-p">Aqui você não depende de “um técnico informal”.</p>
+      <p class="db8-p db8-rot">Você conta com:</p>
+      <ul class="db8-conta">
+        <li>empresa estruturada</li>
+        <li>atendimento organizado</li>
+        <li>garantia</li>
+        <li>suporte técnico</li>
+        <li>peças e componentes adequados</li>
+        <li>acompanhamento do serviço</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PRINCIPAIS PROBLEMAS QUE RESOLVEMOS -->
+<section class="db4">
+  <div class="db4-miolo">
+    <p class="db4-olho">CHECK RÁPIDO DO SEU AQUECEDOR</p>
+    <h2>Seu aquecedor apresenta algum destes sintomas?</h2>
+    <p class="db4-apoio">Veja se você reconhece algum destes sintomas no funcionamento<br>do seu aquecedor a gás.</p>
+
+    <div class="db4-cartao">
+      <div class="d4-grupo">
+        <div class="d4-grupo-topo">
+          <span class="d4-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-temp"/></svg></span>
+          <h3>TEMPERATURA E CONSUMO</h3>
+        </div>
+        <ul class="d4-lista">
+          <li><svg class="d4-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>Não esquenta a água</span></li>
+          <li><svg class="d4-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>Oscila temperatura</span></li>
+          <li><svg class="d4-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>Demora para aquecer</span></li>
+          <li><svg class="d4-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>Consome muito gás</span></li>
+        </ul>
+      </div>
+      <div class="d4-grupo">
+        <div class="d4-grupo-topo">
+          <span class="d4-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-aquecedor"/></svg></span>
+          <h3>FUNCIONAMENTO E SEGURANÇA</h3>
+        </div>
+        <ul class="d4-lista">
+          <li><svg class="d4-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>Não liga</span></li>
+          <li><svg class="d4-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>Desliga durante o banho</span></li>
+          <li><svg class="d4-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>Apresenta código de erro</span></li>
+          <li><svg class="d4-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>Faz barulho estranho</span></li>
+          <li><svg class="d4-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>Tem cheiro de gás</span></li>
+          <li><svg class="d4-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>Está pingando água</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="db4-fecho">
+      <div class="db4-fecho-txt">
+        <span class="d4-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-equipe"/></svg></span>
+        <div>
+          <h3>Identificou um ou mais desses sintomas?</h3>
+          <p>Nossa equipe está preparada para diagnosticar e resolver o problema rapidamente.</p>
+        </div>
+      </div>
+      <a class="db4-btn" href="https://wa.me/5548992171489?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20manuten%C3%A7%C3%A3o%20de%20aquecedor%20a%20g%C3%A1s%20e%20quero%20um%20or%C3%A7amento.">
+        <svg class="glifo" viewBox="0 0 24 24" aria-hidden="true"><use href="#zap"/></svg>
+        <span>Solicitar Visita Técnica</span>
+      </a>
+      <p class="db4-seguro"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-cadeado"/></svg>Atendimento rápido e seguro pelo WhatsApp.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="db5" id="servicos">
+  <div class="db5-miolo">
+    <p class="db5-olho">NOSSOS PRINCIPAIS SERVIÇOS</p>
+    <h2>Soluções completas para aquecedores a gás</h2>
+    <p class="db5-apoio">Manutenção, revisão preventiva e limpeza técnica,<br>com diagnóstico no local e garantia no serviço.</p>
+
+    <div class="db5-grade">
+      <div class="d5-col">
+        <h3>Manutenção Corretiva</h3>
+        <p class="d5-desc">Diagnóstico e reparo técnico no local ou em laboratório especializado.</p>
+        <p class="d5-rot">Inclui:</p>
+        <p class="d5-itens">análise técnica <span class="d5-sep">•</span> identificação de falhas <span class="d5-sep">•</span> testes de funcionamento <span class="d5-sep">•</span> substituição de componentes <span class="d5-sep">•</span> regulagens</p>
+        
+      </div>
+      <div class="d5-col">
+        <h3>Revisão Preventiva</h3>
+        <p class="d5-desc">A manutenção preventiva ajuda a evitar falhas inesperadas e aumenta a segurança do equipamento.</p>
+        <p class="d5-rot">Realizamos:</p>
+        <p class="d5-itens">limpeza interna <span class="d5-sep">•</span> limpeza de queimadores <span class="d5-sep">•</span> testes de vazamento <span class="d5-sep">•</span> revisão de componentes <span class="d5-sep">•</span> análise da exaustão <span class="d5-sep">•</span> verificação da pressão do gás <span class="d5-sep">•</span> testes hidráulicos</p>
+        <p class="d5-fecho">A revisão preventiva é recomendada anualmente pelos fabricantes.</p>
+      </div>
+      <div class="d5-col">
+        <h3>Limpeza Técnica Especializada</h3>
+        <p class="d5-desc">Remoção de sujeiras, fuligem e resíduos que prejudicam o funcionamento do aquecedor.</p>
+        <p class="d5-rot">Isso melhora:</p>
+        <p class="d5-itens">desempenho <span class="d5-sep">•</span> aquecimento <span class="d5-sep">•</span> segurança <span class="d5-sep">•</span> durabilidade</p>
+        
+      </div>
+    </div>
+
+    <p class="db5-rodape">Equipe técnica especializada, atendimento no local e garantia de qualidade em cada serviço.</p>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS FLEX CLEAN -->
+<section class="db6" id="diferenciais">
+  <div class="db6-miolo">
+    <p class="db6-olho">Por que clientes escolhem a Flex Clean?</p>
+    <h2>Confiança e experiência<br>que <span class="marca-azul">fazem a diferença.</span></h2>
+    <p class="db6-apoio">Atuamos com responsabilidade, técnica e compromisso em<br>cada atendimento que realizamos.</p>
+
+    <ul class="db6-itens">
+        <li><span class="d6-num">01</span><div class="d6-txt"><h3>Empresa Autorizada</h3><p>Trabalhamos com diversas marcas e seguimos padrões dos fabricantes.</p></div></li>
+        <li><span class="d6-num">02</span><div class="d6-txt"><h3>Atendimento Organizado</h3><p>Você acompanha o atendimento e recebe informações da equipe em tempo real.</p></div></li>
+        <li><span class="d6-num">03</span><div class="d6-txt"><h3>Técnicos Especializados</h3><p>Equipe treinada para manutenção de aquecedores residenciais.</p></div></li>
+        <li><span class="d6-num">04</span><div class="d6-txt"><h3>Garantia Real</h3><p>Garantia sobre serviços e peças aplicadas.</p></div></li>
+        <li><span class="d6-num">05</span><div class="d6-txt"><h3>Segurança em Primeiro Lugar</h3><p>Seguimos processos técnicos e verificações rigorosas.</p></div></li>
+        <li><span class="d6-num">06</span><div class="d6-txt"><h3>Pós-venda e Suporte</h3><p>Atendimento rápido caso o cliente precise de suporte após o serviço.</p></div></li>
+    </ul>
+
+    <div class="db6-fecho">
+      <a class="db6-btn" href="https://wa.me/5548992171489?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20manuten%C3%A7%C3%A3o%20de%20aquecedor%20a%20g%C3%A1s%20e%20quero%20um%20or%C3%A7amento.">
+        <svg class="glifo" viewBox="0 0 24 24" aria-hidden="true"><use href="#zap"/></svg>
+        <span>Solicitar Atendimento no WhatsApp</span>
+      </a>
+      <p class="db6-seguro"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-escudo"/></svg>Atendimento rápido, seguro e direto pelo WhatsApp.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SEGURANÇA -->
+<section class="db9">
+  <div class="db9-miolo">
+    <div class="db9-texto">
+      <p class="db9-olho">SEGURANÇA DO SISTEMA</p>
+      <h2>Vazamento de gás<br><span class="marca-azul">não é algo<br>para ignorar.</span></h2>
+
+      <p class="db9-lead">Problemas em aquecedores podem gerar:</p>
+      <ul class="db9-riscos">
+          <li><span class="d9-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-gota"/></svg></span><span>risco de vazamento</span></li>
+          <li><span class="d9-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-exaustao"/></svg></span><span>falhas na exaustão</span></li>
+          <li><span class="d9-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-co"/></svg></span><span>monóxido de carbono</span></li>
+          <li><span class="d9-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-super"/></svg></span><span>superaquecimento</span></li>
+          <li><span class="d9-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-engrenagem"/></svg></span><span>danos ao equipamento</span></li>
+      </ul>
+
+      <div class="db9-callout">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-escudo"/></svg>
+        <p>Por isso, a manutenção preventiva é fundamental para garantir a segurança da residência.</p>
+      </div>
+
+      <p class="db9-sub">Na Flex Clean realizamos:</p>
+      <ul class="db9-checa">
+          <li><svg class="d9-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>testes de estanqueidade</span></li>
+          <li><svg class="d9-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>avaliação de exaustão</span></li>
+          <li><svg class="d9-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>verificação de flexíveis</span></li>
+          <li><svg class="d9-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>análise técnica completa</span></li>
+          <li><svg class="d9-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>revisão geral do sistema</span></li>
+      </ul>
+    </div>
+
+    <figure class="db9-figura">
+      <img class="foto-4x3" src="../assets/aquecedor-gas/hero-tecnico-aquecedor-real.jpg" alt="Técnico da Flex Clean em manutenção de aquecedor a gás em residência de Florianópolis" width="1600" height="1200" loading="lazy">
+      <div class="db9-cartao">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-escudo"/></svg>
+        <div>
+          <h3>Avaliação técnica completa</h3>
+          <p>Segurança antes de qualquer reparo.</p>
+        </div>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- MARCAS ATENDIDAS -->
+<section class="db10">
+  <div class="db10-miolo">
+    <p class="db10-olho">MARCAS ATENDIDAS</p>
+    <h2>Trabalhamos com praticamente todas as marcas</h2>
+
+    <ul class="db10-marcas">
+        <li>Rinnai</li>
+        <li>Komeco</li>
+        <li>Rheem</li>
+        <li>Bosch</li>
+        <li>Lorenzetti</li>
+        <li>Orbis</li>
+        <li>Inova</li>
+        <li>Heliotek</li>
+    </ul>
+    <p class="db10-apoio">E diversos outros modelos do mercado.</p>
+
+    <div class="db10-cards">
+      <figure class="d10-card"><img src="../assets/aquecedor-gas/aquecedor-digital-komeco.jpg" alt="Aquecedor de água a gás digital Komeco" width="1000" height="1000" loading="lazy"><figcaption>Aquecedor Digital Komeco</figcaption></figure>
+      <figure class="d10-card"><img src="../assets/aquecedor-gas/aquecedor-prime-komeco.jpg" alt="Aquecedor de água a gás Prime Komeco" width="1000" height="1000" loading="lazy"><figcaption>Aquecedor Prime Komeco</figcaption></figure>
+      <figure class="d10-card"><img src="../assets/aquecedor-gas/aquecedor-decor-komeco.jpg" alt="Aquecedor de água a gás Decor Komeco" width="1000" height="1000" loading="lazy"><figcaption>Aquecedor Decor Komeco</figcaption></figure>
+      <figure class="d10-card"><img src="../assets/aquecedor-gas/aquecedor-passagem-mecanico.png" alt="Aquecedor de passagem mecânico" width="1100" height="1100" loading="lazy"><figcaption>Aquecedor de Passagem Mecânico</figcaption></figure>
+    </div>
+
+    <div class="db10-acao">
+      <a class="db10-btn" href="https://wa.me/5548992171489?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20manuten%C3%A7%C3%A3o%20de%20aquecedor%20a%20g%C3%A1s%20e%20quero%20um%20or%C3%A7amento.">
+        <svg class="glifo" viewBox="0 0 24 24" aria-hidden="true"><use href="#zap"/></svg>
+        <span>Chamar Técnico Especializado</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PROVA SOCIAL -->
+<section class="db11">
+  <div class="db11-miolo">
+    <p class="db11-olho">CONFIANÇA CONSTRUÍDA AO LONGO DOS ANOS</p>
+    <h2>Uma empresa construída<br><span class="marca-azul">na confiança.</span></h2>
+    <p class="db11-lead">Ao longo dos anos, a Flex Clean se tornou referência em Florianópolis por:</p>
+
+    <ul class="db11-valores">
+      <li>atendimento profissional</li>
+      <li>suporte técnico</li>
+      <li>transparência</li>
+      <li>qualidade nos serviços</li>
+    </ul>
+
+    <div class="db11-indicacao">
+      <p class="db11-frase">Grande parte dos novos clientes<br><span class="marca-azul">chegam por indicação</span></p>
+      <p class="db11-resto">de outros clientes satisfeitos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM É -->
+<section class="db7">
+  <div class="db7-miolo">
+    <p class="db7-olho">PARA QUEM É A FLEX CLEAN</p>
+    <h2>A Flex Clean é ideal para quem:</h2>
+    <ul class="db7-itens">
+        <li>Quer resolver o problema rápido</li>
+        <li>Busca uma empresa confiável</li>
+        <li>Não quer correr riscos com gás</li>
+        <li>Valoriza garantia e suporte</li>
+        <li>Quer atendimento profissional</li>
+        <li>Deseja evitar problemas futuros</li>
+    </ul>
+  </div>
+</section>
+
+<!-- BLOCO PREVENTIVO -->
+<section class="db12">
+  <div class="db12-miolo">
+    <p class="db12-olho">MANUTENÇÃO PREVENTIVA</p>
+    <h2>O problema quase<br>sempre começa pequeno<span class="marca-azul">.</span></h2>
+
+    <p class="db12-lead">Muitos aquecedores apresentam:</p>
+    <ul class="db12-sintomas">
+      <li>sujeira acumulada</li>
+      <li>desgaste natural</li>
+      <li>falhas de ignição</li>
+      <li>obstruções</li>
+      <li>superaquecimento</li>
+    </ul>
+
+    <p class="db12-callout">Quando isso não é tratado preventivamente, o problema evolui para manutenção corretiva mais cara.</p>
+
+    <p class="db12-lead">A revisão preventiva ajuda a:</p>
+    <ul class="db12-ajuda">
+      <li>aumentar a vida útil</li>
+      <li>reduzir falhas</li>
+      <li>evitar vazamentos</li>
+      <li>melhorar desempenho</li>
+      <li>manter segurança</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PRÉ-FECHAMENTO -->
+<section class="db13">
+  <div class="db13-miolo">
+    <p class="db13-olho">ESCOLHA COM SEGURANÇA</p>
+    <h2>Antes de chamar qualquer técnico…</h2>
+    <p class="db13-sub">verifique se ele realmente oferece garantia e suporte.</p>
+
+    <div class="db13-grade">
+      <div class="d13-col">
+        <h3>Quando falamos de gás, improviso pode gerar:</h3>
+        <ul class="d13-lista">
+          <li>riscos</li>
+          <li>prejuízos</li>
+          <li>retrabalho</li>
+          <li>problemas futuros</li>
+        </ul>
+      </div>
+      <div class="d13-col">
+        <h3>Na Flex Clean você encontra:</h3>
+        <ul class="d13-lista">
+          <li>atendimento profissional</li>
+          <li>empresa estruturada</li>
+          <li>suporte pós-venda</li>
+          <li>técnicos preparados</li>
+          <li>garantia real</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="db13-rodape">Em sistemas a gás, vale escolher uma empresa com estrutura, suporte e responsabilidade técnica.</p>
+  </div>
+</section>
+
+<!-- FECHAMENTO -->
+<section class="db14">
+  <div class="db14-miolo">
+    <p class="db14-olho">CUIDADO DO INÍCIO AO FIM</p>
+    <h2>Seu banho quente e sua segurança<br>merecem um serviço feito<br><span class="marca-azul">da forma correta.</span></h2>
+    <p class="db14-lead">A Flex Clean oferece:</p>
+
+    <ul class="db14-oferece">
+      <li>manutenção</li>
+      <li>revisão preventiva</li>
+      <li>limpeza técnica</li>
+      <li>diagnóstico especializado</li>
+      <li>suporte</li>
+      <li>garantia</li>
+    </ul>
+
+    <div class="db14-fecho">
+      <p class="db14-frase">Tudo com atendimento profissional e acompanhamento do início ao fim.</p>
+      <p class="db14-sub">Fale com a equipe Flex Clean e solicite uma avaliação.</p>
+      <a class="db14-btn" href="https://wa.me/5548992171489?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20manuten%C3%A7%C3%A3o%20de%20aquecedor%20a%20g%C3%A1s%20e%20quero%20um%20or%C3%A7amento.">
+        <svg class="glifo" viewBox="0 0 24 24" aria-hidden="true"><use href="#zap"/></svg>
+        <span>Solicitar Atendimento no WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="faixa" id="duvidas">
+  <div class="miolo-texto">
+    <h2>Perguntas Frequentes</h2>
+    <div class="duvida" style="margin-top: 40px;">
+      <h3>Vocês fazem manutenção de qualquer marca?</h3>
+      <p>Sim. Trabalhamos com praticamente todas as principais marcas do mercado.</p>
+    </div>
+    <div class="duvida">
+      <h3>Quanto tempo demora o atendimento?</h3>
+      <p>Depende da demanda do dia e da região atendida.</p>
+    </div>
+    <div class="duvida">
+      <h3>A manutenção possui garantia?</h3>
+      <p>Sim. Os serviços realizados possuem garantia.</p>
+    </div>
+    <div class="duvida">
+      <h3>A revisão preventiva é realmente necessária?</h3>
+      <p>Sim. Todos os fabricantes recomendam revisão anual.</p>
+    </div>
+    <div class="duvida">
+      <h3>O que pode causar cheiro de gás?</h3>
+      <p>Pode estar relacionado a vazamentos, regulagem incorreta ou problemas nos componentes.</p>
+    </div>
+    <div class="duvida">
+      <h3>Vocês atendem toda Florianópolis?</h3>
+      <p>Sim, atendemos toda a ilha.</p>
+    </div>
+  </div>
+</section>
+<section class="faixa faixa-tinta">
+  <div class="miolo-texto">
+    <h2>Solicite seu atendimento agora</h2>
+    <p class="apoio" style="margin-top: 16px;">Fale com nossa equipe no WhatsApp e receba atendimento especializado para seu aquecedor a gás.</p>
+    <div class="acao" style="margin-top: 40px;">
+      <a class="btn-zap" href="https://wa.me/5548992171489?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20manuten%C3%A7%C3%A3o%20de%20aquecedor%20a%20g%C3%A1s%20e%20quero%20um%20or%C3%A7amento.">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        CHAMAR NO WHATSAPP
+      </a>
+    </div>
+    <div class="rodape" style="margin-top: 56px;">
+      <span>Flex Clean · Climatização e Aquecedores</span>
+      <span>© 2026 Flex Clean</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+
+
+<!-- FAQ -->
+
+
+<div class="barra-mobile">
+  <a href="https://wa.me/5548992171489?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20manuten%C3%A7%C3%A3o%20de%20aquecedor%20a%20g%C3%A1s%20e%20quero%20um%20or%C3%A7amento.">CHAMAR NO WHATSAPP</a>
+</div>
+
+</body>
+</html>

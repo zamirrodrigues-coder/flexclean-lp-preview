@@ -1,0 +1,1244 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>[MOCKUP] Flex Clean · Manutenção de Aquecimento Solar em Florianópolis</title>
+<meta name="description" content="Manutenção, revisão preventiva, limpeza de boiler e placas solares com atendimento especializado, segurança e garantia.">
+<meta property="og:title" content="Flex Clean · Manutenção de Aquecimento Solar em Florianópolis">
+<meta property="og:description" content="Manutenção, revisão preventiva, limpeza de boiler e placas solares com atendimento especializado, segurança e garantia.">
+<meta property="og:image" content="https://servicos.flexclean.com.br/assets/solar/hero-tecnico-boiler.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="../assets/solar/flexclean-logo.png">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ================================================================
+   REPLICA DO MOCKUP  -  primeira dobra
+   Cores estimadas a olho a partir da imagem enviada no chat.
+   Este bloco NAO segue o v2.1: tem olho em caixa alta, icone na lista,
+   canto arredondado, sombra, fundo cinza e ornamento decorativo.
+   ================================================================ */
+.hero-mock {
+  --mk-fundo:   #F4F7FA;
+  --mk-navy:    #0E2338;
+  --mk-azul:    #1470E0;
+  --mk-azul-cl: #2E7FE3;
+  --mk-cinza:   #6B7B8C;
+  --mk-verde:   #1FA855;
+  --mk-blob:    #E7F0FB;
+  --mk-ponto:   #D3E2F2;
+
+  position: relative;
+  overflow: hidden;
+  background: var(--mk-fundo);
+  padding: clamp(18px, 2.6vh, 50px) var(--esp-1) clamp(70px, 13vh, 150px);
+}
+
+/* mesmo conteiner das outras dobras: 1200px centralizado */
+.hm-miolo {
+  position: relative;
+  max-width: var(--larg-faixa);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 48fr 52fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* ornamentos: circulo pálido atras da imagem e duas malhas de pontos */
+.hm-miolo::before {
+  content: "";
+  position: absolute;
+  top: -150px; right: -60px;
+  width: 460px; height: 460px;
+  border-radius: 50%;
+  background: var(--mk-blob);
+  z-index: 0;
+}
+.hm-miolo::after {
+  content: "";
+  position: absolute;
+  top: -30px; right: -110px;
+  width: 150px; height: 120px;
+  background-image: radial-gradient(circle, var(--mk-ponto) 1.6px, transparent 1.7px);
+  background-size: 17px 17px;
+  z-index: 0;
+}
+.hm-pontos {
+  position: absolute;
+  left: 46%; bottom: -50px;
+  width: 150px; height: 120px;
+  background-image: radial-gradient(circle, var(--mk-ponto) 1.6px, transparent 1.7px);
+  background-size: 17px 17px;
+  z-index: 0;
+}
+
+.hm-texto, .hm-figura { position: relative; z-index: 1; }
+
+/* olho */
+.hm-olho {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--mk-navy);
+  max-width: none;
+  margin-bottom: 32px;
+}
+
+/* titulo: duas cores, entrelinha curta, escala bem contrastada */
+.hero-mock h1 {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 900;
+  font-size: clamp(30px, 3.4vw, 47px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--mk-navy);
+  margin: 0 0 34px;
+  max-width: none;
+}
+.hero-mock h1 .marca-azul { color: var(--mk-azul); display: block; }
+
+.hm-chamada {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 700;
+  font-size: clamp(18px, 1.5vw, 23px);
+  line-height: 1.3;
+  color: var(--mk-navy);
+  max-width: 42ch;
+  margin: 0 0 24px;
+}
+
+.hm-apoio {
+  font-size: clamp(16px, 1.1vw, 18px);
+  line-height: 1.6;
+  color: var(--mk-cinza);
+  max-width: 64ch;
+  margin: 0 0 34px;
+}
+
+/* lista com check circular vazado, duas colunas, texto em peso normal */
+.hm-provas {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(3, auto);
+  grid-auto-flow: column;
+  gap: 18px 28px;
+  margin: 0 0 36px;
+  padding: 0;
+}
+.hm-provas li {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--mk-navy);
+  max-width: none;
+}
+.hm-check { width: 20px; height: 20px; flex: none; fill: none; stroke: var(--mk-azul-cl); stroke-width: 1.6; }
+
+/* botao: retangulo arredondado, verde claro, glifo em circulo branco */
+.hm-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--mk-verde);
+  color: #FFFFFF;
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 18px 30px;
+  border-radius: 10px;
+}
+.hm-btn:hover { background: #18904A; }
+.hm-btn-txt { display: block; }
+.hm-btn .glifo { width: 30px; height: 30px; flex: none; background: #FFFFFF; border-radius: 50%; padding: 6px; fill: var(--mk-verde); }
+
+/* imagem: canto arredondado, moldura branca fina, sombra suave */
+.hm-figura { margin: 0; }
+.hm-figura img {
+  width: 100%;
+  aspect-ratio: 10 / 9;
+  object-fit: cover;
+  border-radius: 24px;
+  border: 8px solid #FFFFFF;
+  box-shadow: 0 24px 60px rgba(14, 35, 56, 0.14);
+}
+
+@media (max-width: 900px) {
+  .hero-mock { padding: 56px var(--esp-1); }
+  .hm-miolo { grid-template-columns: 1fr; gap: 32px; }
+  .hm-miolo::before { width: 300px; height: 300px; top: -80px; right: -70px; }
+  .hm-miolo::after, .hm-pontos { display: none; }
+  .hero-mock h1 { max-width: none; }
+  .hero-mock h1 .marca-azul { display: inline; }
+  .hm-provas { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; gap: 14px; }
+}
+
+@media (max-width: 560px) {
+  .hero-mock { padding: 40px var(--esp-1); }
+  .hm-olho { font-size: 12px; margin-bottom: 20px; }
+  .hero-mock h1 { margin-bottom: 22px; }
+  .hm-chamada { margin-bottom: 18px; }
+  .hm-apoio { margin-bottom: 26px; }
+  .hm-provas { margin-bottom: 28px; }
+  /* botao: glifo fixo a esquerda e rotulo ocupando o resto, sem centralizar */
+  .hm-btn {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.25;
+    padding: 16px 20px;
+    gap: 12px;
+  }
+  .hm-btn-txt { flex: 1; }
+  .hm-btn .glifo { width: 28px; height: 28px; padding: 5px; }
+  .hm-figura img { border-width: 6px; border-radius: 18px; }
+}
+
+/* ================================================================
+   REPLICA DO MOCKUP  -  segunda dobra
+   Cores estimadas a olho a partir da imagem enviada no chat.
+   Os 12 icones sao desenhados a mao em SVG, nenhum de biblioteca.
+   ================================================================ */
+.db2 {
+  --d2-alt: clamp(18px, 2.7vh, 52px);
+  --d2-ico: clamp(44px, 6.2vh, 60px);
+  --d2-fundo:  #F4F7FA;
+  --d2-navy:   #0E2338;
+  --d2-azul:   #1470E0;
+  --d2-icobg:  #EAF1FC;
+  --d2-alerta: #E8F0FB;
+  --d2-fio:    #E6EDF5;
+  --d2-cinza:  #46586B;
+
+  position: relative;
+  overflow: hidden;
+  background: var(--d2-fundo);
+  padding: var(--d2-alt) var(--esp-1) clamp(70px, 13vh, 150px);
+}
+.db2-miolo { position: relative; max-width: var(--larg-faixa); margin: 0 auto; }
+
+/* ornamentos: circulo palido e malha de pontos, so no canto superior direito */
+.db2-miolo::before {
+  content: ""; position: absolute; z-index: 0;
+  top: -170px; right: -90px; width: 440px; height: 440px;
+  border-radius: 50%; background: #EDF3FC;
+}
+.db2-miolo::after {
+  content: ""; position: absolute; z-index: 0;
+  top: -18px; right: -6px; width: 132px; height: 108px;
+  background-image: radial-gradient(circle, #D3E2F2 1.7px, transparent 1.8px);
+  background-size: 22px 22px;
+}
+.db2-miolo > * { position: relative; z-index: 1; }
+
+/* olho com traco */
+.db2-olho {
+  display: flex; align-items: center; gap: 14px;
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 700; font-size: 13px; letter-spacing: 0.13em;
+  text-transform: uppercase; color: var(--d2-navy);
+  max-width: none; margin: 0 0 clamp(8px, 1.4vh, 18px);
+}
+.db2-traco { display: block; width: 44px; height: 4px; border-radius: 2px; background: var(--d2-azul); flex: none; }
+
+.db2 h2 {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 900; font-size: clamp(26px, min(3vw, 4.4vh), 40px);
+  line-height: 1.12; letter-spacing: -0.02em;
+  color: var(--d2-navy); max-width: 20ch; margin: 0 0 clamp(10px, 1.6vh, 20px);
+}
+.db2 h2 .marca-azul { color: var(--d2-azul); }
+
+.db2-apoio {
+  font-size: clamp(16px, 1.1vw, 18px); line-height: 1.5; color: var(--d2-cinza);
+  max-width: none; margin: 0 0 clamp(14px, 2.2vh, 32px);
+}
+
+/* cartao branco com os 8 problemas */
+.db2-cartao {
+  background: #FFFFFF;
+  border-radius: 24px;
+  box-shadow: 0 18px 44px rgba(14, 35, 56, 0.07);
+  padding: 8px 0;
+}
+.db2-itens { list-style: none; display: grid; grid-template-columns: 1fr 1fr; margin: 0; padding: 0; }
+.db2-itens li {
+  display: grid; grid-template-columns: var(--d2-ico) 1fr; align-items: center; gap: 20px;
+  padding: clamp(9px, 1.3vh, 20px) 34px;
+  font-size: 17px; color: var(--d2-navy);
+  max-width: none;
+  border-bottom: 1px solid var(--d2-fio);
+}
+.db2-itens li:nth-child(2n) { border-left: 1px solid var(--d2-fio); }
+.db2-itens li:nth-last-child(-n+2) { border-bottom: none; }
+
+.d2-ico {
+  width: var(--d2-ico); height: var(--d2-ico);
+  border-radius: 50%; background: var(--d2-icobg);
+  display: grid; place-items: center;
+}
+.d2-ico svg { width: calc(var(--d2-ico) * 0.57); height: calc(var(--d2-ico) * 0.57); fill: none; stroke: var(--d2-azul); stroke-width: 1.8; stroke-linecap: round; }
+.d2-ico svg circle[r="1.4"], .d2-ico svg circle[r="1.1"] { fill: var(--d2-azul); stroke: none; }
+.d2-ico-branco { background: #FFFFFF; }
+
+/* bloco E o pior */
+.db2-alerta {
+  display: block;
+  background: var(--d2-alerta);
+  border-left: 8px solid var(--d2-azul);
+  border-radius: 6px 16px 16px 6px;
+  padding: clamp(16px, 2.2vh, 26px) 32px;
+  margin-top: clamp(14px, 2vh, 26px);
+  padding-left: clamp(24px, 2.6vw, 36px);
+}
+.db2-pior { font-family: 'Archivo', Arial, sans-serif; font-weight: 700; font-size: 20px; color: var(--d2-azul); margin: 0 0 4px; max-width: none; }
+.db2-pior-txt { font-weight: 700; font-size: 17px; color: var(--d2-navy); margin: 0; max-width: none; }
+
+/* linha de fechamento com os tres selos */
+.db2-fecho {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: 10px; font-size: 17px; color: var(--d2-navy);
+  max-width: none; margin: clamp(14px, 2.2vh, 32px) 0 0;
+}
+.d2-selo { display: inline-flex; align-items: center; gap: 8px; }
+.d2-selo svg { width: 24px; height: 24px; fill: none; stroke: var(--d2-azul); stroke-width: 1.8; stroke-linecap: round; }
+.d2-selo b { font-family: 'Archivo', Arial, sans-serif; color: var(--d2-azul); }
+.d2-sep { color: var(--d2-azul); }
+
+@media (max-width: 900px) {
+  .db2-itens { grid-template-columns: 1fr; }
+  .db2-itens li:nth-child(2n) { border-left: none; }
+  .db2-itens li:nth-last-child(-n+2) { border-bottom: 1px solid var(--d2-fio); }
+  .db2-itens li:last-child { border-bottom: none; }
+  .db2-miolo::before { width: 260px; height: 260px; top: -120px; right: -80px; }
+  .db2-miolo::after { display: none; }
+  .db2 h2 { max-width: none; }
+  .db2-apoio br { display: none; }
+}
+
+@media (max-width: 560px) {
+  .db2 { padding: 40px var(--esp-1); --d2-ico: 48px; --d2-alt: 40px; }
+  .db2-itens li { gap: 14px; padding: 16px 20px; font-size: 16px; }
+
+  .db2-alerta { grid-template-columns: 1fr; gap: 14px; padding: 22px 20px; }
+  .db2-fecho { justify-content: flex-start; }
+}
+
+/* ================================================================
+   TERCEIRA DOBRA  -  replica do mockup dos servicos
+   Tres cartoes com foto, cartao de outros cuidados e selo de 10 anos.
+   Icones desenhados a mao, sem circulo de fundo neste bloco.
+   ================================================================ */
+.db3 {
+  --d3-alt: clamp(16px, 2.4vh, 52px);
+  --d3-ico2: clamp(26px, 3.8vh, 34px);
+  --d3-selo: clamp(38px, 5.6vh, 52px);
+  --d3-navy: #0E2338;
+  --d3-azul: #1470E0;
+  --d3-cinza: #46586B;
+  --d3-fio: #E6EDF5;
+  position: relative;
+  overflow: hidden;
+  background: #F4F7FA;
+  padding: var(--d3-alt) var(--esp-1) clamp(70px, 13vh, 150px);
+}
+.db3-miolo { position: relative; max-width: var(--larg-faixa); margin: 0 auto; }
+
+.db3-miolo::before {
+  content: ""; position: absolute; z-index: 0;
+  top: -180px; right: -110px; width: 430px; height: 430px;
+  border-radius: 50%; background: #EDF3FC;
+}
+.db3-miolo::after {
+  content: ""; position: absolute; z-index: 0;
+  top: 60px; right: -4px; width: 122px; height: 100px;
+  background-image: radial-gradient(circle, #DCE8F6 1.7px, transparent 1.8px);
+  background-size: 22px 22px;
+}
+.db3-miolo > * { position: relative; z-index: 1; }
+
+.db3 h2 {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 900; font-size: clamp(28px, min(3.2vw, 4.6vh), 44px);
+  line-height: 1.1; letter-spacing: -0.02em;
+  color: var(--d3-navy); max-width: none; margin: 0 0 clamp(10px, 1.7vh, 22px);
+}
+.db3 h2 .marca-azul { color: var(--d3-azul); }
+.db3-traco { display: block; width: 44px; height: 4px; border-radius: 2px; background: var(--d3-azul); margin: clamp(6px, 1vh, 16px) 0 clamp(6px, 1vh, 16px); }
+
+.db3-apoio {
+  font-size: clamp(16px, 1.1vw, 18px); line-height: 1.6; color: var(--d3-cinza);
+  max-width: 84ch; margin: 0 0 clamp(12px, 1.8vh, 28px);
+}
+
+/* tres cartoes com foto */
+.db3-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.db3-card {
+  background: #FFFFFF; border-radius: 16px; overflow: hidden;
+  box-shadow: 0 14px 36px rgba(14, 35, 56, 0.07);
+  display: flex; flex-direction: column;
+}
+.db3-card img { width: 100%; height: clamp(110px, 15vh, 230px); object-fit: cover; }
+.db3-card-txt { padding: clamp(12px, 1.6vh, 24px) 24px clamp(13px, 1.8vh, 26px); }
+.db3-card h3 {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(18px, 1.5vw, 22px); color: var(--d3-navy);
+  margin: 0 0 clamp(5px, 0.9vh, 14px);
+}
+.db3-card p { font-size: 17px; line-height: 1.6; color: var(--d3-cinza); margin: 0; max-width: none; }
+
+/* cartao dos outros cuidados */
+.db3-outros {
+  background: #FFFFFF; border-radius: 16px;
+  box-shadow: 0 14px 36px rgba(14, 35, 56, 0.07);
+  padding: clamp(13px, 2vh, 26px) clamp(24px, 3vw, 36px);
+  margin-top: clamp(10px, 1.6vh, 24px);
+}
+.db3-outros h3 {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(17px, 1.4vw, 20px); color: var(--d3-navy);
+  margin: 0 0 clamp(6px, 1.1vh, 18px);
+}
+.db3-outros-grade { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); margin: 0; padding: 0; }
+.db3-outros-grade li {
+  display: grid; grid-template-columns: var(--d3-ico2) 1fr; align-items: center; gap: 14px;
+  padding: clamp(5px, 0.9vh, 12px) 24px;
+  font-size: 17px; color: var(--d3-navy); max-width: none;
+}
+.db3-outros-grade li:nth-child(3n+1) { padding-left: 0; }
+.db3-outros-grade li:not(:nth-child(3n+1)) { border-left: 1px solid var(--d3-fio); }
+.db3-outros-grade svg { width: var(--d3-ico2); height: var(--d3-ico2); fill: none; stroke: var(--d3-azul); stroke-width: 1.8; stroke-linecap: round; }
+
+/* selo dos 10 anos */
+.db3-selo10 {
+  display: block;
+  background: #EDF3FC; border-radius: 16px;
+  padding: clamp(12px, 1.8vh, 24px) clamp(24px, 3vw, 34px);
+  margin-top: clamp(10px, 1.6vh, 24px);
+}
+.db3-selo10 svg { width: var(--d3-selo); height: var(--d3-selo); fill: none; stroke: var(--d3-azul); stroke-width: 1.7; stroke-linejoin: round; }
+.db3-selo10 p { font-size: clamp(16px, 1.2vw, 18px); line-height: 1.55; color: var(--d3-navy); margin: 0; max-width: none; }
+.db3-selo10 b { color: var(--d3-azul); font-family: 'Archivo', Arial, sans-serif; }
+
+@media (max-width: 900px) {
+  .db3-cards { grid-template-columns: 1fr; gap: 20px; }
+  .db3-outros-grade { grid-template-columns: 1fr 1fr; }
+  .db3-outros-grade li { padding-left: 20px; }
+  .db3-outros-grade li:nth-child(3n+1) { padding-left: 20px; }
+  .db3-outros-grade li:not(:nth-child(3n+1)) { border-left: none; }
+  .db3-outros-grade li:nth-child(2n) { border-left: 1px solid var(--d3-fio); }
+  .db3-outros-grade li:nth-child(2n+1) { padding-left: 0; }
+}
+
+@media (max-width: 560px) {
+  .db3 { --d3-ico2: 30px; --d3-selo: 44px; --d3-alt: 40px; }
+  .db3-card img { height: 190px; }
+  .db3-outros-grade { grid-template-columns: 1fr; }
+  .db3-outros-grade li, .db3-outros-grade li:nth-child(2n) { border-left: none; padding-left: 0; }
+  .db3-selo10 { grid-template-columns: 1fr; gap: 14px; }
+}
+
+/* ================================================================
+   QUARTA DOBRA  -  replica do mockup do check de sinais
+   Os 10 sinais sao os mesmos da rev02, agrupados em duas colunas.
+   ================================================================ */
+.db4 {
+  --d4-alt: clamp(16px, 2.4vh, 52px);
+  --d4-ico: clamp(40px, 5.8vh, 56px);
+  --d4-check: clamp(22px, 3.2vh, 30px);
+  --d4-navy: #0E2338;
+  --d4-azul: #1470E0;
+  --d4-cinza: #46586B;
+  --d4-fio: #E6EDF5;
+  position: relative;
+  overflow: hidden;
+  background: #F4F7FA;
+  padding: var(--d4-alt) var(--esp-1) clamp(70px, 13vh, 150px);
+}
+.db4-miolo { position: relative; max-width: var(--larg-faixa); margin: 0 auto; }
+.db4-miolo::before {
+  content: ""; position: absolute; z-index: 0;
+  top: -190px; right: -120px; width: 440px; height: 440px;
+  border-radius: 50%; background: #EDF3FC;
+}
+.db4-miolo::after {
+  content: ""; position: absolute; z-index: 0;
+  top: -10px; right: -4px; width: 122px; height: 100px;
+  background-image: radial-gradient(circle, #DCE8F6 1.7px, transparent 1.8px);
+  background-size: 22px 22px;
+}
+.db4-miolo > * { position: relative; z-index: 1; }
+
+.db4-olho {
+  display: flex; align-items: center; gap: 14px;
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 700; font-size: 13px; letter-spacing: 0.13em;
+  text-transform: uppercase; color: var(--d4-navy);
+  max-width: none; margin: 0 0 clamp(8px, 1.4vh, 18px);
+}
+.db4-traco { display: block; width: 44px; height: 4px; border-radius: 2px; background: var(--d4-azul); flex: none; }
+
+.db4 h2 {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 900; font-size: clamp(26px, min(3vw, 4.4vh), 42px);
+  line-height: 1.1; letter-spacing: -0.02em;
+  color: var(--d4-navy); max-width: 20ch; margin: 0 0 clamp(6px, 1vh, 14px);
+}
+.db4 h2 .marca-azul { color: var(--d4-azul); }
+.db4-apoio { font-size: clamp(16px, 1.1vw, 18px); line-height: 1.55; color: var(--d4-cinza); max-width: none; margin: 0 0 clamp(10px, 1.6vh, 26px); }
+
+/* cartao com os dois grupos */
+.db4-cartao {
+  background: #FFFFFF; border-radius: 24px;
+  box-shadow: 0 18px 44px rgba(14, 35, 56, 0.07);
+  display: grid; grid-template-columns: 1fr 1fr;
+  padding: clamp(10px, 1.6vh, 26px) 0;
+}
+.d4-grupo { padding: 0 clamp(22px, 2.6vw, 40px); }
+.d4-grupo + .d4-grupo { border-left: 1px solid var(--d4-fio); }
+.d4-grupo-topo { display: grid; grid-template-columns: var(--d4-ico) 1fr; align-items: center; gap: 16px; margin-bottom: clamp(6px, 1.2vh, 16px); }
+.d4-grupo-topo h3 {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(14px, 1.15vw, 17px); letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--d4-azul); margin: 0;
+}
+.d4-ico { width: var(--d4-ico); height: var(--d4-ico); border-radius: 50%; background: #EAF1FC; display: grid; place-items: center; }
+.d4-ico svg { width: calc(var(--d4-ico) * 0.58); height: calc(var(--d4-ico) * 0.58); fill: none; stroke: var(--d4-azul); stroke-width: 1.8; stroke-linecap: round; }
+
+.d4-lista { list-style: none; margin: 0; padding: 0; }
+.d4-lista li {
+  display: grid; grid-template-columns: var(--d4-check) 1fr; align-items: center; gap: 14px;
+  padding: clamp(5px, 0.85vh, 13px) 0;
+  font-size: clamp(15px, 1.15vw, 17px); color: var(--d4-navy); max-width: none;
+  border-bottom: 1px solid var(--d4-fio);
+}
+.d4-lista li:last-child { border-bottom: none; }
+.d4-check { width: var(--d4-check); height: var(--d4-check); fill: none; stroke: var(--d4-azul); stroke-width: 1.8; stroke-linecap: round; }
+
+/* fechamento */
+.db4-fecho { display: grid; justify-items: center; margin-top: clamp(10px, 1.6vh, 26px); }
+.db4-fecho-txt { display: grid; grid-template-columns: var(--d4-ico) 1fr; align-items: center; gap: 20px; }
+.db4-fecho h3 {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(17px, 1.5vw, 22px); color: var(--d4-navy); margin: 0 0 4px;
+}
+.db4-fecho p { font-size: clamp(15px, 1.15vw, 17px); line-height: 1.5; color: var(--d4-cinza); margin: 0; max-width: none; }
+
+.db4-btn {
+  display: inline-flex; align-items: center; gap: 14px;
+  background: #1FA855; color: #FFFFFF;
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(15px, 1.2vw, 18px); letter-spacing: 0.02em;
+  text-transform: uppercase; text-decoration: none;
+  padding: clamp(13px, 1.9vh, 19px) clamp(22px, 2.4vw, 34px);
+  border-radius: 10px;
+  margin-top: clamp(10px, 1.8vh, 22px);
+}
+.db4-btn:hover { background: #18904A; }
+.db4-btn .glifo { width: 28px; height: 28px; flex: none; background: #FFFFFF; border-radius: 50%; padding: 5px; fill: #1FA855; stroke: none; }
+
+.db4-seguro {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 14px; color: var(--d4-cinza);
+  margin: clamp(7px, 1.2vh, 14px) 0 0; max-width: none;
+}
+.db4-seguro svg { width: 17px; height: 17px; fill: none; stroke: var(--d4-cinza); stroke-width: 2; }
+
+@media (max-width: 900px) {
+  .db4 { --d4-ico: 48px; --d4-check: 26px; --d4-alt: 40px; }
+  .db4-cartao { grid-template-columns: 1fr; padding: 8px 0; }
+  .d4-grupo { padding: 18px clamp(20px, 5vw, 30px); }
+  .d4-grupo + .d4-grupo { border-left: none; border-top: 1px solid var(--d4-fio); }
+  .db4 h2 { max-width: none; }
+  .db4-apoio br, .db4-fecho p br { display: none; }
+}
+
+@media (max-width: 560px) {
+  .db4-fecho-txt { grid-template-columns: 1fr; gap: 12px; justify-items: start; }
+  .db4-btn { width: 100%; justify-content: flex-start; text-align: left; }
+  .db4-fecho { justify-items: start; }
+}
+
+/* ================================================================
+   QUINTA DOBRA  -  replica do mockup dos servicos principais
+   Tres colunas sobre o fundo, sem cartao. Itens em texto corrido
+   separados por bullet, como no mockup.
+   ================================================================ */
+.db5 {
+  --d5-alt: clamp(16px, 2.4vh, 52px);
+  --d5-navy: #0E2338;
+  --d5-azul: #1470E0;
+  --d5-cinza: #46586B;
+  --d5-fio: #DDE6F0;
+  position: relative;
+  overflow: hidden;
+  background: #F4F7FA;
+  padding: var(--d5-alt) var(--esp-1) clamp(70px, 13vh, 150px);
+}
+.db5-miolo { position: relative; max-width: var(--larg-faixa); margin: 0 auto; }
+.db5-miolo::before {
+  content: ""; position: absolute; z-index: 0;
+  top: -200px; right: -130px; width: 430px; height: 430px;
+  border-radius: 50%; background: #EDF3FC;
+}
+.db5-miolo::after {
+  content: ""; position: absolute; z-index: 0;
+  top: 92px; right: -6px; width: 122px; height: 100px;
+  background-image: radial-gradient(circle, #DCE8F6 1.7px, transparent 1.8px);
+  background-size: 22px 22px;
+}
+.db5-miolo > * { position: relative; z-index: 1; }
+
+.db5-olho {
+  display: flex; align-items: center; gap: 14px;
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 700; font-size: 13px; letter-spacing: 0.13em;
+  text-transform: uppercase; color: var(--d5-azul);
+  max-width: none; margin: 0 0 clamp(8px, 1.4vh, 18px);
+}
+.db5-traco, .d5-traco { display: block; width: 44px; height: 4px; border-radius: 2px; background: var(--d5-azul); flex: none; }
+
+.db5 h2 {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 900; font-size: clamp(26px, min(3vw, 4.4vh), 42px);
+  line-height: 1.1; letter-spacing: -0.02em;
+  color: var(--d5-navy); max-width: 20ch; margin: 0 0 clamp(6px, 1.2vh, 14px);
+}
+.db5 h2 .marca-azul { color: var(--d5-azul); }
+.db5-apoio { font-size: clamp(16px, 1.1vw, 18px); line-height: 1.55; color: var(--d5-cinza); max-width: none; margin: 0 0 clamp(16px, 2.6vh, 40px); }
+
+/* tres colunas direto sobre o fundo, sem cartao */
+.db5-grade { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 3.4vw, 52px); }
+.d5-col > * { max-width: none; }
+.d5-col .d5-traco { margin-bottom: clamp(10px, 1.6vh, 18px); }
+.d5-col h3 {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(15px, 1.3vw, 19px); line-height: 1.25; letter-spacing: 0.02em;
+  text-transform: uppercase; color: var(--d5-navy);
+  margin: 0 0 clamp(10px, 1.6vh, 20px);
+}
+.d5-desc { font-size: clamp(14px, 1.05vw, 16px); line-height: 1.6; color: var(--d5-cinza); margin: 0 0 clamp(10px, 1.8vh, 22px); }
+.d5-rot {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(14px, 1.05vw, 16px); color: var(--d5-azul);
+  margin: 0 0 clamp(6px, 1vh, 12px);
+}
+.d5-itens { font-size: clamp(14px, 1.05vw, 16px); line-height: 1.75; color: var(--d5-navy); margin: 0 0 clamp(10px, 1.6vh, 20px); }
+.d5-sep { color: var(--d5-azul); font-weight: 700; }
+.d5-fecho {
+  font-size: clamp(14px, 1.05vw, 16px); line-height: 1.6; color: var(--d5-cinza);
+  border-top: 1px solid var(--d5-fio);
+  padding-top: clamp(8px, 1.4vh, 16px); margin: 0;
+}
+.d5-fecho b { font-family: 'Archivo', Arial, sans-serif; color: var(--d5-azul); }
+
+.db5-rodape {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  font-size: clamp(15px, 1.1vw, 17px); color: var(--d5-navy);
+  max-width: none; margin: clamp(16px, 2.6vh, 40px) 0 0; text-align: center;
+}
+.db5-rodape svg { width: 30px; height: 30px; flex: none; fill: none; stroke: var(--d5-azul); stroke-width: 1.8; stroke-linejoin: round; }
+
+@media (max-width: 900px) {
+  .db5 { --d5-alt: 40px; }
+  .db5-grade { grid-template-columns: 1fr; gap: 30px; }
+  .db5 h2 { max-width: none; }
+  .db5-apoio br, .d5-col h3 br { display: none; }
+  .db5-rodape { justify-content: flex-start; text-align: left; align-items: flex-start; }
+}
+
+/* ================================================================
+   SEXTA DOBRA  -  replica do mockup dos diferenciais
+   As 8 razoes sao as da rev02, numeradas e em duas colunas.
+   ================================================================ */
+.db6 {
+  --d6-alt: clamp(16px, 2.4vh, 52px);
+  --d6-navy: #0E2338;
+  --d6-azul: #1470E0;
+  --d6-cinza: #46586B;
+  --d6-fio: #E1E9F3;
+  --d6-regua: #C9DDF6;
+  position: relative;
+  overflow: hidden;
+  background: #F4F7FA;
+  padding: var(--d6-alt) var(--esp-1) clamp(70px, 13vh, 150px);
+}
+.db6-miolo { position: relative; max-width: var(--larg-faixa); margin: 0 auto; }
+.db6-miolo::before {
+  content: ""; position: absolute; z-index: 0;
+  top: -210px; right: -150px; width: 440px; height: 440px;
+  border-radius: 50%; background: #EDF3FC;
+}
+.db6-miolo::after {
+  content: ""; position: absolute; z-index: 0;
+  top: -6px; right: 60px; width: 150px; height: 128px;
+  background-image: radial-gradient(circle, #D3E2F2 1.7px, transparent 1.8px);
+  background-size: 24px 24px;
+}
+.db6-miolo > * { position: relative; z-index: 1; }
+
+.db6-olho {
+  display: flex; align-items: center; gap: 14px;
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 700; font-size: 13px; letter-spacing: 0.13em;
+  text-transform: uppercase; color: var(--d6-azul);
+  max-width: none; margin: 0 0 clamp(8px, 1.4vh, 18px);
+}
+.db6-traco { display: block; width: 44px; height: 4px; border-radius: 2px; background: var(--d6-azul); flex: none; }
+
+.db6 h2 {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 900; font-size: clamp(26px, min(3vw, 4.4vh), 42px);
+  line-height: 1.1; letter-spacing: -0.02em;
+  color: var(--d6-navy); max-width: none; margin: 0 0 clamp(6px, 1.2vh, 14px);
+}
+.db6 h2 .marca-azul { color: var(--d6-azul); }
+.db6-apoio { font-size: clamp(16px, 1.1vw, 18px); line-height: 1.55; color: var(--d6-cinza); max-width: none; margin: 0 0 clamp(9px, 1.5vh, 26px); }
+
+/* as 8 razoes numeradas, em duas colunas */
+.db6-itens {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: 1fr 1fr;
+  column-gap: clamp(28px, 4vw, 64px);
+}
+.db6-itens li {
+  display: grid; grid-template-columns: auto 1fr;
+  gap: clamp(14px, 1.6vw, 24px);
+  padding: clamp(8px, 1.3vh, 18px) 0;
+  border-bottom: 1px solid var(--d6-fio);
+  max-width: none;
+}
+.db6-itens li:nth-last-child(-n+2) { border-bottom: none; }
+.d6-num {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 900;
+  font-size: clamp(24px, 2.2vw, 34px); line-height: 1.05;
+  color: var(--d6-azul); font-variant-numeric: tabular-nums;
+}
+.d6-txt { border-left: 2px solid var(--d6-regua); padding-left: clamp(14px, 1.5vw, 22px); }
+.d6-txt h3 {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(15px, 1.3vw, 19px); line-height: 1.25;
+  color: var(--d6-navy); margin: 0 0 clamp(3px, 0.7vh, 8px);
+}
+.d6-txt p { font-size: clamp(14px, 1.05vw, 16px); line-height: 1.5; color: var(--d6-cinza); margin: 0; max-width: none; }
+
+/* fechamento */
+.db6-fecho { display: grid; justify-items: center; margin-top: clamp(10px, 1.6vh, 28px); }
+.db6-btn {
+  display: inline-flex; align-items: center; gap: 14px;
+  background: #1FA855; color: #FFFFFF;
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(15px, 1.2vw, 18px); letter-spacing: 0.02em;
+  text-transform: uppercase; text-decoration: none;
+  padding: clamp(13px, 1.9vh, 19px) clamp(22px, 2.4vw, 34px);
+  border-radius: 10px;
+}
+.db6-btn:hover { background: #18904A; }
+.db6-btn .glifo { width: 28px; height: 28px; flex: none; background: #FFFFFF; border-radius: 50%; padding: 5px; fill: #1FA855; stroke: none; }
+.db6-seguro {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 14px; color: var(--d6-cinza);
+  margin: clamp(7px, 1.2vh, 14px) 0 0; max-width: none;
+}
+.db6-seguro svg { width: 18px; height: 18px; fill: none; stroke: var(--d6-azul); stroke-width: 1.9; stroke-linejoin: round; }
+
+@media (max-width: 900px) {
+  .db6 { --d6-alt: 40px; }
+  .db6-itens { grid-template-columns: 1fr; }
+  .db6-itens li:nth-last-child(-n+2) { border-bottom: 1px solid var(--d6-fio); }
+  .db6-itens li:last-child { border-bottom: none; }
+  .db6 h2 br, .db6-apoio br { display: none; }
+}
+
+@media (max-width: 560px) {
+  .db6-btn { width: 100%; justify-content: flex-start; text-align: left; }
+  .db6-fecho { justify-items: start; }
+}
+
+/* ================================================================
+   DOBRA "PARA QUEM"  -  replica do mockup
+   Seis frases grandes em tres colunas, sem icone e sem marcador.
+   Os seis itens sao os da rev02, na mesma ordem.
+   ================================================================ */
+.db7 {
+  --d7-alt: clamp(30px, 7vh, 80px);
+  --d7-navy: #101C3D;
+  --d7-azul: #1470E0;
+  --d7-fio: #DCE5F0;
+  position: relative;
+  overflow: hidden;
+  background: #F7FAFD;
+  padding: var(--d7-alt) var(--esp-1) clamp(70px, 13vh, 150px);
+}
+/* manchas pálidas: uma no alto à direita, outra embaixo à esquerda */
+.db7::before {
+  content: ""; position: absolute; z-index: 0;
+  top: -190px; right: -170px; width: 560px; height: 560px;
+  border-radius: 46% 54% 52% 48% / 50% 44% 56% 50%;
+  background: #EAF1FB;
+}
+.db7::after {
+  content: ""; position: absolute; z-index: 0;
+  bottom: -230px; left: -190px; width: 520px; height: 520px;
+  border-radius: 52% 48% 46% 54% / 44% 52% 48% 56%;
+  background: #EDF3FC;
+}
+.db7-miolo { position: relative; z-index: 1; max-width: var(--larg-faixa); margin: 0 auto; }
+
+.db7-olho {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 700; font-size: 13px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--d7-azul);
+  max-width: none; margin: 0 0 clamp(14px, 3vh, 30px);
+}
+
+.db7 h2 {
+  font-family: 'Archivo', Arial, sans-serif;
+  font-weight: 900; font-size: clamp(28px, min(3.4vw, 6vh), 46px);
+  line-height: 1.1; letter-spacing: -0.02em;
+  color: var(--d7-navy); max-width: none;
+  margin: 0 0 clamp(20px, 5.5vh, 56px);
+  padding-bottom: clamp(20px, 5.5vh, 56px);
+  border-bottom: 1px solid var(--d7-fio);
+}
+
+.db7-itens {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: clamp(28px, 9vh, 90px) clamp(28px, 3.6vw, 60px);
+}
+.db7-itens li {
+  font-family: 'Archivo', Arial, sans-serif; font-weight: 700;
+  font-size: clamp(19px, min(1.9vw, 4.2vh), 32px);
+  line-height: 1.22; letter-spacing: -0.01em;
+  color: var(--d7-navy); max-width: none;
+}
+
+@media (max-width: 900px) {
+  .db7 { --d7-alt: 40px; }
+  .db7-itens { grid-template-columns: 1fr 1fr; gap: 26px 28px; }
+  .db7-itens li { font-size: 20px; max-width: none; }
+  .db7::before { width: 320px; height: 320px; top: -130px; right: -120px; }
+  .db7::after { width: 300px; height: 300px; bottom: -160px; left: -130px; }
+}
+
+@media (max-width: 560px) {
+  .db7-itens { grid-template-columns: 1fr; gap: 18px; }
+}
+
+/* rolagem por ancora: o cabecalho fixo tem 68px e cobria o topo da secao.
+   scroll-margin-top faz o navegador parar antes, deixando o titulo visivel. */
+section[id] { scroll-margin-top: 84px; }
+
+/* o logo do cabecalho leva ao topo da pagina */
+.cabecalho-logo { display: flex; align-items: center; flex: none; }
+.cabecalho-logo img { display: block; }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <!-- 1. agua nao aquece: termometro sobre ondas -->
+  <g id="i-agua"><path d="M20 7.5a2.6 2.6 0 0 1 2.6 2.6v9.4a5.2 5.2 0 1 1-5.2 0v-9.4A2.6 2.6 0 0 1 20 7.5Z"/><path d="M22.8 12.6h2.2M22.8 15.6h2.2"/><path d="M7 31c2.2-2.2 4.4-2.2 6.6 0s4.4 2.2 6.6 0 4.4-2.2 6.6 0 4.4 2.2 6.2 0"/><path d="M7 35.4c2.2-2.2 4.4-2.2 6.6 0s4.4 2.2 6.6 0 4.4-2.2 6.6 0 4.4 2.2 6.2 0"/></g>
+  <!-- 2. resistencia queimando: serpentina com calor -->
+  <g id="i-resist"><path d="M6 30h28"/><path d="M9 30v-6a3.2 3.2 0 0 1 6.4 0v6m2.2 0v-6a3.2 3.2 0 0 1 6.4 0v6m2.2 0v-6a3.2 3.2 0 0 1 6.4 0v6"/><path d="M13 15q1.8-2 0-4M20 15q1.8-2 0-4M27 15q1.8-2 0-4"/></g>
+  <!-- 3. vazamentos no boiler: gota com gota menor -->
+  <g id="i-gota2"><path d="M20 6.5c0 0 9.4 10 9.4 15.6A9.4 9.4 0 0 1 10.6 22C10.6 16.5 20 6.5 20 6.5Z"/><path d="M22.6 21.4c0 0 3.1 3.3 3.1 5.2a3.1 3.1 0 0 1-6.2 0c0-1.9 3.1-5.2 3.1-5.2Z"/></g>
+  <!-- 4. perda de eficiencia: barras decrescentes com seta -->
+  <g id="i-perda"><path d="M8 7v25h25"/><rect x="12.5" y="17" width="5.5" height="15" rx="1"/><rect x="21" y="22" width="5.5" height="10" rx="1"/><rect x="29.5" y="26.5" width="5.5" height="5.5" rx="1"/><path d="M13.5 11.5 30 22.5m0 0h-5m5 0v-5"/></g>
+  <!-- 5. superaquecimento: termometro com seta -->
+  <g id="i-super"><path d="M16.5 7.5a2.6 2.6 0 0 1 2.6 2.6v9.4a5.2 5.2 0 1 1-5.2 0v-9.4a2.6 2.6 0 0 1 2.6-2.6Z"/><path d="M19.3 12.6h2.2M19.3 15.6h2.2"/><path d="M29.5 30V13m0 0-3.4 3.6M29.5 13l3.4 3.6"/></g>
+  <!-- 6. sujeira nas placas: placa solar com brilho -->
+  <g id="i-placa"><rect x="6.5" y="12" width="24" height="17" rx="1.6"/><path d="M6.5 17.7h24M6.5 23.4h24M14.5 12v17M22.5 12v17"/><path d="m33 7.5 1.2 2.9 2.9 1.2-2.9 1.2L33 15.7l-1.2-2.9-2.9-1.2 2.9-1.2z"/></g>
+  <!-- 7. acumulo de residuos: particulas caindo na calha -->
+  <g id="i-residuo"><path d="M9 25.5c2.6 5.2 18.4 5.2 21 0"/><path d="M7 30.5c3.4 3.4 22.6 3.4 26 0"/><circle cx="14.5" cy="15.5" r="1.4"/><circle cx="20.5" cy="11.5" r="1.4"/><circle cx="26" cy="16" r="1.4"/><circle cx="17.5" cy="20.5" r="1.1"/><circle cx="23.5" cy="21" r="1.1"/></g>
+  <!-- 8. aumento do uso eletrico: casa com tomada -->
+  <g id="i-casa"><path d="M7 19 20 8l13 11v12.5a1.6 1.6 0 0 1-1.6 1.6H8.6A1.6 1.6 0 0 1 7 31.5Z"/><path d="M17.4 19.5v3M22.6 19.5v3"/><path d="M15.4 22.5h9.2v2.6a4.6 4.6 0 0 1-9.2 0Z"/><path d="M20 29.7v3"/></g>
+  <!-- alerta do bloco "E o pior" -->
+  <g id="i-alerta"><path d="M20 7.5 34.5 32h-29Z" stroke-linejoin="round"/><path d="M20 16.5v7M20 27.4h.02"/></g>
+
+  <!-- limpeza periodica: rodo sobre a placa, com brilho -->
+  <g id="i-limpeza"><path d="M11 8h18v6H11z"/><path d="M14 14v5M20 14v5M26 14v5"/><path d="M7 25c4.5 3.5 21.5 3.5 26 0"/><path d="m32 27.5.9 2.2 2.2.9-2.2.9-.9 2.2-.9-2.2-2.2-.9 2.2-.9z"/></g>
+  <!-- revisao tecnica: prancheta com check -->
+  <g id="i-revisao"><path d="M10 9h20a1.6 1.6 0 0 1 1.6 1.6v21A1.6 1.6 0 0 1 30 33.2H10a1.6 1.6 0 0 1-1.6-1.6v-21A1.6 1.6 0 0 1 10 9Z"/><path d="M15.5 6.5h9v4.4h-9z"/><path d="m14 21.5 3.6 3.6 8.4-8.6"/></g>
+  <!-- analise dos componentes: lupa sobre engrenagem -->
+  <g id="i-analise"><circle cx="18" cy="18" r="9.5"/><path d="m25 25 8 8"/><path d="M18 14.2v-2.6M18 24.4v-2.6M21.7 15.4l1.8-1.8M14.5 22.6l1.8-1.8M21.8 18h2.6M11.6 18h2.6M21.7 20.6l1.8 1.8M14.5 13.4l1.8 1.8"/><circle cx="18" cy="18" r="2.6"/></g>
+  <!-- verificacao do boiler: reservatorio cilindrico com manometro -->
+  <g id="i-boiler"><rect x="8" y="10" width="19" height="21" rx="9.5"/><path d="M8 15.5h19M8 25.5h19"/><path d="M27 20.5h5"/><circle cx="32.5" cy="20.5" r="1.6"/></g>
+  <!-- testes de funcionamento: manometro com ponteiro -->
+  <g id="i-teste"><path d="M7.5 27a13 13 0 1 1 25 0"/><path d="m20 27 6.5-8"/><circle cx="20" cy="27" r="1.8"/><path d="M20 11v2.4M9.6 16.2l2 1.2M30.4 16.2l-2 1.2"/></g>
+  <!-- conforto: chuveiro com gotas -->
+  <g id="i-conforto"><path d="M20 6v5"/><path d="M11.5 15.5a8.5 8.5 0 0 1 17 0Z"/><path d="M14.5 21v2M20 22.5v3M25.5 21v2M17 26v2M23 26v2"/></g>
+  <!-- sustentabilidade: folha -->
+  <g id="i-folha"><path d="M31 9C18 9 10 14.5 10 24a9.5 9.5 0 0 0 3 7c0-9 6-14.5 15-16-7 3.5-11 8.5-12.5 17 9 1.5 15.5-4 15.5-23Z"/><path d="M8.5 32.5c2-5 5-8.5 8.5-11"/></g>
+  <!-- longa vida util: relogio -->
+  <g id="i-relogio"><circle cx="20" cy="21" r="12.5"/><path d="M20 13.5V21l5 3"/><path d="M15 6.5h10"/></g>
+
+  <!-- testes de funcionamento: linha de pulso -->
+  <g id="i-pulso"><circle cx="20" cy="20" r="13.5"/><path d="M10.5 20h4l2.5-5.5 4.5 11 2.5-5.5h5.5"/></g>
+  <!-- checagem de vazamentos: torneira com gota -->
+  <g id="i-torneira"><path d="M8 14h9v7H8z"/><path d="M17 17.5h7a3.5 3.5 0 0 1 3.5 3.5v3"/><path d="M12.5 21v4.5"/><path d="M27.5 27.5c0 0 3 3.2 3 5a3 3 0 0 1-6 0c0-1.8 3-5 3-5Z"/></g>
+  <!-- selo de 10 anos: escudo com estrela -->
+  <g id="i-escudo-estrela"><path d="M20 4.5 7.5 9.2v9.6c0 6.8 4.9 12.1 12.5 14.4 7.6-2.3 12.5-7.6 12.5-14.4V9.2Z"/><path d="m20 12.5 2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.6-4.8 2.6.9-5.4-3.9-3.8 5.4-.8z"/></g>
+
+  <!-- check redondo dos sinais -->
+  <g id="i-check"><circle cx="20" cy="20" r="13"/><path d="m13.8 20.3 4.2 4.2 8.2-8.8"/></g>
+  <!-- grupo temperatura e consumo: termometro com raios -->
+  <g id="i-temp"><path d="M17 8.5a2.7 2.7 0 0 1 5.4 0v10.9a5.6 5.6 0 1 1-5.4 0Z"/><path d="M19.7 14.5v6.8"/><path d="M27 9.5h4M27 14h3M28.5 5.5l2.5-2.2"/></g>
+  <!-- grupo componentes: boiler horizontal com tubo -->
+  <g id="i-tanque"><rect x="6" y="12" width="24" height="13" rx="6.5"/><path d="M14 12v13M22 12v13"/><path d="M30 18.5h4v7"/><path d="M11 25v5M25 25v5"/></g>
+  <!-- equipe: duas pessoas com selo de check -->
+  <g id="i-equipe"><circle cx="15" cy="13" r="4.4"/><path d="M7 29c0-4.4 3.6-7.6 8-7.6s8 3.2 8 7.6"/><circle cx="27" cy="15" r="3.6"/><path d="M23.5 22.4A7.4 7.4 0 0 1 34 29"/><circle cx="28.5" cy="27.5" r="5.5" fill="#FFFFFF"/><path d="m26 27.6 1.9 1.9 3.6-4"/></g>
+  <!-- cadeado da linha de seguranca -->
+  <g id="i-cadeado"><rect x="10" y="18" width="20" height="15" rx="3"/><path d="M14.5 18v-4a5.5 5.5 0 0 1 11 0v4"/><path d="M20 24v3.5"/></g>
+  <symbol id="zap" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></symbol>
+  <!-- selos do fechamento -->
+  <g id="i-escudo"><path d="M20 5 8.5 9.3v8.9c0 6.3 4.5 11.2 11.5 13.3 7-2.1 11.5-7 11.5-13.3V9.3Z"/><path d="m14.8 18.6 3.9 3.9 6.7-7.3"/></g>
+  <g id="i-gota"><path d="M20 6.5c0 0 9.4 10 9.4 15.6A9.4 9.4 0 0 1 10.6 22C10.6 16.5 20 6.5 20 6.5Z"/></g>
+  <g id="i-cifrao"><circle cx="20" cy="20" r="13.5"/><path d="M20 11.5v17"/><path d="M24.2 15.8c0-1.9-1.9-3-4.2-3s-4.2 1.1-4.2 3 1.9 2.7 4.2 3.4 4.2 1.4 4.2 3.4-1.9 3-4.2 3-4.2-1.1-4.2-3"/></g>
+</defs></svg>
+
+<header>
+  <div class="cabecalho">
+    <a class="cabecalho-logo" href="#" aria-label="Flex Clean, ir para o topo da página"><img src="../assets/solar/flexclean-logo.png" alt="Flex Clean" width="140" height="47"></a>
+    <nav>
+      <a href="#problemas">Problemas</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="btn-zap" href="https://wa.me/5548992171489?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20manuten%C3%A7%C3%A3o%20de%20aquecimento%20solar%20e%20quero%20um%20or%C3%A7amento.">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+      SOLICITAR ATENDIMENTO NO WHATSAPP
+    </a>
+  </div>
+</header>
+
+<!-- HERO — PRIMEIRA DOBRA -->
+<section class="hero-mock">
+  <div class="hm-miolo">
+  <div class="hm-texto">
+    <p class="hm-olho">MANUTENÇÃO DE AQUECIMENTO SOLAR • FLORIANÓPOLIS</p>
+    <h1>Seu sistema de aquecimento solar <span class="marca-azul">não está esquentando a água?</span></h1>
+    <p class="hm-chamada">Resolva com Especialistas em Manutenção de Aquecimento Solar em Florianópolis</p>
+    <p class="hm-apoio">Manutenção, revisão preventiva, limpeza de boiler e placas solares com atendimento especializado, segurança e garantia.</p>
+    <ul class="hm-provas">
+        <li><svg class="hm-check" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m7.8 12.2 2.8 2.8 5.6-5.8"/></svg><span>Água quente com mais eficiência</span></li>
+        <li><svg class="hm-check" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m7.8 12.2 2.8 2.8 5.6-5.8"/></svg><span>Revisão completa do sistema solar</span></li>
+        <li><svg class="hm-check" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m7.8 12.2 2.8 2.8 5.6-5.8"/></svg><span>Limpeza de boiler e coletores</span></li>
+        <li><svg class="hm-check" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m7.8 12.2 2.8 2.8 5.6-5.8"/></svg><span>Atendimento técnico especializado</span></li>
+        <li><svg class="hm-check" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m7.8 12.2 2.8 2.8 5.6-5.8"/></svg><span>Segurança e garantia no serviço</span></li>
+    </ul>
+    <a class="hm-btn" href="https://wa.me/5548992171489?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20manuten%C3%A7%C3%A3o%20de%20aquecimento%20solar%20e%20quero%20um%20or%C3%A7amento.">
+      <svg class="glifo" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+      <span class="hm-btn-txt">Solicitar Atendimento no WhatsApp</span>
+    </a>
+  </div>
+  <div class="hm-figura">
+    <img src="../assets/solar/hero-tecnico-boiler.jpg" alt="Técnico da Flex Clean fazendo manutenção em um boiler de aquecimento solar" width="1600" height="1440" fetchpriority="high">
+  </div>
+  <span class="hm-pontos" aria-hidden="true"></span>
+  </div>
+</section>
+
+<!-- BLOCO DE IDENTIFICAÇÃO (DOR) -->
+<section class="db2" id="problemas">
+  <div class="db2-miolo">
+    <p class="db2-olho">PROBLEMAS MAIS COMUNS NO AQUECIMENTO SOLAR</p>
+    <h2>Água fria, baixa eficiência ou <span class="marca-azul">vazamentos?</span></h2>
+    <p class="db2-apoio">O sistema de aquecimento solar é extremamente eficiente… <br>mas sem manutenção preventiva ele começa a apresentar problemas como:</p>
+
+    <div class="db2-cartao">
+      <ul class="db2-itens">
+        <li><span class="d2-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-agua"/></svg></span><span>água não aquece corretamente</span></li>
+        <li><span class="d2-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-resist"/></svg></span><span>resistência queimando</span></li>
+        <li><span class="d2-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-gota2"/></svg></span><span>vazamentos no boiler</span></li>
+        <li><span class="d2-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-perda"/></svg></span><span>perda de eficiência</span></li>
+        <li><span class="d2-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-super"/></svg></span><span>superaquecimento</span></li>
+        <li><span class="d2-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-placa"/></svg></span><span>sujeira nas placas</span></li>
+        <li><span class="d2-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-residuo"/></svg></span><span>acúmulo de resíduos</span></li>
+        <li><span class="d2-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-casa"/></svg></span><span>aumento do uso elétrico no apoio</span></li>
+      </ul>
+    </div>
+
+    <div class="db2-alerta">
+      <div>
+        <p class="db2-pior">E o pior:</p>
+        <p class="db2-pior-txt">Muitos clientes só percebem o problema quando ficam sem água quente.</p>
+      </div>
+    </div>
+
+    <p class="db2-fecho"><span>A Flex Clean ajuda você a manter o sistema funcionando com</span>
+      <span class="d2-selo"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-escudo"/></svg><b>segurança</b></span>
+      <span class="d2-sep" aria-hidden="true">•</span>
+      <span class="d2-selo"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-gota"/></svg><b>eficiência</b></span>
+      <span class="d2-sep" aria-hidden="true">•</span>
+      <span class="d2-selo"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-cifrao"/></svg><b>economia.</b></span>
+    </p>
+  </div>
+</section>
+
+<!-- O CONCEITO -->
+<section class="db3" id="servicos">
+  <div class="db3-miolo">
+    <h2>Mais do Que <span class="marca-azul">Manutenção</span></h2>
+    <p class="db3-apoio">O aquecimento solar é um investimento de longo prazo e, para entregar economia e conforto por anos, ele precisa de limpeza periódica, revisão técnica, análise dos componentes, verificação do boiler e testes de funcionamento. É isso que fazemos, no local e com garantia.</p>
+
+    <div class="db3-cards">
+      <article class="db3-card">
+        <img src="../assets/solar/flexclean-tecnico-inspecao_2.jpg" alt="Técnico da Flex Clean inspecionando coletores solares em um telhado de Florianópolis" width="1600" height="900" loading="lazy">
+        <div class="db3-card-txt">
+          <h3>Revisão Preventiva</h3>
+          <p>Inspeção completa para evitar falhas e aumentar a vida útil do sistema.</p>
+        </div>
+      </article>
+      <article class="db3-card">
+        <img src="../assets/solar/flexclean-limpeza-placas_2.jpg" alt="Coletores solares durante serviço de limpeza" width="1600" height="900" loading="lazy">
+        <div class="db3-card-txt">
+          <h3>Limpeza de Placas Solares</h3>
+          <p>Remoção de sujeira e resíduos para melhorar a eficiência e a absorção solar.</p>
+        </div>
+      </article>
+      <article class="db3-card">
+        <img src="../assets/solar/flexclean-manutencao-boiler_2.jpg" alt="Resistência retirada de um boiler durante manutenção" width="1600" height="900" loading="lazy">
+        <div class="db3-card-txt">
+          <h3>Manutenção de Boiler</h3>
+          <p>Limpeza interna, troca de resistência, testes elétricos e análise de vazamentos.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="db3-outros">
+      <h3>Outros cuidados realizados no sistema</h3>
+      <ul class="db3-outros-grade">
+        <li><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-analise"/></svg><span>Análise dos componentes</span></li>
+        <li><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-boiler"/></svg><span>Verificação do boiler</span></li>
+        <li><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-pulso"/></svg><span>Testes de funcionamento</span></li>
+        <li><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-revisao"/></svg><span>Revisão técnica</span></li>
+        <li><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-gota"/></svg><span>Limpeza periódica</span></li>
+        <li><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-torneira"/></svg><span>Checagem de vazamentos</span></li>
+      </ul>
+    </div>
+
+    <div class="db3-selo10">
+      <p>Há <b>mais de 10 anos</b>, a Flex Clean atende Florianópolis com manutenção especializada em sistemas de aquecimento solar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRINCIPAIS PROBLEMAS QUE RESOLVEMOS -->
+<section class="db4">
+  <div class="db4-miolo">
+    <p class="db4-olho">CHECK RÁPIDO DO SEU SISTEMA</p>
+    <h2>Seu sistema apresenta <span class="marca-azul">algum destes sinais?</span></h2>
+    <p class="db4-apoio">Veja se você reconhece algum destes sintomas no funcionamento<br>do seu aquecimento solar.</p>
+
+    <div class="db4-cartao">
+      <div class="d4-grupo">
+        <div class="d4-grupo-topo">
+          <span class="d4-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-temp"/></svg></span>
+          <h3>TEMPERATURA E CONSUMO</h3>
+        </div>
+        <ul class="d4-lista">
+          <li><svg class="d4-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>Água não aquece corretamente</span></li>
+          <li><svg class="d4-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>Oscilação na temperatura</span></li>
+          <li><svg class="d4-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>Água morna mesmo com sol</span></li>
+          <li><svg class="d4-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>Apoio elétrico consumindo demais</span></li>
+        </ul>
+      </div>
+      <div class="d4-grupo">
+        <div class="d4-grupo-topo">
+          <span class="d4-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-tanque"/></svg></span>
+          <h3>COMPONENTES E FUNCIONAMENTO</h3>
+        </div>
+        <ul class="d4-lista">
+          <li><svg class="d4-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>Boiler vazando</span></li>
+          <li><svg class="d4-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>Resistência queimando</span></li>
+          <li><svg class="d4-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>Placas solares sujas</span></li>
+          <li><svg class="d4-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>Tubos danificados</span></li>
+          <li><svg class="d4-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>Ruídos no sistema</span></li>
+          <li><svg class="d4-check" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-check"/></svg><span>Pressão irregular</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="db4-fecho">
+      <div class="db4-fecho-txt">
+        <span class="d4-ico d4-ico-g"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-equipe"/></svg></span>
+        <div>
+          <h3>Identificou um ou mais desses sinais?</h3>
+          <p>Nossa equipe avalia o sistema, identifica a causa do problema<br>e indica a solução adequada.</p>
+        </div>
+      </div>
+      <a class="db4-btn" href="https://wa.me/5548992171489?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20manuten%C3%A7%C3%A3o%20de%20aquecimento%20solar%20e%20quero%20um%20or%C3%A7amento.">
+        <svg class="glifo" viewBox="0 0 24 24" aria-hidden="true"><use href="#zap"/></svg>
+        <span>Solicitar Atendimento no WhatsApp</span>
+      </a>
+      <p class="db4-seguro"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-cadeado"/></svg>Atendimento rápido e seguro pelo WhatsApp.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="db5" id="servicos">
+  <div class="db5-miolo">
+    <p class="db5-olho">NOSSOS PRINCIPAIS SERVIÇOS</p>
+    <h2>Soluções completas para <span class="marca-azul">aquecimento solar</span></h2>
+    <p class="db5-apoio">Atuamos com manutenção completa do sistema, desde cuidados<br>com o boiler até limpeza dos coletores e revisão preventiva.</p>
+
+    <div class="db5-grade">
+      <div class="d5-col">
+        <h3>MANUTENÇÃO DO BOILER /<br>RESERVATÓRIO</h3>
+        <p class="d5-desc">Cuidados específicos para manter o armazenamento da água aquecida funcionando com segurança.</p>
+        <p class="d5-rot">Realizamos:</p>
+        <p class="d5-itens">Limpeza interna <span class="d5-sep">&bull;</span> troca de resistência <span class="d5-sep">&bull;</span> testes elétricos <span class="d5-sep">&bull;</span> análise de vazamentos <span class="d5-sep">&bull;</span> revisão do isolamento <span class="d5-sep">&bull;</span> verificação da segurança.</p>
+        <p class="d5-fecho"><b>Atenção:</b> uma drenagem incorreta pode danificar o reservatório.</p>
+      </div>
+      <div class="d5-col">
+        <h3>LIMPEZA DE<br>COLETORES SOLARES</h3>
+        <p class="d5-desc">A sujeira acumulada nas placas e tubos reduz gradualmente a capacidade de aproveitar a energia solar.</p>
+        <p class="d5-rot">A limpeza contribui para:</p>
+        <p class="d5-itens">Maior eficiência <span class="d5-sep">&bull;</span> melhor absorção solar <span class="d5-sep">&bull;</span> menor uso do apoio elétrico <span class="d5-sep">&bull;</span> maior vida útil.</p>
+        <p class="d5-fecho"><b>Resultado:</b> mais aproveitamento do sol e menos dependência elétrica.</p>
+      </div>
+      <div class="d5-col">
+        <h3>REVISÃO PREVENTIVA<br>COMPLETA</h3>
+        <p class="d5-desc">Uma avaliação periódica permite identificar problemas antes que se transformem em falhas ou falta de água quente.</p>
+        <p class="d5-rot">Inclui:</p>
+        <p class="d5-itens">Análise geral <span class="d5-sep">&bull;</span> testes elétricos <span class="d5-sep">&bull;</span> avaliação dos coletores <span class="d5-sep">&bull;</span> inspeção do boiler <span class="d5-sep">&bull;</span> regulagens <span class="d5-sep">&bull;</span> testes de funcionamento.</p>
+        <p class="d5-fecho"><b>Benefício:</b> menos falhas inesperadas e menor risco de custos maiores.</p>
+      </div>
+    </div>
+
+    <p class="db5-rodape"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-escudo"/></svg>Equipe técnica especializada, atendimento no local e garantia de qualidade em cada serviço.</p>
+  </div>
+</section>
+
+<!-- BENEFÍCIOS DO SISTEMA SOLAR -->
+
+<!-- DIFERENCIAIS FLEX CLEAN -->
+<section class="db6" id="diferenciais">
+  <div class="db6-miolo">
+    <p class="db6-olho">POR QUE ESCOLHER A FLEX CLEAN?</p>
+    <h2>Confiança e experiência<br>que <span class="marca-azul">fazem a diferença.</span></h2>
+    <p class="db6-apoio">Atuamos com responsabilidade, técnica e compromisso em<br>cada atendimento que realizamos.</p>
+
+    <ul class="db6-itens">
+        <li><span class="d6-num">01</span><div class="d6-txt"><h3>Atendimento Organizado</h3><p>Todo atendimento é acompanhado e registrado em sistema, garantindo mais controle e transparência.</p></div></li>
+        <li><span class="d6-num">02</span><div class="d6-txt"><h3>Supervisão Técnica em Tempo Real</h3><p>Todos os atendimentos são supervisionados pelo supervisor técnico em tempo real, oferecendo apoio imediato à equipe sempre que necessário.</p></div></li>
+        <li><span class="d6-num">03</span><div class="d6-txt"><h3>Técnicos Especializados</h3><p>Equipe treinada e capacitada para atuar em sistemas de aquecimento solar residencial.</p></div></li>
+        <li><span class="d6-num">04</span><div class="d6-txt"><h3>Suporte Direto dos Fabricantes</h3><p>Mantemos contato direto com os fabricantes dos equipamentos, garantindo suporte técnico especializado sempre que necessário.</p></div></li>
+        <li><span class="d6-num">05</span><div class="d6-txt"><h3>Segurança em Primeiro Lugar</h3><p>Procedimentos executados corretamente para evitar danos ao boiler, placas solares e demais componentes do sistema.</p></div></li>
+        <li><span class="d6-num">06</span><div class="d6-txt"><h3>Garantia Real</h3><p>Garantia sobre todos os serviços realizados.</p></div></li>
+        <li><span class="d6-num">07</span><div class="d6-txt"><h3>Atendimento Profissional</h3><p>Empresa estruturada, com suporte técnico, acompanhamento e pós-venda.</p></div></li>
+        <li><span class="d6-num">08</span><div class="d6-txt"><h3>Desde 2015 em Florianópolis</h3><p>Mais de 10 anos de experiência em sistemas de aquecimento solar, boilers e aquecimento de água.</p></div></li>
+    </ul>
+
+    <div class="db6-fecho">
+      <a class="db6-btn" href="https://wa.me/5548992171489?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20aquecimento%20solar.">
+        <svg class="glifo" viewBox="0 0 24 24" aria-hidden="true"><use href="#zap"/></svg>
+        <span>Solicitar Atendimento no WhatsApp</span>
+      </a>
+      <p class="db6-seguro"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-escudo"/></svg>Atendimento rápido, seguro e direto pelo WhatsApp.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- SEGURANÇA -->
+
+
+<!-- PARA QUEM É -->
+<section class="db7">
+  <div class="db7-miolo">
+    <p class="db7-olho">PARA QUEM É A FLEX CLEAN</p>
+    <h2>A Flex Clean é ideal para quem:</h2>
+    <ul class="db7-itens">
+        <li>Quer manter o sistema eficiente</li>
+        <li>Busca mais economia</li>
+        <li>Deseja evitar falhas inesperadas</li>
+        <li>Quer água quente com segurança</li>
+        <li>Busca manutenção profissional</li>
+        <li>Valoriza suporte e garantia</li>
+    </ul>
+  </div>
+</section>
+<section class="faixa" id="duvidas">
+  <div class="miolo-texto">
+    <h2>Perguntas Frequentes</h2>
+    <div class="duvida" style="margin-top: 40px;">
+      <h3>O sistema solar precisa de manutenção?</h3>
+      <p>Sim. A manutenção periódica ajuda a manter a eficiência e segurança do sistema.</p>
+    </div>
+    <div class="duvida">
+      <h3>Com que frequência devo fazer revisão?</h3>
+      <p>Todos os fabricantes recomendam que a manutenção preventiva seja realizada, no mínimo, uma vez por ano para garantir o bom funcionamento, a eficiência e a durabilidade do equipamento.</p>
+    </div>
+    <div class="duvida">
+      <h3>Vocês fazem a limpeza das placas solares?</h3>
+      <p>Sim. Realizamos limpeza e revisão dos coletores solares.</p>
+    </div>
+    <div class="duvida">
+      <h3>Trabalham com tubo a vácuo e placa plana?</h3>
+      <p>Sim. Atendemos ambos os sistemas.</p>
+    </div>
+    <div class="duvida">
+      <h3>O boiler pode explodir ou implodir?</h3>
+      <p>Sim. Inclusive, erros de instalação ou a falta de manutenção podem causar o chamado "efeito sanfona", comprometendo a estrutura e podendo condenar o boiler. Quando manuseado incorretamente, o reservatório pode sofrer danos graves. Por isso, a manutenção deve ser realizada por um técnico especializado.</p>
+    </div>
+    <div class="duvida">
+      <h3>Vocês atendem toda Florianópolis?</h3>
+      <p>Sim, atendemos toda a ilha.</p>
+    </div>
+  </div>
+</section>
+<section class="faixa faixa-tinta">
+  <div class="miolo-texto">
+    <h2>Solicite seu atendimento agora</h2>
+    <p class="apoio" style="margin-top: 16px;">Fale com nossa equipe e agende a manutenção do seu sistema de aquecimento solar.</p>
+    <div class="acao" style="margin-top: 40px;">
+      <a class="btn-zap" href="https://wa.me/5548992171489?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20manuten%C3%A7%C3%A3o%20de%20aquecimento%20solar%20e%20quero%20um%20or%C3%A7amento.">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        CHAMAR NO WHATSAPP
+      </a>
+    </div>
+    <div class="rodape" style="margin-top: 56px;">
+      <span>Flex Clean · Climatização e Aquecedores</span>
+      <span>© 2026 Flex Clean</span>
+    </div>
+  </div>
+</section>
+
+<!-- BLOCO PREVENTIVO -->
+
+
+<!-- PRÉ-FECHAMENTO -->
+
+<!-- FECHAMENTO -->
+
+
+<!-- CTA FINAL -->
+
+
+<!-- FAQ -->
+
+<div class="barra-mobile">
+  <a href="https://wa.me/5548992171489?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20manuten%C3%A7%C3%A3o%20de%20aquecimento%20solar%20e%20quero%20um%20or%C3%A7amento.">CHAMAR NO WHATSAPP</a>
+</div>
+
+</body>
+</html>
