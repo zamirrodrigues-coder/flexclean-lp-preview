@@ -99,7 +99,7 @@
   margin: 0 0 34px;
   max-width: none;
 }
-.hero-mock h1 .marca-azul { color: var(--mk-azul); display: block; }
+.hero-mock h1 .marca-azul { color: var(--mk-azul); }
 
 .hm-chamada {
   font-family: 'Archivo', Arial, sans-serif;
@@ -107,7 +107,7 @@
   font-size: clamp(18px, 1.5vw, 23px);
   line-height: 1.3;
   color: var(--mk-navy);
-  max-width: 42ch;
+  max-width: none;
   margin: 0 0 24px;
 }
 
@@ -257,7 +257,7 @@
   font-family: 'Archivo', Arial, sans-serif;
   font-weight: 900; font-size: clamp(26px, min(3vw, 4.4vh), 40px);
   line-height: 1.12; letter-spacing: -0.02em;
-  color: var(--d2-navy); max-width: 20ch; margin: 0 0 clamp(10px, 1.6vh, 20px);
+  color: var(--d2-navy); max-width: none; margin: 0 0 clamp(10px, 1.6vh, 20px);
 }
 .db2 h2 .marca-azul { color: var(--d2-azul); }
 
@@ -308,7 +308,7 @@
 
 /* linha de fechamento com os tres selos */
 .db2-fecho {
-  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start;
   gap: 10px; font-size: 17px; color: var(--d2-navy);
   max-width: none; margin: clamp(14px, 2.2vh, 32px) 0 0;
 }
@@ -494,7 +494,7 @@
   font-family: 'Archivo', Arial, sans-serif;
   font-weight: 900; font-size: clamp(26px, min(3vw, 4.4vh), 42px);
   line-height: 1.1; letter-spacing: -0.02em;
-  color: var(--d4-navy); max-width: 20ch; margin: 0 0 clamp(6px, 1vh, 14px);
+  color: var(--d4-navy); max-width: none; margin: 0 0 clamp(6px, 1vh, 14px);
 }
 .db4 h2 .marca-azul { color: var(--d4-azul); }
 .db4-apoio { font-size: clamp(16px, 1.1vw, 18px); line-height: 1.55; color: var(--d4-cinza); max-width: none; margin: 0 0 clamp(10px, 1.6vh, 26px); }
@@ -620,7 +620,7 @@
   font-family: 'Archivo', Arial, sans-serif;
   font-weight: 900; font-size: clamp(26px, min(3vw, 4.4vh), 42px);
   line-height: 1.1; letter-spacing: -0.02em;
-  color: var(--d5-navy); max-width: 20ch; margin: 0 0 clamp(6px, 1.2vh, 14px);
+  color: var(--d5-navy); max-width: none; margin: 0 0 clamp(6px, 1.2vh, 14px);
 }
 .db5 h2 .marca-azul { color: var(--d5-azul); }
 .db5-apoio { font-size: clamp(16px, 1.1vw, 18px); line-height: 1.55; color: var(--d5-cinza); max-width: none; margin: 0 0 clamp(16px, 2.6vh, 40px); }
@@ -1115,7 +1115,7 @@ section[id] { scroll-margin-top: 84px; }
   font-family: 'Archivo', Arial, sans-serif;
   font-weight: 900; font-size: clamp(26px, min(3vw, 4.4vh), 42px);
   line-height: 1.1; letter-spacing: -0.02em;
-  color: var(--d10-navy); max-width: 22ch; margin: 0 0 clamp(12px, 2vh, 26px);
+  color: var(--d10-navy); max-width: none; margin: 0 0 clamp(12px, 2vh, 26px);
 }
 
 /* as oito marcas em linha, separadas por fio */
@@ -1511,7 +1511,7 @@ section[id] { scroll-margin-top: 84px; }
 .db14-frase {
   font-family: 'Archivo', Arial, sans-serif; font-weight: 400;
   font-size: clamp(19px, min(2vw, 3vh), 28px); line-height: 1.25;
-  color: var(--d14-navy); max-width: 34ch; margin: 0 0 clamp(8px, 1.3vh, 16px);
+  color: var(--d14-navy); max-width: none; margin: 0 0 clamp(8px, 1.3vh, 16px);
 }
 .db14-sub { font-size: clamp(14px, 1.1vw, 17px); color: var(--d14-cinza); margin: 0 0 clamp(12px, 2vh, 24px); }
 
@@ -1587,6 +1587,91 @@ section[id] { scroll-margin-top: 84px; }
   .db10-tipos li { padding-left: 0; border-left: none; border-top: 1px solid var(--d10-fio); }
   .db10-tipos li:first-child { border-top: none; }
   .db15-grade { grid-template-columns: 1fr; }
+}
+
+/* lista em duas colunas (.db8-conta): sem fio vertical entre as colunas, e a
+   linha de cada fileira atravessa a largura inteira. O vao entre colunas vira
+   respiro interno da celula, entao as duas linhas da fileira se encostam. */
+.db8-conta { column-gap: 0; }
+.db8-conta li:nth-child(2n) { border-left: none; }
+@media (min-width: 901px) {
+  .db8-conta li { padding-right: clamp(20px, 2.6vw, 40px); }
+  .db8-conta li:nth-child(2n) { padding-left: clamp(20px, 2.6vw, 40px); padding-right: 0; }
+  .db8-conta li:nth-last-child(-n+2) { border-bottom: 1px solid var(--d8-fio); }
+  .db8-conta li:last-child { border-bottom: none; }
+  .db8-conta li:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .db8-conta li:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+}
+
+/* linha de valores (.db8-valores): uma coluna por item, numa fileira so.
+   A grade fixa de 4 derrubava o quinto item para a linha de baixo. */
+@media (min-width: 901px) {
+  .db8-valores { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 1fr; }
+}
+
+/* duas colunas sem fio vertical: as linhas atravessam as colunas e cada linha
+   fica na mesma altura dos dois lados (subgrid). Cabecalho de coluna na linha 1. */
+@media (min-width: 901px) {
+  .db13-grade:not(.db13-grade-1) { grid-template-rows: repeat(7, auto); }
+  .db13-grade:not(.db13-grade-1) > .d13-col {
+    display: grid; grid-row: 1 / span 7; grid-template-rows: subgrid;
+    align-content: start; padding: 0; border-left: none;
+  }
+  .db13-grade:not(.db13-grade-1) > .d13-col > :is(h3, .d13-cab) { grid-row: 1; }
+  .db13-grade:not(.db13-grade-1) > .d13-col > ul { display: grid; grid-template-rows: subgrid; grid-row: 2 / span 6; }
+  .db13-grade:not(.db13-grade-1) > .d13-col > ul:first-child { grid-row: 1 / span 6; }
+  .db13-grade:not(.db13-grade-1) > .d13-col:first-child > :is(h3, .d13-cab),
+  .db13-grade:not(.db13-grade-1) > .d13-col:first-child li { padding-right: clamp(20px, 3vw, 52px); }
+  .db13-grade:not(.db13-grade-1) > .d13-col:last-child > :is(h3, .d13-cab),
+  .db13-grade:not(.db13-grade-1) > .d13-col:last-child li { padding-left: clamp(20px, 3vw, 52px); }
+  .d13-cab { padding-top: clamp(8px, 1.4vh, 16px); padding-bottom: clamp(8px, 1.4vh, 16px); border-bottom: 1px solid var(--d13-fio); }
+  .d13-cab h3 { margin-bottom: 3px; line-height: 1.55; }
+  .d13-cab .db13-sub2 { margin: 0; line-height: 1.5; }
+  .d13-segue > li:last-child { border-bottom: 1px solid var(--d13-fio); }
+  .db13-razoes span { display: block; }
+}
+
+/* grade de ofertas sem fio vertical: o texto de cada coluna comeca no inicio da coluna */
+.db14-oferece li:nth-child(n) { padding-left: 0; border-left: none; }
+
+/* depoimentos: assinatura na base do cartao, fios na mesma altura nos tres */
+.d15-card { display: flex; flex-direction: column; }
+.d15-card figcaption { margin-top: auto; }
+
+/* perguntas frequentes na largura das demais dobras, alinhadas a esquerda */
+#duvidas .miolo-texto { max-width: var(--larg-faixa); }
+
+/* frase de fechamento das dobras de colunas alinhada a esquerda, como o resto do texto */
+.db13-rodape { text-align: left; }
+
+/* lista de problemas com numero impar de itens: a ultima celula da direita
+   mantem o fio de baixo, porque ainda ha uma linha abaixo dela */
+@media (min-width: 901px) {
+  .db2-itens li:nth-last-child(2):nth-child(even) { border-bottom: 1px solid var(--d2-fio); }
+}
+
+/* E o pior: rotulo e frase na mesma linha */
+.db2-alerta .db2-pior, .db2-alerta .db2-pior-txt { display: inline; }
+.db2-alerta .db2-pior { margin-right: 4px; }
+
+/* ideal para quem: titulo, itens e espacos na mesma escala das demais dobras */
+.db7 h2 {
+  font-size: clamp(26px, min(3vw, 4.4vh), 40px);
+  margin-bottom: clamp(14px, 2.6vh, 32px);
+  padding-bottom: clamp(12px, 2.2vh, 26px);
+}
+.db7-itens li { font-size: clamp(16px, 1.4vw, 22px); line-height: 1.25; }
+@media (min-width: 901px) {
+  .db7 { --d7-alt: clamp(18px, 2.8vh, 56px); }
+  .db7-olho { margin-bottom: clamp(8px, 1.4vh, 18px); }
+  .db7-itens { gap: clamp(16px, 3.4vh, 40px) clamp(28px, 3.6vw, 60px); }
+}
+
+/* grades sem fio vertical e com linhas inteiras */
+.db10-tipos li:nth-child(n) { border-left: none; padding-left: 0; }
+@media (min-width: 901px) {
+  .db10-tipos li:nth-child(n+4) { border-top: none; }
+  .db10-tipos li:nth-child(-n+3) { border-bottom: 1px solid var(--d10-fio); }
 }
 </style>
 </head>
@@ -1768,7 +1853,7 @@ section[id] { scroll-margin-top: 84px; }
 <section class="db8">
   <div class="db8-miolo">
     <p class="db8-olho">PROJETO ANTES DA INSTALAÇÃO</p>
-    <h2>Mais do que vender<br>pressurizadores<span class="marca-azul">.</span></h2>
+    <h2>Mais do que vender pressurizadores<span class="marca-azul">.</span></h2>
     <p class="db8-apoio">Nós projetamos a solução ideal para sua casa.</p>
 
     <p class="db8-lead">Cada residência possui uma necessidade diferente.</p>
@@ -1837,11 +1922,11 @@ section[id] { scroll-margin-top: 84px; }
 <section class="db13" id="diferenciais">
   <div class="db13-miolo">
     <p class="db13-olho">Por que escolher a Flex Clean?</p>
-    <h2>Confiança e experiência<br><span class="marca-azul">que fazem a diferença.</span></h2>
+    <h2>Confiança e experiência <span class="marca-azul">que fazem a diferença.</span></h2>
 
     <div class="db13-grade">
       <div class="d13-col">
-        <ul class="db13-razoes">
+        <ul class="db13-razoes d13-segue">
           <li><b>Atendimento Organizado</b><span>Você acompanha todo processo via WhatsApp.</span></li>
           <li><b>Equipe Especializada</b><span>Técnicos treinados e suporte técnico em tempo real.</span></li>
           <li><b>Garantia Real</b><span>Garantia de fabricante e da instalação realizada.</span></li>
@@ -1850,8 +1935,7 @@ section[id] { scroll-margin-top: 84px; }
         </ul>
       </div>
       <div class="d13-col">
-        <h3>Instalação Completa</h3>
-        <p class="db13-sub2">Realizamos:</p>
+        <div class="d13-cab"><h3>Instalação Completa</h3><p class="db13-sub2">Realizamos:</p></div>
         <ul class="d13-lista">
           <li>ajustes hidráulicos</li>
           <li>registros</li>
@@ -1886,9 +1970,9 @@ section[id] { scroll-margin-top: 84px; }
     <p class="db15-olho">PROVA SOCIAL</p>
     <h2>Quem instala com a Flex Clean recomenda</h2>
     <div class="db15-grade">
-      <figure class="d15-card"><blockquote>“Desde o primeiro contato foram transparentes e explicaram exatamente o que seria feito. O serviço ficou excelente.”flexclean.com.br</blockquote><figcaption>flexclean.com.br</figcaption></figure>
-      <figure class="d15-card"><blockquote>“Profissionais preparados, organizados e pontuais.”flexclean.com.br</blockquote><figcaption>flexclean.com.br</figcaption></figure>
-      <figure class="d15-card"><blockquote>“Atendimento rápido e eficiente.”flexclean.com.br</blockquote><figcaption>flexclean.com.br</figcaption></figure>
+      <figure class="d15-card"><blockquote>“Desde o primeiro contato foram transparentes e explicaram exatamente o que seria feito. O serviço ficou excelente.”</blockquote><figcaption>flexclean.com.br</figcaption></figure>
+      <figure class="d15-card"><blockquote>“Profissionais preparados, organizados e pontuais.”</blockquote><figcaption>flexclean.com.br</figcaption></figure>
+      <figure class="d15-card"><blockquote>“Atendimento rápido e eficiente.”</blockquote><figcaption>flexclean.com.br</figcaption></figure>
     </div>
     <p class="db15-fecho">Hoje boa parte dos novos clientes chegam através de indicação.</p>
   </div>
@@ -1968,7 +2052,7 @@ section[id] { scroll-margin-top: 84px; }
 <section class="db14">
   <div class="db14-miolo">
     <p class="db14-olho">CUIDADO DO INÍCIO AO FIM</p>
-    <h2>Mais conforto, pressão e segurança<br><span class="marca-azul">para sua residência.</span></h2>
+    <h2>Mais conforto, pressão e segurança <span class="marca-azul">para sua residência.</span></h2>
     <p class="db14-lead">A Flex Clean oferece:</p>
 
     <ul class="db14-oferece">

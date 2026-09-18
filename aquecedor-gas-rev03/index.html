@@ -99,7 +99,7 @@
   margin: 0 0 34px;
   max-width: none;
 }
-.hero-mock h1 .marca-azul { color: var(--mk-azul); display: block; }
+.hero-mock h1 .marca-azul { color: var(--mk-azul); }
 
 .hm-chamada {
   font-family: 'Archivo', Arial, sans-serif;
@@ -107,7 +107,7 @@
   font-size: clamp(18px, 1.5vw, 23px);
   line-height: 1.3;
   color: var(--mk-navy);
-  max-width: 42ch;
+  max-width: none;
   margin: 0 0 24px;
 }
 
@@ -257,7 +257,7 @@
   font-family: 'Archivo', Arial, sans-serif;
   font-weight: 900; font-size: clamp(26px, min(3vw, 4.4vh), 40px);
   line-height: 1.12; letter-spacing: -0.02em;
-  color: var(--d2-navy); max-width: 20ch; margin: 0 0 clamp(10px, 1.6vh, 20px);
+  color: var(--d2-navy); max-width: none; margin: 0 0 clamp(10px, 1.6vh, 20px);
 }
 .db2 h2 .marca-azul { color: var(--d2-azul); }
 
@@ -308,7 +308,7 @@
 
 /* linha de fechamento com os tres selos */
 .db2-fecho {
-  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start;
   gap: 10px; font-size: 17px; color: var(--d2-navy);
   max-width: none; margin: clamp(14px, 2.2vh, 32px) 0 0;
 }
@@ -494,7 +494,7 @@
   font-family: 'Archivo', Arial, sans-serif;
   font-weight: 900; font-size: clamp(26px, min(3vw, 4.4vh), 42px);
   line-height: 1.1; letter-spacing: -0.02em;
-  color: var(--d4-navy); max-width: 20ch; margin: 0 0 clamp(6px, 1vh, 14px);
+  color: var(--d4-navy); max-width: none; margin: 0 0 clamp(6px, 1vh, 14px);
 }
 .db4 h2 .marca-azul { color: var(--d4-azul); }
 .db4-apoio { font-size: clamp(16px, 1.1vw, 18px); line-height: 1.55; color: var(--d4-cinza); max-width: none; margin: 0 0 clamp(10px, 1.6vh, 26px); }
@@ -620,7 +620,7 @@
   font-family: 'Archivo', Arial, sans-serif;
   font-weight: 900; font-size: clamp(26px, min(3vw, 4.4vh), 42px);
   line-height: 1.1; letter-spacing: -0.02em;
-  color: var(--d5-navy); max-width: 20ch; margin: 0 0 clamp(6px, 1.2vh, 14px);
+  color: var(--d5-navy); max-width: none; margin: 0 0 clamp(6px, 1.2vh, 14px);
 }
 .db5 h2 .marca-azul { color: var(--d5-azul); }
 .db5-apoio { font-size: clamp(16px, 1.1vw, 18px); line-height: 1.55; color: var(--d5-cinza); max-width: none; margin: 0 0 clamp(16px, 2.6vh, 40px); }
@@ -1115,7 +1115,7 @@ section[id] { scroll-margin-top: 84px; }
   font-family: 'Archivo', Arial, sans-serif;
   font-weight: 900; font-size: clamp(26px, min(3vw, 4.4vh), 42px);
   line-height: 1.1; letter-spacing: -0.02em;
-  color: var(--d10-navy); max-width: 22ch; margin: 0 0 clamp(12px, 2vh, 26px);
+  color: var(--d10-navy); max-width: none; margin: 0 0 clamp(12px, 2vh, 26px);
 }
 
 /* as oito marcas em linha, separadas por fio */
@@ -1238,7 +1238,7 @@ section[id] { scroll-margin-top: 84px; }
 .db11-valores li + li { border-left: 1px solid var(--d11-fio); }
 
 /* a frase da indicacao, recuada como no mockup */
-.db11-indicacao { padding: clamp(20px, 4vh, 64px) 0 0 clamp(0px, 8vw, 120px); }
+.db11-indicacao { padding: clamp(20px, 4vh, 64px) 0 0 0; }
 .db11-frase {
   font-family: 'Archivo', Arial, sans-serif; font-weight: 900;
   font-size: clamp(22px, min(2.6vw, 4vh), 36px); line-height: 1.12;
@@ -1511,7 +1511,7 @@ section[id] { scroll-margin-top: 84px; }
 .db14-frase {
   font-family: 'Archivo', Arial, sans-serif; font-weight: 400;
   font-size: clamp(19px, min(2vw, 3vh), 28px); line-height: 1.25;
-  color: var(--d14-navy); max-width: 34ch; margin: 0 0 clamp(8px, 1.3vh, 16px);
+  color: var(--d14-navy); max-width: none; margin: 0 0 clamp(8px, 1.3vh, 16px);
 }
 .db14-sub { font-size: clamp(14px, 1.1vw, 17px); color: var(--d14-cinza); margin: 0 0 clamp(12px, 2vh, 24px); }
 
@@ -1546,6 +1546,107 @@ section[id] { scroll-margin-top: 84px; }
   .db14-oferece li { padding-left: 0 !important; border-left: none !important; border-top: 1px solid var(--d14-fio); }
   .db14-oferece li:first-child { border-top: none; }
   .db14-btn { width: 100%; justify-content: flex-start; }
+}
+
+/* alinhamento entre colunas: cada coluna ocupa 5 linhas da grade e herda as
+   linhas do pai (subgrid). Titulo, descricao, rotulo, itens e fecho ficam na
+   mesma altura nas tres colunas, qualquer que seja o tamanho de cada lista. */
+.db5-grade { grid-template-rows: repeat(5, auto); }
+.d5-col { display: grid; grid-row: span 5; grid-template-rows: subgrid; align-content: start; }
+@media (max-width: 900px) {
+  .db5-grade { grid-template-rows: none; }
+  .d5-col { display: block; grid-row: auto; }
+}
+
+/* lista em duas colunas (.db8-conta): sem fio vertical entre as colunas, e a
+   linha de cada fileira atravessa a largura inteira. O vao entre colunas vira
+   respiro interno da celula, entao as duas linhas da fileira se encostam. */
+.db8-conta { column-gap: 0; }
+.db8-conta li:nth-child(2n) { border-left: none; }
+@media (min-width: 901px) {
+  .db8-conta li { padding-right: clamp(20px, 2.6vw, 40px); }
+  .db8-conta li:nth-child(2n) { padding-left: clamp(20px, 2.6vw, 40px); padding-right: 0; }
+  .db8-conta li:nth-last-child(-n+2) { border-bottom: 1px solid var(--d8-fio); }
+  .db8-conta li:last-child { border-bottom: none; }
+  .db8-conta li:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .db8-conta li:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+}
+
+/* linha de valores (.db8-valores): uma coluna por item, numa fileira so.
+   A grade fixa de 4 derrubava o quinto item para a linha de baixo. */
+@media (min-width: 901px) {
+  .db8-valores { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 1fr; }
+}
+
+/* duas colunas sem fio vertical: as linhas atravessam as colunas e cada linha
+   fica na mesma altura dos dois lados (subgrid). Cabecalho de coluna na linha 1. */
+@media (min-width: 901px) {
+  .db13-grade:not(.db13-grade-1) { grid-template-rows: repeat(7, auto); }
+  .db13-grade:not(.db13-grade-1) > .d13-col {
+    display: grid; grid-row: 1 / span 7; grid-template-rows: subgrid;
+    align-content: start; padding: 0; border-left: none;
+  }
+  .db13-grade:not(.db13-grade-1) > .d13-col > :is(h3, .d13-cab) { grid-row: 1; }
+  .db13-grade:not(.db13-grade-1) > .d13-col > ul { display: grid; grid-template-rows: subgrid; grid-row: 2 / span 6; }
+  .db13-grade:not(.db13-grade-1) > .d13-col > ul:first-child { grid-row: 1 / span 6; }
+  .db13-grade:not(.db13-grade-1) > .d13-col:first-child > :is(h3, .d13-cab),
+  .db13-grade:not(.db13-grade-1) > .d13-col:first-child li { padding-right: clamp(20px, 3vw, 52px); }
+  .db13-grade:not(.db13-grade-1) > .d13-col:last-child > :is(h3, .d13-cab),
+  .db13-grade:not(.db13-grade-1) > .d13-col:last-child li { padding-left: clamp(20px, 3vw, 52px); }
+  .d13-cab { padding-top: clamp(8px, 1.4vh, 16px); padding-bottom: clamp(8px, 1.4vh, 16px); border-bottom: 1px solid var(--d13-fio); }
+  .d13-cab h3 { margin-bottom: 3px; line-height: 1.55; }
+  .d13-cab .db13-sub2 { margin: 0; line-height: 1.5; }
+  .d13-segue > li:last-child { border-bottom: 1px solid var(--d13-fio); }
+}
+
+/* grade de ofertas sem fio vertical: o texto de cada coluna comeca no inicio da coluna */
+.db14-oferece li:nth-child(n) { padding-left: 0; border-left: none; }
+
+/* perguntas frequentes na largura das demais dobras, alinhadas a esquerda */
+#duvidas .miolo-texto { max-width: var(--larg-faixa); }
+
+/* frase de fechamento das dobras de colunas alinhada a esquerda, como o resto do texto */
+.db13-rodape { text-align: left; }
+
+/* ritmo das colunas de servico: titulo colado na descricao, rotulo colado nos
+   itens e um espaco igual entre os grupos. Sem espaco extra entre as linhas da grade. */
+@media (min-width: 901px) { .db5-grade { row-gap: 0; } }
+.d5-col h3 { margin-bottom: clamp(6px, 1vh, 10px); }
+.d5-desc { margin-bottom: clamp(18px, 3vh, 36px); }
+.d5-rot { margin-bottom: clamp(4px, 0.6vh, 8px); }
+.d5-itens { margin-bottom: clamp(18px, 3vh, 36px); }
+
+/* lista de problemas com numero impar de itens: a ultima celula da direita
+   mantem o fio de baixo, porque ainda ha uma linha abaixo dela */
+@media (min-width: 901px) {
+  .db2-itens li:nth-last-child(2):nth-child(even) { border-bottom: 1px solid var(--d2-fio); }
+}
+
+/* E o pior: rotulo e frase na mesma linha */
+.db2-alerta .db2-pior, .db2-alerta .db2-pior-txt { display: inline; }
+.db2-alerta .db2-pior { margin-right: 4px; }
+
+/* ideal para quem: titulo, itens e espacos na mesma escala das demais dobras */
+.db7 h2 {
+  font-size: clamp(26px, min(3vw, 4.4vh), 40px);
+  margin-bottom: clamp(14px, 2.6vh, 32px);
+  padding-bottom: clamp(12px, 2.2vh, 26px);
+}
+.db7-itens li { font-size: clamp(16px, 1.4vw, 22px); line-height: 1.25; }
+@media (min-width: 901px) {
+  .db7 { --d7-alt: clamp(18px, 2.8vh, 56px); }
+  .db7-olho { margin-bottom: clamp(8px, 1.4vh, 18px); }
+  .db7-itens { gap: clamp(16px, 3.4vh, 40px) clamp(28px, 3.6vw, 60px); }
+}
+
+/* grades sem fio vertical e com linhas inteiras */
+.d5-col + .d5-col { border-left: none; }
+.db12-ajuda li:nth-child(n) { border-left: none; padding-left: 0; }
+@media (min-width: 901px) {
+  .db12-sintomas { column-gap: 0; }
+  .db12-sintomas li:nth-child(odd) { padding-right: clamp(20px, 3vw, 52px); }
+  .db12-sintomas li:nth-child(even) { padding-left: clamp(20px, 3vw, 52px); }
+  .db12-sintomas li:last-child:nth-child(odd) { grid-column: 1 / -1; }
 }
 </style>
 </head>
@@ -1708,7 +1809,7 @@ section[id] { scroll-margin-top: 84px; }
 <section class="db8">
   <div class="db8-miolo">
     <p class="db8-olho">MAIS DO QUE MANUTENÇÃO</p>
-    <h2>Mais do que um<br>simples conserto<span class="marca-azul">.</span></h2>
+    <h2>Mais do que um simples conserto<span class="marca-azul">.</span></h2>
     <p class="db8-apoio">Segurança e tranquilidade para sua família.</p>
 
     <p class="db8-lead">Desde 2015, a Flex Clean atende Florianópolis com foco em:</p>
@@ -1808,7 +1909,6 @@ section[id] { scroll-margin-top: 84px; }
         <p class="d5-desc">A manutenção preventiva ajuda a evitar falhas inesperadas e aumenta a segurança do equipamento.</p>
         <p class="d5-rot">Realizamos:</p>
         <p class="d5-itens">limpeza interna <span class="d5-sep">•</span> limpeza de queimadores <span class="d5-sep">•</span> testes de vazamento <span class="d5-sep">•</span> revisão de componentes <span class="d5-sep">•</span> análise da exaustão <span class="d5-sep">•</span> verificação da pressão do gás <span class="d5-sep">•</span> testes hidráulicos</p>
-        <p class="d5-fecho">A revisão preventiva é recomendada anualmente pelos fabricantes.</p>
       </div>
       <div class="d5-col">
         <h3>Limpeza Técnica Especializada</h3>
@@ -1827,7 +1927,7 @@ section[id] { scroll-margin-top: 84px; }
 <section class="db6" id="diferenciais">
   <div class="db6-miolo">
     <p class="db6-olho">Por que clientes escolhem a Flex Clean?</p>
-    <h2>Confiança e experiência<br>que <span class="marca-azul">fazem a diferença.</span></h2>
+    <h2>Confiança e experiência que <span class="marca-azul">fazem a diferença.</span></h2>
     <p class="db6-apoio">Atuamos com responsabilidade, técnica e compromisso em<br>cada atendimento que realizamos.</p>
 
     <ul class="db6-itens">
@@ -1854,7 +1954,7 @@ section[id] { scroll-margin-top: 84px; }
   <div class="db9-miolo">
     <div class="db9-texto">
       <p class="db9-olho">SEGURANÇA DO SISTEMA</p>
-      <h2>Vazamento de gás<br><span class="marca-azul">não é algo<br>para ignorar.</span></h2>
+      <h2>Vazamento de gás <span class="marca-azul">não é algo para ignorar.</span></h2>
 
       <p class="db9-lead">Problemas em aquecedores podem gerar:</p>
       <ul class="db9-riscos">
@@ -1931,7 +2031,7 @@ section[id] { scroll-margin-top: 84px; }
 <section class="db11">
   <div class="db11-miolo">
     <p class="db11-olho">CONFIANÇA CONSTRUÍDA AO LONGO DOS ANOS</p>
-    <h2>Uma empresa construída<br><span class="marca-azul">na confiança.</span></h2>
+    <h2>Uma empresa construída <span class="marca-azul">na confiança.</span></h2>
     <p class="db11-lead">Ao longo dos anos, a Flex Clean se tornou referência em Florianópolis por:</p>
 
     <ul class="db11-valores">
@@ -1942,7 +2042,7 @@ section[id] { scroll-margin-top: 84px; }
     </ul>
 
     <div class="db11-indicacao">
-      <p class="db11-frase">Grande parte dos novos clientes<br><span class="marca-azul">chegam por indicação</span></p>
+      <p class="db11-frase">Grande parte dos novos clientes <span class="marca-azul">chegam por indicação</span></p>
       <p class="db11-resto">de outros clientes satisfeitos.</p>
     </div>
   </div>
@@ -1968,7 +2068,7 @@ section[id] { scroll-margin-top: 84px; }
 <section class="db12">
   <div class="db12-miolo">
     <p class="db12-olho">MANUTENÇÃO PREVENTIVA</p>
-    <h2>O problema quase<br>sempre começa pequeno<span class="marca-azul">.</span></h2>
+    <h2>O problema quase sempre começa pequeno<span class="marca-azul">.</span></h2>
 
     <p class="db12-lead">Muitos aquecedores apresentam:</p>
     <ul class="db12-sintomas">
@@ -2002,7 +2102,7 @@ section[id] { scroll-margin-top: 84px; }
     <div class="db13-grade">
       <div class="d13-col">
         <h3>Quando falamos de gás, improviso pode gerar:</h3>
-        <ul class="d13-lista">
+        <ul class="d13-lista d13-segue">
           <li>riscos</li>
           <li>prejuízos</li>
           <li>retrabalho</li>
@@ -2029,7 +2129,7 @@ section[id] { scroll-margin-top: 84px; }
 <section class="db14">
   <div class="db14-miolo">
     <p class="db14-olho">CUIDADO DO INÍCIO AO FIM</p>
-    <h2>Seu banho quente e sua segurança<br>merecem um serviço feito<br><span class="marca-azul">da forma correta.</span></h2>
+    <h2>Seu banho quente e sua segurança merecem um serviço feito <span class="marca-azul">da forma correta.</span></h2>
     <p class="db14-lead">A Flex Clean oferece:</p>
 
     <ul class="db14-oferece">

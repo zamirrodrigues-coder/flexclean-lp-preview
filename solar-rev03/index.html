@@ -99,7 +99,7 @@
   margin: 0 0 34px;
   max-width: none;
 }
-.hero-mock h1 .marca-azul { color: var(--mk-azul); display: block; }
+.hero-mock h1 .marca-azul { color: var(--mk-azul); }
 
 .hm-chamada {
   font-family: 'Archivo', Arial, sans-serif;
@@ -107,7 +107,7 @@
   font-size: clamp(18px, 1.5vw, 23px);
   line-height: 1.3;
   color: var(--mk-navy);
-  max-width: 42ch;
+  max-width: none;
   margin: 0 0 24px;
 }
 
@@ -257,7 +257,7 @@
   font-family: 'Archivo', Arial, sans-serif;
   font-weight: 900; font-size: clamp(26px, min(3vw, 4.4vh), 40px);
   line-height: 1.12; letter-spacing: -0.02em;
-  color: var(--d2-navy); max-width: 20ch; margin: 0 0 clamp(10px, 1.6vh, 20px);
+  color: var(--d2-navy); max-width: none; margin: 0 0 clamp(10px, 1.6vh, 20px);
 }
 .db2 h2 .marca-azul { color: var(--d2-azul); }
 
@@ -494,7 +494,7 @@
   font-family: 'Archivo', Arial, sans-serif;
   font-weight: 900; font-size: clamp(26px, min(3vw, 4.4vh), 42px);
   line-height: 1.1; letter-spacing: -0.02em;
-  color: var(--d4-navy); max-width: 20ch; margin: 0 0 clamp(6px, 1vh, 14px);
+  color: var(--d4-navy); max-width: none; margin: 0 0 clamp(6px, 1vh, 14px);
 }
 .db4 h2 .marca-azul { color: var(--d4-azul); }
 .db4-apoio { font-size: clamp(16px, 1.1vw, 18px); line-height: 1.55; color: var(--d4-cinza); max-width: none; margin: 0 0 clamp(10px, 1.6vh, 26px); }
@@ -614,7 +614,7 @@
   font-family: 'Archivo', Arial, sans-serif;
   font-weight: 900; font-size: clamp(26px, min(3vw, 4.4vh), 42px);
   line-height: 1.1; letter-spacing: -0.02em;
-  color: var(--d5-navy); max-width: 20ch; margin: 0 0 clamp(6px, 1.2vh, 14px);
+  color: var(--d5-navy); max-width: none; margin: 0 0 clamp(6px, 1.2vh, 14px);
 }
 .db5 h2 .marca-azul { color: var(--d5-azul); }
 .db5-apoio { font-size: clamp(16px, 1.1vw, 18px); line-height: 1.55; color: var(--d5-cinza); max-width: none; margin: 0 0 clamp(16px, 2.6vh, 40px); }
@@ -645,9 +645,11 @@
 .d5-fecho b { font-family: 'Archivo', Arial, sans-serif; color: var(--d5-azul); }
 
 .db5-rodape {
-  display: flex; align-items: center; justify-content: center; gap: 12px;
   font-size: clamp(15px, 1.1vw, 17px); color: var(--d5-navy);
-  max-width: none; margin: clamp(16px, 2.6vh, 40px) 0 0; text-align: center;
+  max-width: none;
+  border-top: 1px solid var(--d5-fio);
+  margin: clamp(16px, 2.6vh, 40px) 0 0;
+  padding-top: clamp(12px, 2vh, 26px);
 }
 .db5-rodape svg { width: 30px; height: 30px; flex: none; fill: none; stroke: var(--d5-azul); stroke-width: 1.8; stroke-linejoin: round; }
 
@@ -845,6 +847,47 @@ section[id] { scroll-margin-top: 84px; }
 /* o logo do cabecalho leva ao topo da pagina */
 .cabecalho-logo { display: flex; align-items: center; flex: none; }
 .cabecalho-logo img { display: block; }
+
+/* alinhamento entre colunas: cada coluna ocupa 5 linhas da grade e herda as
+   linhas do pai (subgrid). Titulo, descricao, rotulo, itens e fecho ficam na
+   mesma altura nas tres colunas, qualquer que seja o tamanho de cada lista. */
+.db5-grade { grid-template-rows: repeat(5, auto); }
+.d5-col { display: grid; grid-row: span 5; grid-template-rows: subgrid; align-content: start; }
+@media (max-width: 900px) {
+  .db5-grade { grid-template-rows: none; }
+  .d5-col { display: block; grid-row: auto; }
+}
+
+/* perguntas frequentes na largura das demais dobras, alinhadas a esquerda */
+#duvidas .miolo-texto { max-width: var(--larg-faixa); }
+
+/* ritmo das colunas de servico: titulo colado na descricao, rotulo colado nos
+   itens e um espaco igual entre os grupos. Sem espaco extra entre as linhas da grade. */
+@media (min-width: 901px) { .db5-grade { row-gap: 0; } }
+.d5-col h3 { margin-bottom: clamp(6px, 1vh, 10px); }
+.d5-desc { margin-bottom: clamp(18px, 3vh, 36px); }
+.d5-rot { margin-bottom: clamp(4px, 0.6vh, 8px); }
+.d5-itens { margin-bottom: clamp(18px, 3vh, 36px); }
+
+/* E o pior: rotulo e frase na mesma linha */
+.db2-alerta .db2-pior, .db2-alerta .db2-pior-txt { display: inline; }
+.db2-alerta .db2-pior { margin-right: 4px; }
+
+/* ideal para quem: titulo, itens e espacos na mesma escala das demais dobras */
+.db7 h2 {
+  font-size: clamp(26px, min(3vw, 4.4vh), 40px);
+  margin-bottom: clamp(14px, 2.6vh, 32px);
+  padding-bottom: clamp(12px, 2.2vh, 26px);
+}
+.db7-itens li { font-size: clamp(16px, 1.4vw, 22px); line-height: 1.25; }
+@media (min-width: 901px) {
+  .db7 { --d7-alt: clamp(18px, 2.8vh, 56px); }
+  .db7-olho { margin-bottom: clamp(8px, 1.4vh, 18px); }
+  .db7-itens { gap: clamp(16px, 3.4vh, 40px) clamp(28px, 3.6vw, 60px); }
+}
+
+/* foto do hero em retrato: o recorte sobe para manter a cabeca do tecnico e as placas */
+.hm-figura img { object-position: 50% 40%; }
 </style>
 </head>
 <body>
@@ -947,7 +990,7 @@ section[id] { scroll-margin-top: 84px; }
     </a>
   </div>
   <div class="hm-figura">
-    <img src="../assets/solar/hero-tecnico-boiler.jpg" alt="Técnico da Flex Clean fazendo manutenção em um boiler de aquecimento solar" width="1600" height="1440" fetchpriority="high">
+    <img src="../assets/solar/hero-tecnico-telhado-paineis.jpg" alt="Técnico da Flex Clean instalando placas solares no telhado" width="899" height="1599" fetchpriority="high">
   </div>
   <span class="hm-pontos" aria-hidden="true"></span>
   </div>
@@ -1100,21 +1143,21 @@ section[id] { scroll-margin-top: 84px; }
 
     <div class="db5-grade">
       <div class="d5-col">
-        <h3>MANUTENÇÃO DO BOILER /<br>RESERVATÓRIO</h3>
+        <h3>MANUTENÇÃO DO BOILER / RESERVATÓRIO</h3>
         <p class="d5-desc">Cuidados específicos para manter o armazenamento da água aquecida funcionando com segurança.</p>
         <p class="d5-rot">Realizamos:</p>
         <p class="d5-itens">Limpeza interna <span class="d5-sep">&bull;</span> troca de resistência <span class="d5-sep">&bull;</span> testes elétricos <span class="d5-sep">&bull;</span> análise de vazamentos <span class="d5-sep">&bull;</span> revisão do isolamento <span class="d5-sep">&bull;</span> verificação da segurança.</p>
         <p class="d5-fecho"><b>Atenção:</b> uma drenagem incorreta pode danificar o reservatório.</p>
       </div>
       <div class="d5-col">
-        <h3>LIMPEZA DE<br>COLETORES SOLARES</h3>
+        <h3>LIMPEZA DE COLETORES SOLARES</h3>
         <p class="d5-desc">A sujeira acumulada nas placas e tubos reduz gradualmente a capacidade de aproveitar a energia solar.</p>
         <p class="d5-rot">A limpeza contribui para:</p>
         <p class="d5-itens">Maior eficiência <span class="d5-sep">&bull;</span> melhor absorção solar <span class="d5-sep">&bull;</span> menor uso do apoio elétrico <span class="d5-sep">&bull;</span> maior vida útil.</p>
         <p class="d5-fecho"><b>Resultado:</b> mais aproveitamento do sol e menos dependência elétrica.</p>
       </div>
       <div class="d5-col">
-        <h3>REVISÃO PREVENTIVA<br>COMPLETA</h3>
+        <h3>REVISÃO PREVENTIVA COMPLETA</h3>
         <p class="d5-desc">Uma avaliação periódica permite identificar problemas antes que se transformem em falhas ou falta de água quente.</p>
         <p class="d5-rot">Inclui:</p>
         <p class="d5-itens">Análise geral <span class="d5-sep">&bull;</span> testes elétricos <span class="d5-sep">&bull;</span> avaliação dos coletores <span class="d5-sep">&bull;</span> inspeção do boiler <span class="d5-sep">&bull;</span> regulagens <span class="d5-sep">&bull;</span> testes de funcionamento.</p>
@@ -1122,7 +1165,7 @@ section[id] { scroll-margin-top: 84px; }
       </div>
     </div>
 
-    <p class="db5-rodape"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-escudo"/></svg>Equipe técnica especializada, atendimento no local e garantia de qualidade em cada serviço.</p>
+    <p class="db5-rodape">Equipe técnica especializada, atendimento no local e garantia de qualidade em cada serviço.</p>
   </div>
 </section>
 
@@ -1132,7 +1175,7 @@ section[id] { scroll-margin-top: 84px; }
 <section class="db6" id="diferenciais">
   <div class="db6-miolo">
     <p class="db6-olho">POR QUE ESCOLHER A FLEX CLEAN?</p>
-    <h2>Confiança e experiência<br>que <span class="marca-azul">fazem a diferença.</span></h2>
+    <h2>Confiança e experiência que <span class="marca-azul">fazem a diferença.</span></h2>
     <p class="db6-apoio">Atuamos com responsabilidade, técnica e compromisso em<br>cada atendimento que realizamos.</p>
 
     <ul class="db6-itens">
